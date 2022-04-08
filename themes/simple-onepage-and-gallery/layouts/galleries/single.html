@@ -1,0 +1,15 @@
+{{ define "main" }}
+	<main id="gallery-container">
+        <a href="/galleries">Galeries</a>
+		<article>
+			<h1>{{ .Title }}</h1>
+		</article>
+        {{ with .Params.images }}
+            <div id="gallery-images">
+                {{ range . }}
+                    <img src="{{ .image }}">
+                {{ end }}
+            </div>
+        {{ end }}
+	</main>
+{{ end }}

@@ -1,0 +1,13 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{{ .Title }}</title>
+	
+	{{ $sass := resources.Get "sass/main.scss" }}
+	{{ $style := $sass | resources.ToCSS | resources.Fingerprint }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+
+	<!-- netlify cms -->
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>

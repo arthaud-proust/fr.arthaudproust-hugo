@@ -1,0 +1,9 @@
+#gallery-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    grid-auto-rows: auto;
+    img {
+        width: 100%
+    }
+}

@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: 'static/media'
+public_folder: '/media'
+locale: fr
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  - name: galleries
+    label: Galeries
+    label_singular: Galerie
+    folder: content/galleries
+    create: true
+    editor: { preview: false }
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}{{minute}}{{second}}"
+    filter: {field: "visibleInCms", value: true}
+    fields:
+      - { label: "Visible", name: "visibleInCms", widget: hidden, default: true}
+      - { label: Titre, name: title }
+      - { label: Description, name: description, widget: markdown, minimal: true, required: false, buttons: [bold, link], editor_components: [], modes: [rich_text] }
+      - {label: "Images", name: images, widget: list, fields: [{label: "Image", name: "image", widget: "image", media_folder: /static/media, public_folder: /media}]}
