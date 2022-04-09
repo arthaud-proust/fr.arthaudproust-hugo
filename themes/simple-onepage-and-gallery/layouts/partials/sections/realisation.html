@@ -1,0 +1,85 @@
+<section 
+    class="swiper-slide" data-hash="realisations" aria-title="{{ .Title }}"
+    itemscope itemtype="https://www.schema.org/CreativeWork"
+
+>
+    <meta itemprop="url" content="{{ .Permalink }}">
+
+
+    <div class="sub noMixBlend overflow-hidden">
+        
+        <a href="{{ .Permalink }}" class="img-wrapper" id="section-image-cover-container">
+            <img class="hidden-smd full hoverable-alt" id="sic-preview" src="{{ .Params.img }}">
+            <!-- <img class="hidden-smd full" id="section-image-cover" src="{{ .Params.img }}"> -->
+            {{ range .Params.imgs }}
+                <img class="hidden-smd full hoverable-alt d-none" id="sic-{{ . }}" src="{{ . }}">
+            {{ end }}
+        </a>
+
+        <div class="section-swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide hidden-xl">
+                    <div class="intro-card">
+                        <h2 itemprop="name" class="title">{{ .Title }}</h2>
+                        {{ if isset .Params "subtitle" }}
+                        <h3>{{ .Params.subtitle }}</h3>
+                        {{ end }}
+                        {{ partials "components/swipe-indic-vertical.html" . }}
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="intro-card">
+                        <h2>Réalisation</h2>
+                        
+                        <p itemprop="about">{{ .Params.desc }}</p>
+
+                        {{ if isset .Params "technos" }}
+                            <br/>
+                            <h2>Technos utilisées</h2>
+                            <span>
+                                {{ $relatedTechnos := site.RegularPages.RelatedTo ( keyVals "techno" .Params.technos)}}
+                                {{ range $relatedTechnos }}
+                                    <img src="{{ .Params.img }}" alt="techno">
+                                {{ end }}
+                            </span>
+                        {{ end }}
+                    </div>
+                </li>
+                {{ range .Params.Content }}
+                    <li class="swiper-slide" data-cover="preview">
+                        <div class="intro-card">
+                            <span>{{ .date }}</span>
+                            <h2>{{ .title }}</h2>
+                            {{ range .lines }}
+                                <p class="pt">
+                                    {{ . }}
+                                </p>
+                            {{ end }}
+                        </div>
+                    </li>
+                {{ end }}
+                <li class="swiper-slide">
+                    <ul class="card" style="padding: 0;">
+                        <li><h2>Et ensuite?</h2></li>
+                        {{ if isset .Params "project_url" }}
+                        <li>{{ partial "components/link.html" (dict "href" .Params.project_url "content" "Voir en action") }}</li>
+                        {{ end }}
+                        
+                        {{ if isset .Params "github_url" }}
+                        <li>{{ partial "components/link.html" (dict "href" .Params.github_url "content" "Voir sur github") }}</li>
+                        {{ end }}
+                        <li>{{ partial "components/link.html" (dict "href" "/#realisations" "content" "Retour aux réalisations") }}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="hidden-sm">
+            <h2 class="title">{{ .Title }}</h2>
+            {{ if isset .Params "subtitle" }}
+            <h3>{{ .Params.subtitle }}</h3>
+            {{ end }}
+        </div>
+       
+        <!-- <h2 class="hoverShowHidden">(frissons garantis) <span class="hidden">si si je vous assure</span></h2> -->
+    </div>  
+</section>

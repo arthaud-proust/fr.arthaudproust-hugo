@@ -1,5 +1,16 @@
 {{ define "main" }}
-	<main>
-        <h1>Hugo et Netlify CMS</h1>
-	</main>
+
+    <main id="main" class="main-swiper grabbable grabX">
+        <div class="swiper-wrapper">
+
+            {{ partial "sections/realisations.html" . }}
+            {{ partial "sections/about.html" . }}
+
+            {{ partial "sections/skills.html" . }}
+            {{ partial "sections/informatic-skills.html" . }}
+            {{ partial "sections/meet-us.html" . }}
+            
+        </div>
+    </main>
+
 {{ end }}

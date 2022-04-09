@@ -1,0 +1,27 @@
+languageCode: 'fr'
+title: 'POC - netlify'
+theme: 'simple-onepage-and-gallery'
+
+params:
+  email: "contact@arthaudproust.fr"
+  seo:
+    author: "Arthaud"
+    desc: "Test"
+    links:
+      github: "https://github.com/arthaud-proust"
+      linkedin: "https://www.linkedin.com/in/arthaud-proust/"
+      twitter: "https://twitter.com/arthaud_proust"
+      facebook: "https://www.facebook.com/arthaudproust.fr"
+      instagram: "https://www.instagram.com/arthaudproust/"
+
+taxonomies:
+  techno: 'technos'
+
+related:
+  includeNewer: true
+  toLower: true
+  indices:
+    - name: techno
+      weight: 1
+
+    

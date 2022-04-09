@@ -1,0 +1,117 @@
+@keyframes wiggle{
+    0% { transform: rotate(0); }
+    10% { transform: rotate(-50deg); }
+    20% { transform: rotate(40deg); }
+    30% { transform: rotate(-30deg); }
+    40% { transform: rotate(20deg); }
+    50% { transform: rotate(-10deg); }
+    60% { transform: rotate(10deg); }
+    70% { transform: rotate(-5deg); }
+    80% { transform: rotate(5deg); }
+    90% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+@keyframes band {
+    from {
+        transform: translate(0);
+    }
+    to {
+        transform: translate(100%);
+    }
+}
+
+@keyframes nod {
+    0% { transform: translateY(0) }
+    50% { transform: translateY(10%) }
+    0% { transform: translateY(0) }
+}
+
+@keyframes draw-in {
+    from {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 230 1500;
+    }
+  
+    to {
+        stroke-dashoffset: -500;
+        stroke-dasharray: 900 1500;
+    }
+}
+@keyframes draw-out {
+    from {
+        /* stroke-dashoffset: -500; */
+        /* stroke-dasharray: 900 1500; */
+        stroke-dashoffset: 1900;
+        stroke-dasharray: 900 1500;
+    }
+  
+    to {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 230 1500;
+        /* stroke-dashoffset: -1650; */
+        /* stroke-dasharray: 300 1500; */
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(1800deg);
+    }
+}
+@keyframes spinVertical {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(1800deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes swipeAnim {
+    0% {
+        opacity: 0;
+        left: 100%;
+        width: var(--h);
+    }
+    20% {
+        opacity: 1;
+        left: 100%;
+        width: var(--h);
+    }
+    30% {
+        opacity: 1;
+        left: calc(100% - ( 3 * var(--h) ) );
+        width: calc( 3 * var(--h) );
+    }
+
+    70% {
+        opacity: 0;
+        left: 0%;
+        width: calc( 3 * var(--h) );
+    }
+
+    100% {
+        opacity: 0;
+        left: 0%;
+        width: calc( 3 * var(--h) );
+    }
+
+    /* 90% {
+        opacity: 0;
+        left: 0%;
+        width: var(--h);
+    } */
+
+}

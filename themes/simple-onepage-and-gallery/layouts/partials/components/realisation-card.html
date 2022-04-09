@@ -1,0 +1,11 @@
+<a 
+    itemscope itemtype="https://www.schema.org/CreativeWork"
+    class="realisation-card with-bg hoverable-alt" 
+    data-img="/assets/realisations/test.png" 
+    href="{{ .Permalink }}"
+>
+    <meta itemprop="url" content="{{ .Permalink }}">
+    <h2 itemprop="name">{{ .Title }}</h2>
+    <p itemprop="about">{{ .Params.desc }}</p>
+    <img itemprop="thumbnailUrl" src="{{ .Params.img }}" alt="Image représentant {{ .Title }}"/>
+</a>

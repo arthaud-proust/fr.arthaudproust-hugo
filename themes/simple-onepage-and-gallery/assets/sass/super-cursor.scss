@@ -1,0 +1,139 @@
+.noCursor, .noCursor * {
+    cursor: none !important;
+}
+
+#superCursor.hide {
+    opacity: 0;
+}
+
+
+#superCursor-outter, 
+#superCursor-pointer {
+    --translateX: -50%;
+    --translateY: -50%;
+    --translateZ: 0;
+    --rotateX: 0;
+    --rotateY: 0;
+    --rotateZ: 0;
+    --blendMode: difference;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 500;
+    position: absolute;
+    height: var(--h);
+    width: var(--w);
+    opacity: 1;
+    mix-blend-mode: var(--blendMode);
+
+    transition: height .5s, width .5s, opacity .3s, transform .3s;
+
+    top: 50vh;
+    left: 50vw;
+    pointer-events: none;
+    transform: 
+        translateX(var(--translateX))
+        translateY(var(--translateY))
+        translateZ(var(--translateZ))
+        rotateX(var(--rotateX))
+        rotateY(var(--rotateY))
+        rotateZ(var(--rotateZ))
+    ;
+}
+
+#superCursor-outter {
+    --w: 3.5rem;
+    --h: 3.5rem;   
+    --hoverAltContent: 'Voir';
+
+    height: var(--h);
+    width: var(--w);
+    border: 1px solid white;
+    z-index: 999999;
+    // background: white;
+    // border-radius: 100%;
+
+}
+#superCursor-outter.alt {
+    --rotateZ:135deg;
+    // clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+#superCursor-outter.hide {
+    --h: 0rem;
+    --w: 0rem;
+    opacity: 0;
+}
+
+#superCursor-outter.hover {
+    // --h: 4rem;
+    // --w: 6rem;
+    --rotateZ:90deg;
+}
+#superCursor-outter.hover-alt {
+    --h: 8rem;
+    --w: 8rem;
+    border-radius: 0;
+    border: none;
+    // border-radius: 100%;
+}
+#superCursor-outter.hover-alt::after {
+    content: var(--hoverAltContent);
+    position: relative;
+    mix-blend-mode: difference;
+    margin: auto;
+    font-size: 3rem;
+    font-weight: bold;
+    display: block;
+}
+
+#superCursor-outter.active {
+    --w: 5rem;
+    --h: 5rem;  
+    border-radius: 100%;
+    // opacity: 0;
+}
+
+
+
+
+
+#superCursor-pointer {
+    --w: 1rem;
+    --h: 1rem;   
+
+    // border: 1px solid white;
+    background: white;
+    border-radius: 4rem;
+
+}
+#superCursor-pointer.hide {
+    --h: 0rem;
+    --w: 0rem;
+    opacity: 0;
+}
+
+#superCursor-pointer.hover {
+    --h: 4rem;
+    --w: 6rem;
+    border-radius: 0;
+}
+
+
+
+
+#superCursor-pointer.hover-alt {
+    --h: 8rem;
+    --w: 10rem;
+    border-radius: 0;
+    // background: none;
+}
+
+#superCursor-pointer.active {
+    --w: 4rem;
+    --h: 4rem;  
+    // border-radius: 0;
+    // --rotateZ: 45deg;
+}

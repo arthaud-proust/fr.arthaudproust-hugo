@@ -1,0 +1,7 @@
+<section class="swiper-slide" data-hash="galleries" aria-title="Galerie {{ .title }}">
+    <div class="noMixBlend overflow-visible">
+        {{ range .imgs }}
+            <img class="hidden-smd full d-none" id="sic-{{ . }}" src="{{ . }}">
+        {{ end }}
+    </div>  
+</section>

@@ -1,3 +1,13 @@
+@import 
+    "./animations.scss", 
+    "./juicy-effects.scss",
+    "./global.scss",
+    "./master.scss",
+    "./utils.scss",
+    "./super-cursor.scss",
+    "./logo.scss"
+;
+
 #gallery-images {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

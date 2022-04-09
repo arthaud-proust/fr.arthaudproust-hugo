@@ -1,13 +1,41 @@
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{ .Title }}</title>
-	
-	{{ $sass := resources.Get "sass/main.scss" }}
-	{{ $style := $sass | resources.ToCSS | resources.Fingerprint }}
-	<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ $t := mul 1000 (time "2016-05-28T10:30:00.00+10:00").Unix }}
+<!-- //921482 -->
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ partial "seo.html" . }}
 
-	<!-- netlify cms -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+
+    {{ $sass := resources.Get "sass/main.scss" }}
+	{{ $style := $sass | resources.ToCSS | resources.Fingerprint }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}?v={{ $t }}" integrity="{{ $style.Data.Integrity }}">
+
+
+    <!-- website carbon -->
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+
+    <!-- netlify cms -->
 	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <!-- swiper js -->
+    <script src="/js/swiper-bundle.min.js"></script>
+
+    <!-- app js -->
+    {{ $shims := dict "supercursor" "js/shims/supercursor.js" "utils" "js/shims/utils.js" }}
+    {{ $js := resources.Get "js/app.js" | js.Build (dict "shims" $shims) }}
+    <script src="{{ $js.Permalink }}?v={{ $t }}"></script>
+    
+
+    <!-- <script src="/js/utils.js?v={{ $t }}"></script> -->
+    <!-- <script src="/js/supercursor.js?v={{ $t }}"></script> -->
+    <!-- <script src="/js/app.js?v={{ $t }}"></script> -->
+    
+    
 </head>
