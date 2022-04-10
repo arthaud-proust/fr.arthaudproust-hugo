@@ -14,6 +14,7 @@ with open('./devicon.yml', mode="r", encoding="utf-8") as f:
         with open(technoPath, mode="w", encoding="utf-8") as nf:
             nf.writelines([
                 '---\n',
+                'visibleInCms: true\n',
                 'techno: '+techno+'\n',
                 'img: '+img+'\n'
                 '---\n'
