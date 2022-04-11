@@ -2,6 +2,8 @@ languageCode: 'fr'
 title: 'POC - netlify'
 theme: 'simple-onepage-and-gallery'
 
+removePathAccents: true
+
 params:
   email: "contact@arthaudproust.fr"
   seo:
