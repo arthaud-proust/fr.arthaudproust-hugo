@@ -43,7 +43,8 @@ collections:
           { label: Titre, name: title, required: false },
           { label: Date, name: date, required: false },
           { label: "Image", name: "image", required: false, widget: "image", allow_multiple: false, choose_url: false, media_folder: /static/media/projects, public_folder: /media/projects},
-          { label: Lignes, name: lines, required: false, widget: list, fields: [{ label: Ligne, name: title, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] }]}
+          { label: Paragraphe 1, name: paraph1, required: false, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] },
+          { label: Paragraphe 2, name: paraph2, required: false, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] }
         ]}
     
   - name: technos
