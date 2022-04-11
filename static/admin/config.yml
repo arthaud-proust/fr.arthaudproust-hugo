@@ -40,7 +40,7 @@ collections:
       - { label: Lien projet, name: project_url, required: false }
       - { label: Lien github, name: github_url, required: false }
       - { label: "Contenu", name: content, widget: list, fields: [
-          { label: Titre, name: title, required: false },
+          { label: Titre, name: title },
           { label: Date, name: date, required: false },
           { label: "Image", name: "image", required: false, widget: "image", allow_multiple: false, choose_url: false, media_folder: /static/media/projects, public_folder: /media/projects},
           { label: Paragraphe 1, name: paraph1, required: false, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] },

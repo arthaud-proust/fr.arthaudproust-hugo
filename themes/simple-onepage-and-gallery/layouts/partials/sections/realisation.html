@@ -9,7 +9,7 @@
     <div class="sub noMixBlend overflow-hidden">
         
         <a href="{{ .Permalink }}" class="img-wrapper" id="section-image-cover-container">
-            <img class="hidden-smd full hoverable-alt" id="sic-preview" src="{{ .Params.img }}">
+            <img class="hidden-smd full hoverable-alt" id="sic-preview" src="{{ .Params.image }}">
             <!-- <img class="hidden-smd full" id="section-image-cover" src="{{ .Params.img }}"> -->
             {{ range .Params.Content }}
                     <img class="hidden-smd full hoverable-alt d-none" id="sic-{{ urlize .title  }}" src="{{ .image }}">
@@ -48,11 +48,18 @@
                 {{ range .Params.Content }}
                     <li class="swiper-slide" data-cover="{{ urlize .title  }}">
                         <div class="intro-card">
-                            <span>{{ .date }}</span>
+                            {{ if isset . "date" }}
+                                <span>{{ .date }}</span>
+                            {{ end }}
                             <h2>{{ .title }}</h2>
-                            {{ range .lines }}
+                            {{ if isset . "paraph1" }}
+                                <p>
+                                    {{ .paraph1 }}
+                                </p>
+                            {{ end }}
+                            {{ if isset . "paraph2" }}
                                 <p class="pt">
-                                    {{ . }}
+                                    {{ .paraph2 }}
                                 </p>
                             {{ end }}
                         </div>
@@ -61,6 +68,7 @@
                 <li class="swiper-slide">
                     <ul class="card" style="padding: 0;">
                         <li><h2>Et ensuite?</h2></li>
+                        
                         {{ if isset .Params "project_url" }}
                         <li>{{ partial "components/link.html" (dict "href" .Params.project_url "content" "Voir en action") }}</li>
                         {{ end }}
@@ -68,6 +76,7 @@
                         {{ if isset .Params "github_url" }}
                         <li>{{ partial "components/link.html" (dict "href" .Params.github_url "content" "Voir sur github") }}</li>
                         {{ end }}
+
                         <li>{{ partial "components/link.html" (dict "href" "/#realisations" "content" "Retour aux réalisations") }}</li>
                     </ul>
                 </li>
