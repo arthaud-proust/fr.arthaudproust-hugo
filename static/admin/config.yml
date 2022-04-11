@@ -34,16 +34,16 @@ collections:
       - { label: "Visible", name: "visibleInCms", widget: hidden, default: true}
       - { label: Brouillon, name: draft, widget: "boolean", default: false}
       - { label: Titre, name: title }
-      - { label: "Image", name: "image", widget: "image", allow_multiple: false, choose_url: false, media_folder: /static/media/projects, public_folder: /media/projects}
-      - { label: Description, name: abstract, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] }
-      - { label: Technologies, name: technos, widget: relation, collection: technos, value_field: techno, search_fields: [techno], multiple: true}
-      - { label: Lien projet, name: project_url }
-      - { label: Lien github, name: github_url }
+      - { label: "Image", name: "image", required: false, widget: "image", allow_multiple: false, choose_url: false, media_folder: /static/media/projects, public_folder: /media/projects}
+      - { label: Description, name: abstract, required: false, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] }
+      - { label: Technologies, name: technos, required: false, widget: relation, collection: technos, value_field: techno, search_fields: [techno], multiple: true}
+      - { label: Lien projet, name: project_url, required: false }
+      - { label: Lien github, name: github_url, required: false }
       - { label: "Contenu", name: content, widget: list, fields: [
-          { label: Titre, name: title },
-          { label: Date, name: date },
-          { label: "Image", name: "image", widget: "image", allow_multiple: false, choose_url: false, media_folder: /static/media/projects, public_folder: /media/projects},
-          { label: Lignes, name: lines, widget: list, fields: [{ label: Ligne, name: title, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] }]}
+          { label: Titre, name: title, required: false },
+          { label: Date, name: date, required: false },
+          { label: "Image", name: "image", required: false, widget: "image", allow_multiple: false, choose_url: false, media_folder: /static/media/projects, public_folder: /media/projects},
+          { label: Lignes, name: lines, required: false, widget: list, fields: [{ label: Ligne, name: title, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] }]}
         ]}
     
   - name: technos
