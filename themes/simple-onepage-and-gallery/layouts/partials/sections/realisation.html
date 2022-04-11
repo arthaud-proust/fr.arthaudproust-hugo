@@ -11,8 +11,8 @@
         <a href="{{ .Permalink }}" class="img-wrapper" id="section-image-cover-container">
             <img class="hidden-smd full hoverable-alt" id="sic-preview" src="{{ .Params.img }}">
             <!-- <img class="hidden-smd full" id="section-image-cover" src="{{ .Params.img }}"> -->
-            {{ range .Params.imgs }}
-                <img class="hidden-smd full hoverable-alt d-none" id="sic-{{ . }}" src="{{ . }}">
+            {{ range .Params.Content }}
+                    <img class="hidden-smd full hoverable-alt d-none" id="sic-{{ urlize .title  }}" src="{{ .image }}">
             {{ end }}
         </a>
 
@@ -46,7 +46,7 @@
                     </div>
                 </li>
                 {{ range .Params.Content }}
-                    <li class="swiper-slide" data-cover="preview">
+                    <li class="swiper-slide" data-cover="{{ urlize .title  }}">
                         <div class="intro-card">
                             <span>{{ .date }}</span>
                             <h2>{{ .title }}</h2>

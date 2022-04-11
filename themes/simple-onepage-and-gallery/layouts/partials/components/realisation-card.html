@@ -7,5 +7,7 @@
     <meta itemprop="url" content="{{ .Permalink }}">
     <h2 itemprop="name">{{ .Title }}</h2>
     <p itemprop="about">{{ .Params.desc }}</p>
-    <img itemprop="thumbnailUrl" src="{{ .Params.img }}" alt="Image représentant {{ .Title }}"/>
+    {{ if isset .Params "image" }}
+        <img itemprop="thumbnailUrl" src="{{ .Params.image }}" alt="Image représentant {{ .Title }}"/>
+    {{ end }}
 </a>

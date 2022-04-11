@@ -15,7 +15,6 @@ abstract: "Des jeunes Bordelais et Bordelaises qui organisent des concours photo
 project_url: https://bordeaux-photo.fr
 github_url: https://github.com/arthaud-proust/fr.bordeaux-photo
 
-
 content:
     -   title: Aux origines
         date: Mars 2021
