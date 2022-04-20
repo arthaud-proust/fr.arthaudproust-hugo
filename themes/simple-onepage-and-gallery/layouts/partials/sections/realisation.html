@@ -9,10 +9,23 @@
     <div class="sub noMixBlend overflow-hidden">
         
         <a href="{{ .Permalink }}" class="img-wrapper" id="section-image-cover-container">
-            <img class="hidden-smd full hoverable-alt" id="sic-preview" src="{{ .Params.image }}">
-            <!-- <img class="hidden-smd full" id="section-image-cover" src="{{ .Params.img }}"> -->
+            {{ if .Params.image }}
+                {{ partial "components/image" (dict
+                    "img" .Params.image
+                    "opt" (dict
+                        "class" "hidden-smd full hoverable-alt"
+                        "id" "sic-preview"
+                    )
+                )}}
+            {{ end }}
             {{ range .Params.Content }}
-                    <img class="hidden-smd full hoverable-alt d-none" id="sic-{{ urlize .title  }}" src="{{ .image }}">
+                {{ partial "components/image" (dict
+                    "img" .image
+                    "opt" (dict
+                        "class" "hidden-smd full hoverable-alt d-none"
+                        "id" (printf "sic-%s" (urlize .title))
+                    )
+                )}}
             {{ end }}
         </a>
 

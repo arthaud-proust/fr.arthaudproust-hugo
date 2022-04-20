@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
-media_folder: 'static/media'
+media_folder: 'assets/media'
 public_folder: '/media'
 locale: fr
 slug:
@@ -21,7 +21,7 @@ collections:
       - { label: "Visible", name: "visibleInCms", widget: hidden, default: true}
       - { label: Titre, name: title }
       - { label: Description, name: description, widget: markdown, minimal: true, required: false, buttons: [bold, link], editor_components: [], modes: [rich_text] }
-      - {label: "Images", name: images, widget: list, fields: [{label: "Image", name: "image", widget: "image", media_folder: /static/media, public_folder: /media}]}
+      - {label: "Images", name: images, widget: list, fields: [{label: "Image", name: "image", widget: "image", media_folder: /assets/media, public_folder: /media}]}
     
   - name: projects
     label: Projects
@@ -34,7 +34,7 @@ collections:
       - { label: "Visible", name: "visibleInCms", widget: hidden, default: true}
       - { label: Brouillon, name: draft, widget: "boolean", default: false}
       - { label: Titre, name: title }
-      - { label: "Image", name: "image", required: false, widget: "image", allow_multiple: false, choose_url: false, media_folder: /static/media/projects, public_folder: /media/projects}
+      - { label: "Image", name: "image", required: false, widget: "image", allow_multiple: false, choose_url: false, media_folder: /assets/images/projects, public_folder: /images/projects}
       - { label: Description, name: abstract, required: false, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] }
       - { label: Technologies, name: technos, required: false, widget: relation, collection: technos, value_field: techno, search_fields: [techno], multiple: true}
       - { label: Lien projet, name: project_url, required: false }
@@ -42,7 +42,7 @@ collections:
       - { label: "Contenu", name: content, widget: list, fields: [
           { label: Titre, name: title },
           { label: Date, name: date, required: false },
-          { label: "Image", name: "image", required: false, widget: "image", allow_multiple: false, choose_url: false, media_folder: /static/media/projects, public_folder: /media/projects},
+          { label: "Image", name: "image", required: false, widget: "image", allow_multiple: false, choose_url: false, media_folder: /assets/images/projects, public_folder: /images/projects},
           { label: Paragraphe 1, name: paraph1, required: false, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] },
           { label: Paragraphe 2, name: paraph2, required: false, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] }
         ]}

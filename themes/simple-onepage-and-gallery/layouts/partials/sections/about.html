@@ -15,7 +15,14 @@
         <div class="section-swiper-1">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img itemprop="image" class="rounded xlarge" src="/img/me-2/me-x256.jpg" alt="Photo de arthaud de profil"/>
+                    {{ partial "components/image" (dict
+                        "img" "images/faces/me-2/me-x256.jpg"
+                        "opt" (dict
+                           "alt" "Photo de arthaud de profil"
+                            "class" "rounded xlarge"
+                            "itemprop" "image"
+                        )
+                    )}}
                     <!-- <h1 class="title" data-swiper-parallax-x="-400"><em class="toAnimate">Arthaud</em> Proust</h1> -->
                     <p data-swiper-parallax-x="-600" class="pt">
                         J'ai commencé à développer des sites à 14 ans, tout d'abord pour explorer le domaine du web, puis pour apporter des solutions à des problématiques précises ou pour <b>entreprendre des projets</b>. 

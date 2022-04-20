@@ -1,0 +1,10 @@
+{
+ "compilerOptions": {
+  "baseUrl": ".",
+  "paths": {
+   "*": [
+    "..\\themes\\simple-onepage-and-gallery\\assets\\*"
+   ]
+  }
+ }
+}

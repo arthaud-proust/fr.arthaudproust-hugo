@@ -9,7 +9,13 @@
     {{ if isset .Params "abstract" }}
         <p itemprop="about">{{ .Params.abstract }}</p>
     {{ end }}
-    {{ if isset .Params "image" }}
-        <img itemprop="thumbnailUrl" src="{{ .Params.image }}" alt="Image représentant {{ .Title }}"/>
+    {{ if .Params.image }}
+        {{ partial "components/image" (dict
+            "img" .Params.image
+            "opt" (dict
+                "itemprop" "thumbnailUrl"
+                "alt" .Title
+            )
+        )}}
     {{ end }}
 </a>

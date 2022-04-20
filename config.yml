@@ -5,19 +5,21 @@ theme: 'simple-onepage-and-gallery'
 removePathAccents: true
 
 params:
-  email: "contact@arthaudproust.fr"
+  email: contact@arthaudproust.fr
   seo:
-    author: "Arthaud"
-    desc: "Test"
+    author: Arthaud
+    title: Développeur web fullstack à Bordeaux
+    desc: "Passionné, curieux et créatif, je conçois des solutions digitales, maquette et développe des sites - Arthaud Proust"
+    url: 
     links:
-      github: "https://github.com/arthaud-proust"
-      linkedin: "https://www.linkedin.com/in/arthaud-proust/"
-      twitter: "https://twitter.com/arthaud_proust"
-      facebook: "https://www.facebook.com/arthaudproust.fr"
-      instagram: "https://www.instagram.com/arthaudproust/"
+      github: https://github.com/arthaud-proust
+      linkedin: https://www.linkedin.com/in/arthaud-proust/
+      twitter: https://twitter.com/arthaud_proust
+      facebook: https://www.facebook.com/arthaudproust.fr
+      instagram: https://www.instagram.com/arthaudproust/
 
 taxonomies:
-  techno: 'technos'
+  techno: technos
 
 related:
   includeNewer: true

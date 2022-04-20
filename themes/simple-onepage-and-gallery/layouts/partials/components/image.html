@@ -1,0 +1,36 @@
+{{ $img := .img }}
+{{ $opt := .opt }}
+{{ with resources.Get $img }}
+    {{ with .Err }}
+        {{ warnf "%s" . }}
+    {{ else }}
+        <img 
+            src="{{ .Permalink }}" 
+            width = "{{ .Width }}"
+            height = "{{ .Height }}"
+            loading="lazy"
+
+            {{ if $opt.alt }}
+                alt="{{ . }}"
+            {{ else }}
+                alt=" "
+            {{ end }}
+
+            {{ with $opt.id }}
+                id="{{ . }}"
+            {{ end }}
+
+            {{ with $opt.class }}
+                class="{{ . }}"
+            {{ end }}
+
+            {{ with $opt.itemprop }}
+                itemprop="{{ . }}"
+            {{ end }}
+
+            {{ with $opt.inlineCss }}
+                style="{{ . }}"
+            {{ end }}
+            />
+    {{ end }}
+{{ end }}
