@@ -44,6 +44,14 @@ class CursorEl {
 		return this;
 	}
 
+    setPositionFromMouse(mouse) {
+		this.position = {
+			x: mouse.x,
+			y: mouse.y
+		};
+		return this;
+	}
+
 	updateDisplacementFromMouse(mouse) {
 		let dist = this.getDistanceFromMouse(mouse);
 
@@ -113,6 +121,8 @@ class SuperCursor {
 		this.state="Disabled";
 
 		this.isAlt = false;
+
+        this.isMouseOutOfDocument = true;
 
 		this.stateOn = {
 			hover: [
@@ -202,14 +212,23 @@ class SuperCursor {
 		
 
 
-		document.addEventListener("mouseleave", ()=>this.setHidden(true));
-		document.addEventListener("mouseenter", ()=>this.setHidden(false));
+		document.addEventListener("mouseleave", ()=>this.isMouseOutOfDocument = true);
+		document.addEventListener("mouseenter", event=>{
+            this.updateMouseFromEvent(event)
+            this.outter.setPositionFromMouse(this.mouse);
+		    this.pointer.setPositionFromMouse(this.mouse);
+            this.isMouseOutOfDocument = false
+
+        });
+		// document.addEventListener("mouseenter", ()=>this.setHidden(false));
 	
-		document.addEventListener("mousemove", (event)=>this.updateMouseFromEvent(event));
+		document.addEventListener("mousemove", event=>{
+            this.updateMouseFromEvent(event)
+        });
 	}
 
 	updateMouseFromEvent(event) {
-		if(this.state=="Disabled") return;
+		// if(this.state=="Disabled") return;
 		this.mouse = {
 			x: event.pageX,
 			y: event.pageY
@@ -221,6 +240,9 @@ class SuperCursor {
 	}
 
 	enable() {
+        this.outter.setPositionFromMouse(this.mouse);
+        this.pointer.setPositionFromMouse(this.mouse);
+
 		this.el.classList.remove('hide');
 		this.setState("Normal");
 		document.body.classList.add('noCursor');
@@ -240,8 +262,9 @@ class SuperCursor {
 
 		let shouldHide = false;
 		for(let hideSelector of this.stateOn.hide) {
-			shouldHide = elHovered.matches(hideSelector) || elHovered.closest(hideSelector);
-			if(shouldHide!==false && shouldHide !==null) {
+			let _shouldHide = elHovered.matches(hideSelector) || elHovered.closest(hideSelector);
+			if(_shouldHide!==false && _shouldHide !==null) {
+                shouldHide = _shouldHide;
 				break;
 			}
 		}
@@ -310,8 +333,9 @@ class SuperCursor {
 	}
 
 	setHidden(isHidden) {
-		this.outter.setHidden(isHidden);
-		this.pointer.setHidden(isHidden);
+        console.log(this.isMouseOutOfDocument);
+		this.outter.setHidden(isHidden || this.isMouseOutOfDocument);
+		this.pointer.setHidden(isHidden || this.isMouseOutOfDocument);
 	}
 
 	setHover(isHover) {
