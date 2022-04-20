@@ -2,7 +2,7 @@
 visibleInCms: true
 draft: false
 title: Preview
-image: /images/projects/PSD-3@0,1x.jpg
+image: /images/projects/preview-preview.jpg
 abstract: Visualisez, comparez, organisez, partagez vos photos depuis n'importe
   quel appareil.
 technos:
