@@ -21,9 +21,6 @@
     <!-- website carbon -->
     <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
 
-    <!-- netlify cms -->
-	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
     <!-- swiper js -->
     <script src="/js/swiper-bundle.min.js"></script>
 
@@ -31,11 +28,5 @@
     {{ $shims := dict "supercursor" "js/shims/supercursor.js" "utils" "js/shims/utils.js" }}
     {{ $js := resources.Get "js/app.js" | js.Build (dict "shims" $shims) }}
     <script src="{{ $js.Permalink }}?v={{ $t }}"></script>
-    
-
-    <!-- <script src="/js/utils.js?v={{ $t }}"></script> -->
-    <!-- <script src="/js/supercursor.js?v={{ $t }}"></script> -->
-    <!-- <script src="/js/app.js?v={{ $t }}"></script> -->
-    
-    
+        
 </head>
