@@ -1,4 +1,5 @@
 ---
+draft: true
 layout: realisation
 title: Site du CAPC Bordeaux
 folder: capc/
