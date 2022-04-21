@@ -25,7 +25,7 @@
     <script src="/js/swiper-bundle.min.js"></script>
 
     <!-- app js -->
-    {{ $shims := dict "supercursor" "js/shims/supercursor.js" "utils" "js/shims/utils.js" }}
+    {{ $shims := dict "supercursor" "js/shims/supercursor-v2.js" "utils" "js/shims/utils.js" "enum" "js/shims/enum.js" }}
     {{ $js := resources.Get "js/app.js" | js.Build (dict "shims" $shims) }}
     <script src="{{ $js.Permalink }}?v={{ $t }}"></script>
         

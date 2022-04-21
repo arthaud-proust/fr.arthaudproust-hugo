@@ -1,32 +1,14 @@
-class CursorEl {
-	constructor({el, speed, coef=1, position}) {
+import {Enum} from 'enum';
 
+class CursorLayer {
+	constructor({parent, el, speed, coef=1, position}) {
 		this.el= el;
+        this.parent = parent;
 		this.speed= speed;
 		this.coef= coef;
 		this.position= position;
-		this.state="Normal";
 	}
-
-	updateElNormal() {
-		this.setHover(false);
-
-		this.el.style.removeProperty("--w");
-		this.el.style.removeProperty("--h");
-		this.el.style.left = this.position.x + "px";
-		this.el.style.top = this.position.y + "px";
-	}
-
-	updateElHover() {
-		this.el.style.left = this.position.x + "px";
-		this.el.style.top = this.position.y + "px";
-	}
-
-	updateElHidden() {
-		this.el.style.left = this.position.x + "px";
-		this.el.style.top = this.position.y + "px";
-	}
-
+	
 	getDistanceFromMouse(mouse) {
 		return {
 			x: mouse.x - this.position.x,
@@ -44,14 +26,6 @@ class CursorEl {
 		return this;
 	}
 
-    setPositionFromMouse(mouse) {
-		this.position = {
-			x: mouse.x,
-			y: mouse.y
-		};
-		return this;
-	}
-
 	updateDisplacementFromMouse(mouse) {
 		let dist = this.getDistanceFromMouse(mouse);
 
@@ -62,39 +36,43 @@ class CursorEl {
 		return this;
 	}
 
+    setPositionFromMouse(mouse) {
+		this.position = {
+			x: mouse.x,
+			y: mouse.y
+		};
+		return this;
+	}
+
 	updateEl() {
-		this.setHover(this.state == "Hover");	
-		this["updateEl"+this.state]();
+		this.setHover(this.parent.state == this.parent.states.hover);	
+		
+        if(this.parent.state == this.parent.states.normal) {
+            this.setHover(false);
+            this.el.style.removeProperty("--w");
+            this.el.style.removeProperty("--h"); 
+        }
+        this.el.style.left = this.position.x + "px";
+		this.el.style.top = this.position.y + "px";
 	}
 
 
 
 	// setters 	
-	setState(state) {
-		this.state = state;
-	}
+	updateClasses() {
+        // if(! state in this.states._getMembers()) return;
 
-	setHidden(isHidden) {
-		this.el.classList.toggle('hide', isHidden);
-	}
+		// this.state = this.states[state];
+        for(let possibleState of this.parent.states._getMembers()) {
+            this.el.classList.remove(possibleState);
+        }
 
-	setHover(isHover) {
-		this.el.classList.toggle('hover', isHover);
-	}
+        this.classList.add(this.parent.state);
 
-	setHoverAlt(isHover, realElHovered=false) {
-		if(realElHovered && realElHovered.dataset.hoverAltContent) {
-			this.el.style.setProperty('--hoverAltContent', `"${realElHovered.dataset.hoverAltContent}"`);
+
+        if(this.parent.realElHovered && this.parent.realElHovered.dataset.hoverAltContent) {
+			this.el.style.setProperty('--hoverAltContent', `"${this.parent.realElHovered.dataset.hoverAltContent}"`);
 		}
-		this.el.classList.toggle('hoverAlt', isHover);
-	}
-
-	setAlt(isAlt) {
-		this.el.classList.toggle('alt', isAlt);
-	}
-
-	setActive(isActive) {
-		this.el.classList.toggle('active', isActive);
 	}
 
 	setHoveringElement(element) {
@@ -108,21 +86,29 @@ class CursorEl {
 
 class SuperCursor {
 	constructor() {
-		this.props = {
-			normal: {
-				h: '3rem',
-				w: '3rem'
-			},
+		
 
-		}
+        this.states = Enum(
+            'normal',
+            'hover',
+            'hoverAlt',
+            'active',
+            'alt',
+            'hidden',
+            'disabled'
+        )
+		this.state=this.states.normal;
 
 		this.el = document.getElementById('superCursor');
 
-		this.state="Disabled";
-
-		this.isAlt = false;
-
         this.isMouseOutOfDocument = true;
+
+        this.props = {
+			normal: {
+				h: '3rem',
+				w: '3rem'
+			}
+		}
 
 		this.stateOn = {
 			hover: [
@@ -146,7 +132,8 @@ class SuperCursor {
 		};
 
 
-		this.pointer = new CursorEl({
+		this.pointer = new CursorLayer({
+            parent: this,
 			el: document.getElementById("superCursor-pointer"),
 			speed: 0.9,
 			coef: 0.8,
@@ -178,7 +165,8 @@ class SuperCursor {
 			this.el.style.top = this.position.y + "px";
 		}
 
-		this.outter = new CursorEl({
+		this.outter = new CursorLayer({
+            parent: this,
 			el: document.getElementById("superCursor-outter"),
 			speed: 0.15,
 			position: {...this.mouse},

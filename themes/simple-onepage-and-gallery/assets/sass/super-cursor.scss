@@ -72,14 +72,14 @@
     // --w: 6rem;
     --rotateZ:90deg;
 }
-#superCursor-outter.hover-alt {
+#superCursor-outter.hoverAlt {
     --h: 8rem;
     --w: 8rem;
     border-radius: 0;
     border: none;
     // border-radius: 100%;
 }
-#superCursor-outter.hover-alt::after {
+#superCursor-outter.hoverAlt::after {
     content: var(--hoverAltContent);
     position: relative;
     mix-blend-mode: difference;
@@ -124,7 +124,7 @@
 
 
 
-#superCursor-pointer.hover-alt {
+#superCursor-pointer.hoverAlt {
     --h: 8rem;
     --w: 10rem;
     border-radius: 0;
