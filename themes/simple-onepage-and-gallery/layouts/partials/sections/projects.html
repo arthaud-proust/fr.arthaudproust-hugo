@@ -1,0 +1,23 @@
+</main>
+<hr>
+<main class="overflow-hidden">
+    <div class="container">
+
+        <section id="projects" class="py-6">
+            <h2 class="display-4 mb-4">Réalisations</h2>
+            <div id="projects-group">
+                <ul class="swiper-wrapper list-unstyled">
+                    {{ range (where .Site.Pages "Section" "projects") }}
+                    {{ range .Pages }}
+                    <li class="h-100 d-flex swiper-slide">
+                        {{ .Render "card"}}
+                    </li>
+                    {{ end}}
+                    {{ end }}
+                </ul>
+            </div>
+        </section>
+    </div>
+</main> 
+<hr>
+<main class="container">

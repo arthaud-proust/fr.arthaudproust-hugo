@@ -1,0 +1,229 @@
+#logo 
+    transition: .25s
+    user-select: none
+    cursor: pointer
+
+    &:hover 
+        transform: scale(1.05)
+    
+
+    &:active 
+        transform: scale(0.80) rotate(-4deg)
+    
+
+
+
+
+.swipe-indication 
+    margin-top: 1rem
+    margin-bottom: 3rem
+    padding: 1rem 0 3rem 0
+
+    p 
+        font-size: 1.2rem
+    
+
+.swipe-indication-vertical 
+    width: 100%
+    display: flex
+    gap: 10px
+    flex-direction: row 
+    align-items: center
+
+.swipe-animation 
+    padding: 1rem 0
+    box-sizing: content-box
+    position: relative
+    --h: 15px
+    --w: 200px
+    width: var(--w)
+    height: var(--h)
+
+
+    &::after 
+        display: block
+        content: " "
+        top: 1rem
+        left: 100%
+        position: absolute
+        width: var(--h)
+        height: var(--h)
+        border-radius: var(--h)
+        border: 1px solid white
+        animation: swipeAnim 2s infinite
+    
+
+
+.swipe-animation-vertical 
+    margin-top: 2rem
+    padding: 0
+    --w:50px
+    transform: rotate(90deg) translateY(-15px)
+
+
+
+section 
+    transition: transform 0.2s
+
+@media screen and (min-width:576px )
+    .grabbing section 
+        transform: scale(0.9) !important
+    
+
+
+
+
+@media screen and (max-width:576px )
+    em::after 
+        left: -0.7rem
+        height: 40%
+    
+
+
+
+.wavy 
+    position: relative
+    padding: 1rem 0
+    text-decoration: underline
+    text-decoration-color: #d8ad7d9d !important
+    text-decoration-style: wavy
+    transition: .3s
+    transform-origin: left
+    transition-timing-function: cubic-bezier(.62,.04,.08,2.65)
+
+    &:hover 
+        text-decoration-style: dashed
+        text-decoration-color: salmon !important
+    
+
+
+
+.fall 
+    display: inline-block
+    transition: .3s
+    transform-origin: left
+    transition-timing-function: cubic-bezier(.62,.04,.08,2.65)
+
+    &:hover 
+        transform: rotate(4deg)
+    
+
+
+
+@media screen and (max-width:576px )
+    .hidden 
+        display: none !important
+    
+
+.hidden 
+    opacity: 0
+    transition: .3s
+
+.hoverShowHidden:hover .hidden 
+    opacity: 1
+ 
+
+@media screen and (max-width:576px )
+    #info-swipe 
+        display: none
+    
+    #info-swipe-bottom 
+        justify-self: flex-end
+        display: initial !important
+        --height: 14rem    
+        margin: 1rem 0 3rem 0
+    
+
+@media screen and (max-width:576px )
+    #info-swipe-bottom 
+        display: none
+    
+
+
+
+
+img 
+    --height: 2rem
+    height: var(--height)
+    width: var(--height)
+    margin-right: calc( var(--height) / 6)
+    transition: .3s
+
+    &:not(.noTurn):hover 
+        animation: spin 2s
+        animation-timing-function: cubic-bezier(.3,.22,.32,1.02)
+    
+
+    &.turnVertical:hover 
+        animation: spinVertical 2s
+        animation-timing-function: cubic-bezier(.3,.22,.32,1.02)
+    
+
+    &:not(.noActive):active 
+        transform: scale(0.85) rotate(4deg)
+    
+
+    &.rounded 
+        border-radius: var(--height)  
+    
+
+    &.medium 
+        --height: 4rem
+        // margin-bottom: 3rem
+    
+
+    &.large 
+        --height: 8rem
+        margin-bottom: 3rem
+    
+
+    &.xlarge 
+        --height: 11rem
+        margin-bottom: 6rem
+    
+
+    &.wide 
+        --height: 14rem
+        margin-top: 30vh
+    
+
+    &.full 
+        max-width: 100%
+        max-height: 100%
+        width: auto
+        height: 100%
+        padding: 0
+        margin: 0
+
+        &:hover 
+            animation: none
+        
+    
+
+
+.img-wrapper 
+    z-index: 100
+    height: 100%
+    padding: 0 !important
+    position: relative
+
+    @media screen and (max-width:576px )
+        &::after 
+            position: absolute
+            bottom: 0
+            left: -50%
+            width: 200%
+            height: 200%
+            background: black
+            content: ' '
+            z-index: -1
+        
+    
+
+
+.spin 
+    animation: 10s rotate infinite linear
+
+
+.nod 
+    animation: 2s nod infinite

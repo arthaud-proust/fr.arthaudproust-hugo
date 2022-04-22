@@ -10,7 +10,7 @@
         <p itemprop="about">{{ .Params.abstract }}</p>
     {{ end }}
     {{ if .Params.image }}
-        {{ partial "components/image" (dict
+        {{ partial "image/normal" (dict
             "img" .Params.image
             "opt" (dict
                 "itemprop" "thumbnailUrl"

@@ -1,16 +1,10 @@
 {{ define "main" }}
+    {{ partial "sections/presentation" . }}
+    {{ partial "sections/about" . }}
+    {{ partial "sections/projects" . }}
 
-    <main id="main" class="main-swiper grabbable grabX">
-        <div class="swiper-wrapper">
-
-            {{ partial "sections/realisations.html" . }}
-            {{ partial "sections/about.html" . }}
-
-            {{ partial "sections/skills.html" . }}
-            {{ partial "sections/informatic-skills.html" . }}
-            {{ partial "sections/meet-us.html" . }}
-            
-        </div>
-    </main>
-
+    {{ partial "sections/skills" . }}
+    {{ partial "sections/informatic-skills" . }}
+    {{ partial "sections/we-work-together" . }}
+    {{ partial "sections/meet-us" . }}
 {{ end }}

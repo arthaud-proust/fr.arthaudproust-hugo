@@ -1,0 +1,30 @@
+<div 
+    itemscope itemtype="https://www.schema.org/CreativeWork"
+    class="pe-4 hoverable" 
+>
+    <meta itemprop="url" content="{{ .Permalink }}">
+
+
+    {{ if .Params.image }}
+        {{ partial "image/resize" (dict
+            "img" .Params.image
+            "opt" (dict
+                "size" "500x webp"
+                "itemprop" "thumbnailUrl"
+                "alt" .Title
+                "class" "transition-2 effect-hover hover-rotate-n5 hover-scale-9 w-50 h-auto"
+            )
+        )}}
+    {{ end }}           
+
+    <div>
+        <h4 class="display-6 mt-3" itemprop="name"><a class="text-black text-decoration-none stretched-link" href="{{ .Permalink }}">{{ .Title }}</a></h4>
+        {{ if .Description }}
+        <p class="" itemprop="about">{{ .Description }}</p>
+        {{ end }}
+    </div>
+
+    
+   
+    
+</div>

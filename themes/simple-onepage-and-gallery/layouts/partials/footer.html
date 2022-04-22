@@ -1,13 +1,10 @@
-<footer id="bottom-text" class="decoration-line horizontal">
-    <span class="hoverShowHidden">
-        &copy; 2020-{{ now.Year }} Tous droits réservés
-        - <a  class="underline" href="/more/">Légal & plus</a>
-    </span>
-    <div>
-        <a class="underline" href="{{ .Site.Params.seo.links.github }}">
-            Github
-        </a>
-        -
-        {{ .Site.Params.email }}
-    </div>
-</footer>
+<hr>
+<div class="container pt-5">
+    <footer class="py-3 py-4">
+        <ul class="nav justify-content-center pb-3 mb-3">
+            <li class="nav-item"><a href="/more" class="px-2">Légal & plus</a></li>
+            <li class="nav-item"><a href="{{ .Site.Params.seo.links.github }}" class="px-2">Github</a></li>
+        </ul>
+        <p class="text-center text-muted"><small>&copy; 2020-{{ now.Year }} Arthaud Proust Tous droits réservés</small></p>
+    </footer>
+</div>

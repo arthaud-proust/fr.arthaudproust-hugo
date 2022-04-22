@@ -1,0 +1,40 @@
+{{ $img := .img }}
+{{ $opt := .opt }}
+{{ with resources.Get $img }}
+    {{ with .Err }}
+        {{ warnf "%s" . }}
+    {{ else }}
+        {{ if $opt.size }}
+            {{ $resized := .Resize $opt.size }}
+
+            <img 
+                src="{{ $resized.Permalink }}"
+                height="{{ $resized.Height }}"
+                width="{{ $resized.Width }}"
+                loading="lazy"
+
+                {{ if $opt.alt }}
+                    alt="{{ . }}"
+                {{ else }}
+                    alt=" "
+                {{ end }}
+
+                {{ with $opt.id }}
+                    id="{{ . }}"
+                {{ end }}
+
+                {{ with $opt.class }}
+                    class="{{ . }}"
+                {{ end }}
+
+                {{ with $opt.itemprop }}
+                    itemprop="{{ . }}"
+                {{ end }}
+
+                {{ with $opt.inlineCss }}
+                    style="{{ . }}"
+                {{ end }}
+                />
+            {{ end }}
+    {{ end }}
+{{ end }}

@@ -3,7 +3,7 @@ visibleInCms: true
 draft: false
 title: Porte-téléphone en bois
 image: /images/projects/porte-telephone-preview.jpg
-abstract: Découpe dans un bloc de hêtre
+description: Découpe dans un bloc de hêtre
 content:
   - title: Découpe dans la buche
     date: Avril 2021

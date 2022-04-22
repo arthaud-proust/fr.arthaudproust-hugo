@@ -3,22 +3,22 @@ import {SuperCursor} from 'supercursor';
 
 window.addEventListener('DOMContentLoaded', function() {
     const SESSION_KEY_ANIM = 'arthaudproust-animation';
-    window.superCursor = new SuperCursor();
-	if(!utils.mobileAndTabletCheck()) {
-		superCursor.prepare();
+    // window.superCursor = new SuperCursor();
+	// if(!utils.mobileAndTabletCheck()) {
+	// 	superCursor.prepare();
 
-        if(!utils.botCheck() && !sessionStorage.getItem(SESSION_KEY_ANIM)) {
-            sessionStorage.setItem(SESSION_KEY_ANIM, true);
-            document.body.classList.add('contentHidden');
-            setTimeout(function(){
-                superCursor.enable();
-            }, 3500);
-        } else {
-            superCursor.enable();
-        }
-    }
+    //     if(!utils.botCheck() && !sessionStorage.getItem(SESSION_KEY_ANIM)) {
+    //         sessionStorage.setItem(SESSION_KEY_ANIM, true);
+    //         document.body.classList.add('contentHidden');
+    //         setTimeout(function(){
+    //             superCursor.enable();
+    //         }, 3500);
+    //     } else {
+    //         superCursor.enable();
+    //     }
+    // }
 
-
+    /*
     const MAIN_SPEED = 1500;
     const MAIN_LINK_SPEED = 800;
     const SECTION_SPEED = 1000;
@@ -264,6 +264,7 @@ window.addEventListener('DOMContentLoaded', function() {
         slideToHash(link.dataset.to, false)
         sectionSwiper.slideTo(0);
     }));
+    */
 
 
     document.body.addEventListener('contextmenu', function(e) {

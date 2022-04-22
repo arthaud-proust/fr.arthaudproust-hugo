@@ -1,0 +1,46 @@
+<div class="px-md-5 pt-4 pt-md-0 pb-5">
+    <div class="row mb-3">
+        {{ if .Params.img }}
+            <div class="col-3">
+                {{ partial "image/resize" (dict
+                    "img" .Params.img
+                    "opt" (dict
+                        "size" "380x webp"
+                        "alt" "Photo de arthaud de profil"
+                        "class" "h-auto img-fluid rounded-3"
+                        "itemprop" "image"
+                    )
+                )}}
+            </div>
+        {{ end }}
+
+        
+        <div class="col-9 my-auto">
+            <h4 class="mt-0">{{ .Title }}</h4>
+            {{ if .Params.subtitle }}
+                <p class="m-0">{{ .Params.subtitle }}</p>
+            {{ end }}
+            {{ if .Params.site }}
+                <a href="{{ .Params.site }}">Voir le site</a>
+            {{ end }}
+        </div>
+    </div>
+    {{ if .Params.content }}
+        <p class="m-0">
+            {{ .Params.content }}
+        </p>
+        {{ if .Params.more }}
+            <div class="testimonyCollapsible collapse" id="collapseTestimony-{{ .Title | urlize }}">
+                <p class="my-2">{{ .Params.more }}</p>
+            </div>
+            <button class="testimonyCollapser btn btn-text p-0 text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTestimony-{{ .Title | urlize }}" aria-expanded="false" aria-controls="collapseExample">
+                Lire plus
+            </button>
+                
+        {{ end }}
+        
+
+
+    
+    {{ end }}
+</div>

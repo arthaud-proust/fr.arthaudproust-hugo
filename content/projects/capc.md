@@ -3,11 +3,10 @@ draft: true
 layout: realisation
 title: Site du CAPC Bordeaux
 folder: capc/
-desc: "Projet BUT MMI Bordeaux: refonte ergonomique et graphique d'un site."
+description: "Projet BUT MMI Bordeaux: refonte ergonomique et graphique d'un site."
 img: preview
 link: https://capc.netlify.app
 github: https://github.com/studio-beauvoir/jekyll-capc
-published: false
 sitemap: 
     priority: 0.5
     changefreq: weekly

@@ -3,7 +3,7 @@ visibleInCms: true
 draft: false
 title: Preview
 image: /images/projects/preview-preview.jpg
-abstract: Visualisez, comparez, organisez, partagez vos photos depuis n'importe
+description: Visualisez, comparez, organisez, partagez vos photos depuis n'importe
   quel appareil.
 technos:
   - nodejs

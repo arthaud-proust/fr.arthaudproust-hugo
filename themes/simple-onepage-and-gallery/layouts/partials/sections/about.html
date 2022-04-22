@@ -1,46 +1,17 @@
 <section 
-    class="swiper-slide" 
-    id="intro" 
-    data-hash="a-propos" 
-    aria-title="À propos" 
+    id="about"
+    class="py-6 row"
     itemscope itemtype="https://schema.org/Person"
 >
-    <div class="sub">
-        <div>
-            <h1 class="title" data-swiper-parallax-x="-400"><em class="toAnimate">À propos</em></h1>
-            <!-- <h2>À propos</h2> -->
-            <!-- <span class="italic">Qui suis-je?</span> -->
-        </div>
-        
-        <div class="section-swiper-1">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    {{ partial "components/image" (dict
-                        "img" "images/faces/me-2/me-x256.jpg"
-                        "opt" (dict
-                           "alt" "Photo de arthaud de profil"
-                            "class" "rounded xlarge"
-                            "itemprop" "image"
-                        )
-                    )}}
-                    <!-- <h1 class="title" data-swiper-parallax-x="-400"><em class="toAnimate">Arthaud</em> Proust</h1> -->
-                    <p data-swiper-parallax-x="-600" class="pt">
-                        J'ai commencé à développer des sites à 14 ans, tout d'abord pour explorer le domaine du web, puis pour apporter des solutions à des problématiques précises ou pour <b>entreprendre des projets</b>. 
-                    </p>   
-                    <p data-swiper-parallax-x="-450"  class="pt">
-                        Aujourd'hui je suis <b itemprop="jobTitle">développeur freelance</b> depuis septembre 2021, à coté de mes études au <b>MMI Bordeaux</b>. 
-                        <!-- Ouvert aux commandes, je propose <a class="underline" href="#">différents services</a>  -->
-                    </p>
-                    <p data-swiper-parallax-x="-250"  class="pt">
-                        Je vise une alternance pour mes deuxième et troisième années de BUT, puis à rejoindre une école comme 42, ou l'ENSC.
-                    </p>    
-                </div>
-            </div>
-        </div>
-
-        <!-- <div class="swipe-indication hidden">
-            <p>Cliquer et glisser pour naviguer</p>
-            <div class="swipe-animation"></div>
-        </div> -->
+    <h2 class="display-4 col-md-6 offset-md-6">À propos</h2>
+    
+    
+    <div class="col-md-6 offset-md-6 mt-3">
+        <p>
+            J'ai commencé à développer des sites à 14 ans, tout d'abord pour explorer le domaine du web, puis pour apporter des solutions à des problématiques précises ou pour <b>entreprendre des projets</b>. 
+        </p>   
+        <p>
+            Je vise une alternance pour mes deuxième et troisième années de BUT, puis à rejoindre une école comme 42, ou l'ENSC.
+        </p>    
     </div>
 </section>

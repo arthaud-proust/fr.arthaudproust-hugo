@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
     {{- partial "head.html" . -}}
-    <body data-menu-open="false" class="">
-        {{ partial "components/superCursor.html" }}
+    <body>
+        {{ partial "components/superCursor" . }}
 
-        <div class="corner" id="corner-a"></div>
+        <!-- <div class="corner" id="corner-a"></div>
         <div class="corner" id="corner-b"></div>
         <div class="corner" id="corner-c"></div>
-        <div class="corner" id="corner-d"></div>
+        <div class="corner" id="corner-d"></div> -->
  
-        {{- partial "header.html" . -}}
-        <div id="left-text" class="decoration-line vertical">
-            {{- partial "components/pageArrow.html" (dict "dir" "left") -}}
-        </div>
-        <div id="right-text" class="decoration-line vertical">
-            {{- partial "components/pageArrow.html" (dict "dir" "right") -}}
-        </div>
+        {{- partial "header" . -}}
 
-        {{- block "main" . }}{{- end }}
+        <main class="container">
+            {{- block "main" . }}{{- end }}
+        </main>
 
-        {{- partial "footer.html" . -}}
-        {{- partial "components/pageTransition.html" . -}}
+        {{- partial "footer" . -}}
+
+        {{- partial "modals" . -}}
+        {{- partial "components/pageTransition" . -}}
     </body>
 </html>

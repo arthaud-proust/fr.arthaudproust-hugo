@@ -1,18 +1,18 @@
-<header id="top-text" class="decoration-line horizontal">
-    <div id="logo">
-        <h3>
-            <!-- <span id="mainSlideStepper"></span> -->
-            <!-- <span id="mainSlideName"></span> -->
-            <a href="/" class="hoverable">Arthaud Proust</a>
-        </h3>
-    </div>
-    <img id="menu-toggle" src="/svg/menu.svg" alt="menu">
-    <nav id="links">
-        <ul>
-            <li><a data-to="realisations" href="/#realisations">Réalisations</a></li>
-            <li><a data-to="a-propos" href="/#a-propos">À propos</a></li>
-            <li><a data-to="competences" href="/#competences">Compétences</a></li>
-            <li><a data-to="contact" href="/#contact">Me contacter</a></li>
-        </ul>
-    </nav>
+<header class="sticky-top">
+    <div class="container">
+        <div class="row py-2">
+            <nav class="navbar">
+                <h6 class="m-0">
+                    <a class="navbar-brand" href="/">
+                        Arthaud Proust
+                    </a>
+                </h6>
+                <button class="navbar-toggler p-0 m-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Ouvrir le menu">
+                    Menu
+                </button>
+            </nav>
+        </div>
+    </div>  
+
+    {{ partial "menu.html" .}}
 </header>

@@ -1,0 +1,22 @@
+<nav  class="offcanvas offcanvas-end"
+    tabindex="-1"
+    id="offcanvasMenu"
+    aria-labelledby="offcanvasMenuLabel">
+
+    <div class="offcanvas-header px-5 pb-0">
+        <button class="btn btn-text px-3" type="button" data-bs-dismiss="offcanvas" aria-label="Fermer">
+            Fermer
+        </button>
+    </div>
+    <div class="offcanvas-body pt-0">
+        <div class="my-4">
+            {{ with .Site.Menus.main }}
+            <ul class="list-unstyled px-5">
+                {{ range .ByWeight  }}
+                    <li><h2><a href="{{ .URL | relURL }}">{{ .Name }}</a></h2></li>
+                {{ end }}
+            </ul>
+            {{ end }}
+        </div>
+    </div>
+</nav>

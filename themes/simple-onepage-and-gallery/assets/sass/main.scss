@@ -1,19 +1,17 @@
 @import 
-    "./animations.scss", 
-    "./juicy-effects.scss",
-    "./global.scss",
-    "./master.scss",
-    "./utils.scss",
-    "./super-cursor.scss",
-    "./logo.scss"
+    "variables",
+    "utils",
+
+    "animations", 
+    "juicy-effects",
+    "global",
+    "master",
+    
+    "components/logo",
+    "components/super-cursor",
+    "components/links",
+    "components/typo"
 ;
 
-#gallery-images {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-    grid-auto-rows: auto;
-    img {
-        width: 100%
-    }
-}
+
+    

@@ -1,16 +1,17 @@
-<section class="swiper-slide" data-hash="on-travaille-ensemble" aria-title="Partenaires">
-    <div class="sub">
-        <div>
-            <h2 class="title">Nous travaillons <em class="toAnimate">ensemble</em></h2>
-        </div>
-        <div class="section-swiper">
-            <ul class="swiper-wrapper">
-                {{ range .Site.Pages.Testimonies }}
+<section id="we-work-together" class=" py-6 row">
+    <h2 class="display-4 col-md-6">Nous travaillons ensemble</h2>
+    <div id="testimonies-group" class="position-relative overflow-hidden col-md-6">
+        <ul class="pt-md-3 swiper-wrapper list-unstyled">
+            {{ range (where .Site.Pages "Section" "testimonies") }}
+                {{ range .Pages.ByWeight }}
                     <li class="swiper-slide">
-                        {{ partial "components/testimony.html" . }}
+                        {{ .Render "card" }}
                     </li>
                 {{ end }}
-            </ul>
-        </div>  
+            {{ end }}
+        </ul>
+        <div class="swiper-pagination"></div>
     </div>
+
+    
 </section>

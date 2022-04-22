@@ -6,6 +6,7 @@ removePathAccents: true
 
 params:
   email: contact@arthaudproust.fr
+  phone: "07 83 39 28 88"
   seo:
     author: Arthaud
     title: Développeur web fullstack à Bordeaux
@@ -17,6 +18,30 @@ params:
       twitter: https://twitter.com/arthaud_proust
       facebook: https://www.facebook.com/arthaudproust.fr
       instagram: https://www.instagram.com/arthaudproust/
+
+menu:
+  main:
+    - name: À propos
+      pre: about
+      url: "#about"
+      weight: 1
+     
+    - name: Compétences
+      pre: skills
+      url: "#skills"
+      weight: 2
+    - name: Réalisations
+      pre: realisations
+      url: "#realisations"
+      weight: 3
+    - name: Me contacter
+      pre: meet-us
+      url: "#meet-us"
+      weight: 4
+    
+    
+    
+    
 
 taxonomies:
   techno: technos

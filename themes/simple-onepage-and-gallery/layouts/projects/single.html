@@ -1,7 +1,96 @@
 {{ define "main" }}
-    <main id="main" class="">
-        <div class="swiper-wrapper">
-            {{ partial "sections/realisation.html" . }}
-        </div>  
-    </main>
+<section 
+    itemscope itemtype="https://www.schema.org/CreativeWork"
+    class="row position-relative"
+>
+    <meta itemprop="url" content="{{ .Permalink }}">   
+    
+
+    <div class="col-5 mt-5">
+        <div class="position-sticky top-6" id="">
+            {{ if .Params.image }}
+                {{ partial "image/normal" (dict
+                    "img" .Params.image
+                    "opt" (dict
+                        "class" "project-image img-fluid h-auto"
+                        "id" "sic-preview"
+                    )
+                )}}
+            {{ end }}
+            {{ range .Params.Content }}
+                {{ partial "image/normal" (dict
+                    "img" .image
+                    "opt" (dict
+                        "class" "project-image img-fluid h-auto d-none"
+                        "id" (printf "sic-%s" (urlize .title))
+                    )
+                )}}
+            {{ end }}
+        </div>
+    </div>
+    
+    <div class="col-7 mt-5" id="project-sections-root">
+        <div class="mb-6">
+            <h1 class="display-2">{{ .Title }}</h1>
+            {{ if .Params.subtitle }}
+                <h3>{{ .Params.subtitle }}</h3>
+            {{ end }}
+
+            {{ if .Description }}
+                <p itemprop="about">{{ .Description }}</p>
+            {{ end }}
+        </div>
+
+        {{ if isset .Params "technos" }}
+            <div class="mb-6">
+                <h5>Réalisé avec</h5>
+                <p>
+                    {{ $relatedTechnos := site.RegularPages.RelatedTo ( keyVals "techno" .Params.technos)}}
+                    {{ range $relatedTechnos }}
+                        <img class="img-icon" src="{{ .Params.img }}" alt="techno">
+                    {{ end }}
+                </p>
+            </div>
+        {{ end }}
+
+
+
+
+        {{ range .Params.Content }}
+            <div class="project-section mb-7" data-image="{{ (printf "sic-%s" (urlize .title)) }}">
+                {{ if isset . "date" }}
+                    <span>{{ .date }}</span>
+                {{ end }}
+                <h2><strong>{{ .title }}</strong></h2>
+                {{ if isset . "paraph1" }}
+                    <p>
+                        {{ .paraph1 }}
+                    </p>
+                {{ end }}
+                {{ if isset . "paraph2" }}
+                    <p class="pt">
+                        {{ .paraph2 }}
+                    </p>
+                {{ end }}
+            </div>
+        {{ end }}
+
+
+        <div class="mb-7">
+            <h2><strong>Et ensuite?</strong></h2>
+            <ul class="list-unstyled">
+                
+                {{ if .Params.project_url }}
+                    <li>{{ partial "components/link.html" (dict "href" .Params.project_url "content" "Voir en action") }}</li>
+                {{ end }}
+                
+                {{ if .Params.github_url }}
+                    <li>{{ partial "components/link.html" (dict "href" .Params.github_url "content" "Voir sur github") }}</li>
+                {{ end }}
+                
+                <li>{{ partial "components/link.html" (dict "href" "/#realisations" "content" "Retour aux réalisations") }}</li>
+            </ul>
+        </div>
+    </div>  
+</section>
 {{ end }}

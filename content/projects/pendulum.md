@@ -3,11 +3,10 @@ draft: true
 layout: realisation
 title: Simulation de pendule
 folder: pendulum/
-desc: Adaptation du calcul sur une animation modulable.
+description: Adaptation du calcul sur une animation modulable.
 img: pendulum
 link: https://bordeaux-photo.fr
 github: https://github.com/arthaud-proust/dev.arthaud.pendulum
-published: false
 sitemap: 
     priority: 0.5
     changefreq: weekly

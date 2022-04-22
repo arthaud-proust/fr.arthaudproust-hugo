@@ -333,7 +333,6 @@ class SuperCursor {
 	}
 
 	setHidden(isHidden) {
-        console.log(this.isMouseOutOfDocument);
 		this.outter.setHidden(isHidden || this.isMouseOutOfDocument);
 		this.pointer.setHidden(isHidden || this.isMouseOutOfDocument);
 	}

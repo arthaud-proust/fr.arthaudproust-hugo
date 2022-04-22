@@ -3,7 +3,7 @@ visibleInCms: true
 draft: false
 title: Bordeaux Photo
 image: images/projects/bordeaux-photo-preview.jpg
-abstract: Des jeunes Bordelais et Bordelaises qui organisent des concours photo
+description: Des jeunes Bordelais et Bordelaises qui organisent des concours photo
   aux thèmes variés.
 technos:
   - laravel
