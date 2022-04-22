@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+
     <!-- app js -->
     {{ $shims := dict "supercursor" "js/shims/supercursor.js" "utils" "js/shims/utils.js" }}
     {{ $js := resources.Get "js/application.js" | js.Build (dict "shims" $shims) }}
