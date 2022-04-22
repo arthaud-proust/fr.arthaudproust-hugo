@@ -51,7 +51,9 @@ window.addEventListener('DOMContentLoaded', function() {
             })
         }
     })
-    superCursor.init();
+    if(!utils.mobileAndTabletCheck()) {
+        superCursor.init();
+    }
 
     const projectsGroup = document.getElementById('projects-group');
     if(projectsGroup) {

@@ -7,6 +7,7 @@ class SuperCursor {
 
         this.element = document.createElement('div');
         this.element.id = 'superCursor';
+        this.element.classList.add('state-HIDDEN');
         this.root.appendChild(this.element);
 
         this.states = Enum(
