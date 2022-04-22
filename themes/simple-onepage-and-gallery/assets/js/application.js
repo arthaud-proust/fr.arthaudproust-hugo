@@ -1,24 +1,57 @@
 import "./bootstrap.js";
-import * as utils from 'utils';
-import {SuperCursor} from 'supercursor';
+import * as utils from './shims/utils';
+import { SuperCursor } from './shims/supercursor';
+// import * as utils from 'utils';
+// import {SuperCursor} from 'supercursor';
 
 window.addEventListener('DOMContentLoaded', function() {
-    // const SESSION_KEY_ANIM = 'arthaudproust-animation';
+    const SESSION_KEY_ANIM = 'arthaudproust-animation';
 
-    // window.superCursor = new SuperCursor();
-	// if(!utils.mobileAndTabletCheck()) {
-	// 	superCursor.prepare();
+    window.superCursor = new SuperCursor({ root: document.body });
 
-    //     if(!utils.botCheck() && !sessionStorage.getItem(SESSION_KEY_ANIM)) {
-    //         sessionStorage.setItem(SESSION_KEY_ANIM, true);
-    //         document.body.classList.add('contentHidden');
-    //         setTimeout(function(){
-    //             superCursor.enable();
-    //         }, 3500);
-    //     } else {
-    //         superCursor.enable();
-    //     }
-    // }
+    superCursor.addLayer({
+        name: "pointer",
+        speed: 0.9,
+        coef: 0.8,
+        props: {
+            hover: hoverElCoords=>({
+                h: '7rem',
+                w: '7rem'
+            })
+        },
+        updateEl: {
+            HOVER: function() {
+                if(this.cursor.elementHovered) {
+                    let hvrElCoords = this.cursor.elementHovered.getBoundingClientRect();
+        
+                    
+                    this.updateDisplacementFromMouse({
+                        x: hvrElCoords.left + hvrElCoords.width/2,
+                        y: hvrElCoords.top + hvrElCoords.height/2,
+                    });
+
+                    // this.el.style.setProperty("--w", hvrElCoords.width*1.3+"px");
+                    // this.el.style.setProperty("--h", hvrElCoords.height*2+"px");
+
+                    this.element.style.setProperty("--w", hvrElCoords.width*1.2+"px");	
+                    this.element.style.setProperty("--h", hvrElCoords.height*1.5+"px");
+                }
+                this.element.style.left = this.position.x + "px";
+                this.element.style.top = this.position.y + "px";
+            }
+        }
+    });
+    superCursor.addLayer({
+        name: "outter",
+        speed: 0.15,
+        props: {
+            hover: hoverElCoords=>({
+                h: '7rem',
+                w: '7rem'
+            })
+        }
+    })
+    superCursor.init();
 
     const projectsGroup = document.getElementById('projects-group');
     if(projectsGroup) {
@@ -51,6 +84,16 @@ window.addEventListener('DOMContentLoaded', function() {
             //     enabled: true
             // }
         });
+        projectsSwiper.on('touchStart', function (swiper, event) {
+            superCursor.setState(superCursor.states.ACTIVE);
+        });
+        projectsSwiper.on('sliderMove', function (swiper, event) {
+            superCursor.updateMouseFromEvent(event);
+        });
+        
+        projectsSwiper.on('touchEnd', function (swiper, event) {
+            superCursor.setState(superCursor.states.NORMAL);
+        });
     }
 
     const testimoniesGroup = document.getElementById('testimonies-group');
@@ -72,6 +115,17 @@ window.addEventListener('DOMContentLoaded', function() {
             // mousewheel: {
             //     enabled: true
             // }
+        });
+
+        testimoniesSwiper.on('touchStart', function (swiper, event) {
+            superCursor.setState(superCursor.states.ACTIVE);
+        });
+        testimoniesSwiper.on('sliderMove', function (swiper, event) {
+            superCursor.updateMouseFromEvent(event);
+        });
+        
+        testimoniesSwiper.on('touchEnd', function (swiper, event) {
+            superCursor.setState(superCursor.states.NORMAL);
         });
     }
 

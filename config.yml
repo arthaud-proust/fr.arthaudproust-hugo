@@ -31,8 +31,8 @@ menu:
       url: "#skills"
       weight: 2
     - name: Réalisations
-      pre: realisations
-      url: "#realisations"
+      pre: projects
+      url: "#projects"
       weight: 3
     - name: Me contacter
       pre: meet-us

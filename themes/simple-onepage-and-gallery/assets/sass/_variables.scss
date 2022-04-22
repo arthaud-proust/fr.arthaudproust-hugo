@@ -16,6 +16,8 @@ $position-values: map-merge((
     100: 100%
 ), $spacers);
 
+
+
 $enable-negative-margins: true;
 $enable-rounded: false;
 
@@ -35,6 +37,9 @@ $hr-color: $black;
 $hr-height: 2px;
 $hr-opacity: 1;
 $hr-margin-y: 0;
+
+$border-width: 2px;
+$border-color: $black;
 
 // $link-color: $light;
 $link-decoration: none;
