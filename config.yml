@@ -23,20 +23,20 @@ menu:
   main:
     - name: À propos
       pre: about
-      url: "#about"
+      url: "/#about"
       weight: 1
      
     - name: Compétences
       pre: skills
-      url: "#skills"
+      url: "/#skills"
       weight: 2
     - name: Réalisations
       pre: projects
-      url: "#projects"
+      url: "/#projects"
       weight: 3
     - name: Me contacter
       pre: meet-us
-      url: "#meet-us"
+      url: "/#meet-us"
       weight: 4
     
     

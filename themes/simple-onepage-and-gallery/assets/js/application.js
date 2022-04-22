@@ -152,7 +152,6 @@ window.addEventListener('DOMContentLoaded', function() {
         const projectImages = document.querySelectorAll('.project-image')
         const y = Math.round(window.innerHeight * 0.7)
         const rootMargin = `-${window.innerHeight - y - 1}px 0px -${y}px 0px`;
-        console.log(rootMargin);
         const options = {
             rootMargin,
         }

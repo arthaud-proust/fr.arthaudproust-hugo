@@ -7,7 +7,7 @@ class SuperCursor {
 
         this.element = document.createElement('div');
         this.element.id = 'superCursor';
-        this.element.classList.add('state-HIDDEN');
+        this.element.setAttribute('disabled', true);
         this.root.appendChild(this.element);
 
         this.states = Enum(
@@ -39,7 +39,6 @@ class SuperCursor {
 
         this.layers = [];
 
-        console.log(window);
         this.mouse = {
 			x: window.innerWidth/2,
 			y: window.innerHeight/2

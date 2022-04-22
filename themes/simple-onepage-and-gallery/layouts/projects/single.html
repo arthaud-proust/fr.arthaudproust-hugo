@@ -6,21 +6,23 @@
     <meta itemprop="url" content="{{ .Permalink }}">   
     
 
-    <div class="col-5 mt-5">
+    <div class="d-none d-md-block col-5 mt-5">
         <div class="position-sticky top-6" id="">
             {{ if .Params.image }}
-                {{ partial "image/normal" (dict
+                {{ partial "image/resize" (dict
                     "img" .Params.image
                     "opt" (dict
+                        "size" "480x webp"
                         "class" "project-image img-fluid h-auto"
                         "id" "sic-preview"
                     )
                 )}}
             {{ end }}
             {{ range .Params.Content }}
-                {{ partial "image/normal" (dict
+                {{ partial "image/resize" (dict
                     "img" .image
                     "opt" (dict
+                        "size" "480x webp"
                         "class" "project-image img-fluid h-auto d-none"
                         "id" (printf "sic-%s" (urlize .title))
                     )
@@ -29,8 +31,8 @@
         </div>
     </div>
     
-    <div class="col-7 mt-5" id="project-sections-root">
-        <div class="mb-6">
+    <div class="col-md-7 col-xl-6 mt-5" id="project-sections-root">
+        <div class="mb-5">
             <h1 class="display-2">{{ .Title }}</h1>
             {{ if .Params.subtitle }}
                 <h3>{{ .Params.subtitle }}</h3>
@@ -42,7 +44,7 @@
         </div>
 
         {{ if isset .Params "technos" }}
-            <div class="mb-6">
+            <div class="mb-7">
                 <h5>Réalisé avec</h5>
                 <p>
                     {{ $relatedTechnos := site.RegularPages.RelatedTo ( keyVals "techno" .Params.technos)}}

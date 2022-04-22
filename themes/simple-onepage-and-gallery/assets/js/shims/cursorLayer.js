@@ -12,11 +12,8 @@ class CursorLayer {
         this.cursor.element.appendChild(this.element);
 
         for(const [state, func] of Object.entries(updateEl)) {
-            console.log(state, func);
             this[`updateEl_${state}`] = func;
         }
-
-        console.log(this);
 	}
 
 	updateEl_NORMAL() {

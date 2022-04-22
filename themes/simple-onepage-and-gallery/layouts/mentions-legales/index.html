@@ -1,0 +1,38 @@
+{{ define "main" }}
+<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+<section class="row pt-6">
+    <h1 class="display-2 col-6">Mentions légales</h1>
+    <div class="col-6 mt-3 gap-3">
+        <h3 class="mb-6">{{ partial "components/link" (dict "href" "/cgv-20-01-2022.pdf" "content" "Conditions générales de vente") }}</h3>
+        <!-- <h2 class="mt-5">Plus sur le site</h2>
+        <p>Site créé avec Hugo</p>
+        <div id="wcb" class="me-auto carbonbadge wcb-d"></div> -->
+
+
+        <div class="mb-6">
+            <h3><strong>Propriétaire du site</strong></h3>
+            <h4>Arthaud Proust</h4>
+            <p>15 rue André Malraux</p>
+            <p>33520 Bruges</p>
+            <p>07 83 39 28 88</p>
+            <p>pro@arthaudproust.fr</p>
+        </div>
+
+        <div class="mb-6">
+            <h3><strong>Entreprise</strong></h3>
+            <h4>Monsieur Arthaud Proust</h4>
+            <p>15 rue André Malraux</p>
+            <p>33520 Bruges</p>
+            <p>SIRET 90274035600016</p>
+        </div>
+
+        <div class="mb-6">
+            <h3><strong>Hébergeur du site</strong></h3>
+            <h4>Société Netlify</h4>
+            <p>44 Montgomery Street, Suite 300</p>
+            <p>San Francisco, California 94104</p>
+            <p>support@netlify.com</p>
+        </div>
+    </div>
+</section>
+{{ end }}
