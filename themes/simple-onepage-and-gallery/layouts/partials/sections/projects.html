@@ -6,15 +6,15 @@
         <section id="projects" class="py-6">
             <h2 class="display-4 mb-4">Réalisations</h2>
             <div id="projects-group">
-                <ul class="swiper-wrapper list-unstyled">
+                <div class="swiper-wrapper">
                     {{ range (where .Site.Pages "Section" "projects") }}
                     {{ range .Pages }}
-                    <li class="h-100 d-flex swiper-slide">
+                    <div class="h-100 d-flex swiper-slide">
                         {{ .Render "card"}}
-                    </li>
+                    </div>
                     {{ end}}
                     {{ end }}
-                </ul>
+                </div>
             </div>
         </section>
     </div>
