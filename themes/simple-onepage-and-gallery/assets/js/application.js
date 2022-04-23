@@ -64,12 +64,12 @@ window.addEventListener('DOMContentLoaded', function() {
 
             breakpoints: {
                 576: { // >= sm
-                slidesPerView: 2,
-                spaceBetween: 16*1.5
+                    slidesPerView: 2,
+                    spaceBetween: 16*1.5
                 },
                 992: { // >= lg
-                slidesPerView: 2,
-                spaceBetween: 16*1.5
+                    slidesPerView: 2,
+                    spaceBetween: 16*1.5
                 },
 
                 1200: { // >= xl
@@ -77,9 +77,9 @@ window.addEventListener('DOMContentLoaded', function() {
                     spaceBetween: 16*1.5
                 },
             },
-            // mousewheel: {
-            //     enabled: true
-            // }
+            mousewheel: {
+                enabled: true
+            }
         });
         projectsSwiper.on('touchStart', function (swiper, event) {
             superCursor.setState(superCursor.states.ACTIVE);
