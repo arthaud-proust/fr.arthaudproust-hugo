@@ -23,23 +23,6 @@ class CursorLayer {
 		this.element.style.top = this.position.y + "px";
 	}
 
-    updateEl_ACTIVE() {
-		this.element.style.removeProperty("--w");
-		this.element.style.removeProperty("--h");
-		this.element.style.left = this.position.x + "px";
-		this.element.style.top = this.position.y + "px";
-	}
-
-	updateEl_HOVER() {
-		this.element.style.left = this.position.x + "px";
-		this.element.style.top = this.position.y + "px";
-	}
-
-	updateEl_HIDDEN() {
-		this.element.style.left = this.position.x + "px";
-		this.element.style.top = this.position.y + "px";
-	}
-
 	getDistanceFromMouse(mouse) {
 		return {
 			x: mouse.x - this.position.x,
@@ -79,9 +62,13 @@ class CursorLayer {
 
 	updateEl() {
         try {
-            this[`updateEl_${this.cursor.state.toText()}`]();
+            if(this[`updateEl_${this.cursor.state.toText()}`]) {
+                this[`updateEl_${this.cursor.state.toText()}`]();
+            } else {
+                this.updateEl_NORMAL();
+            }
         } catch(e) {
-            console.group('Warn');
+            console.groupCollapsed(`Warn: Layer ${this.name}`);
             console.warn(`Layer ${this.name}: Undefined method for state ${this.cursor.state.toText()}`)
             console.error(e);
             console.groupEnd();

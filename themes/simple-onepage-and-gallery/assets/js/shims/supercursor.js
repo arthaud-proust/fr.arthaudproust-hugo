@@ -13,27 +13,33 @@ class SuperCursor {
         this.states = Enum(
             'NORMAL',
             'HOVER',
+            'HOVER_TEXT',
+            'HOVER_SEE',
             'ACTIVE',
             'HIDDEN',
+            'ACTIVEABLE_X'
         );
         this.state = this.states.HIDDEN;
 
 
-        this.stateOn = {
-			hover: [
-				'a', 
-                '.supercursor-hover'
-				// '.hoverable',
-				// '.underline', 
-				// '.list-subitem span'
-			],
-			// hoverAlt: [
-			// 	'.hoverable-alt'
-			// ],
-			hide: [
-				'.supercursor-hide'
-			],
-		}
+        this.stateOn = new Map();
+        this.stateOn.set('HIDDEN', [
+            // '.supercursor-hide',
+            // '.offcanvas-backdrop'
+        ]);
+        this.stateOn.set('HOVER_TEXT', [
+            '.supercursor-hover-text'
+        ]);
+        this.stateOn.set('HOVER_SEE', [
+            '.supercursor-hover-see'
+        ]);
+        this.stateOn.set('HOVER', [
+            'a', 
+            '.supercursor-hover'
+        ]);
+        this.stateOn.set('ACTIVEABLE_X', [
+            '.supercursor-activeable-x'
+        ]);
 
         this.enabled = false;
 
@@ -79,8 +85,6 @@ class SuperCursor {
         }
         
         this.animate();
-
-              
     }
 
     disable() {
@@ -93,7 +97,7 @@ class SuperCursor {
     setState(newState) {
         if(newState===undefined) {
             console.warn("SuperCursor: undefined state provided");
-        } else {
+        } else if (newState !== this.state) {
             this.element.classList.value = ''
             this.element.classList.add(`state-${newState.toText()}`);
             this.state = newState;
@@ -112,31 +116,31 @@ class SuperCursor {
     animate() {
         if(!this.enabled) return;
 
+
         this.elementHovered = document.elementFromPoint(this.mouse.x, this.mouse.y);
         let shouldChangeState = false;
         if(this.elementHovered) {
-            for(let hideSelector of this.stateOn.hide) {
-                let _shouldHide = this.elementHovered.matches(hideSelector) || this.elementHovered.closest(hideSelector);
-                if(_shouldHide!==false && _shouldHide !==null) {
-                    shouldChangeState = this.states.HIDDEN;
-                    break;
-                }
-            }
-    
-            for(let hoverSelector of this.stateOn.hover) {
-                let _shouldHover = this.elementHovered.matches(hoverSelector) || this.elementHovered.closest(hoverSelector);
-                if(_shouldHover!==false && _shouldHover !==null) {
-                    shouldChangeState = this.states.HOVER;
-                    break;
+            for(let [state, selectors] of this.stateOn) {
+                if(shouldChangeState) break;
+                // console.log(state);
+                for(let selector of selectors) {
+                    let shouldChange = this.elementHovered.matches(selector) || this.elementHovered.closest(selector);
+                    if( shouldChange!==false && shouldChange !==null) {
+                        shouldChangeState = this.states[state];
+                        break;
+                    }
                 }
             }
         }
 
-        if(shouldChangeState) {
-            this.setState(shouldChangeState);
-        } else if(this.state !== this.states.ACTIVE) {
-            this.setState(this.states.NORMAL)
+        if(this.state !== this.states.ACTIVE) {
+            if(shouldChangeState) {
+                this.setState(shouldChangeState);
+            } else {
+                this.setState(this.states.NORMAL)
+            }
         }
+        
         
 
 

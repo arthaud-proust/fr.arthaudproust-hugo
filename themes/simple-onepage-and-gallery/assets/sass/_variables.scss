@@ -68,10 +68,11 @@ $small-font-size: 0.8rem;
 
 
 $offcanvas-padding-y: $spacer * 3;
-// $offcanvas-bg-color: $dark;
-// $offcanvas-color: $light;
-// $offcanvas-border-color: $light;
-// $offcanvas-border-width: 1px;
+// $offcanvas-bg-color: $white;
+// $offcanvas-color: $white;
+$offcanvas-border-color: $black;
+// $offcanvas-border-width: 2;
+$offcanvas-backdrop-opacity: 0.1;
 
 
 $accordion-border-color: transparent;

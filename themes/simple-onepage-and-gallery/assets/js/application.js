@@ -1,8 +1,6 @@
-import "./bootstrap.js";
+import * as bootstrap from "./bootstrap.js";
 import * as utils from './shims/utils';
 import { SuperCursor } from './shims/supercursor';
-// import * as utils from 'utils';
-// import {SuperCursor} from 'supercursor';
 
 window.addEventListener('DOMContentLoaded', function() {
     const SESSION_KEY_ANIM = 'arthaudproust-animation';
@@ -13,12 +11,6 @@ window.addEventListener('DOMContentLoaded', function() {
         name: "pointer",
         speed: 0.9,
         coef: 0.8,
-        props: {
-            hover: hoverElCoords=>({
-                h: '7rem',
-                w: '7rem'
-            })
-        },
         updateEl: {
             HOVER: function() {
                 if(this.cursor.elementHovered) {
@@ -44,11 +36,14 @@ window.addEventListener('DOMContentLoaded', function() {
     superCursor.addLayer({
         name: "outter",
         speed: 0.15,
-        props: {
-            hover: hoverElCoords=>({
-                h: '7rem',
-                w: '7rem'
-            })
+        updateEl: {
+            HOVER_TEXT: function() {
+                if(this.cursor.elementHovered && this.cursor.elementHovered.dataset.hoverTextContent) {
+                    this.element.style.setProperty('--hoverTextContent', `"${this.cursor.elementHovered.dataset.hoverTextContent}"`);
+                }
+                this.element.style.left = this.position.x + "px";
+                this.element.style.top = this.position.y + "px";
+            }
         }
     })
     if(!utils.mobileAndTabletCheck()) {
