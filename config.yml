@@ -1,7 +1,7 @@
 languageCode: 'fr'
 title: 'POC - netlify'
 theme: 'simple-onepage-and-gallery'
-
+baseURL: https://arthaudproust.fr
 removePathAccents: true
 
 params:
@@ -40,11 +40,8 @@ menu:
       weight: 4
     
     
-    
-    
-
 taxonomies:
-  techno: technos
+    
 
 related:
   includeNewer: true
@@ -52,5 +49,3 @@ related:
   indices:
     - name: techno
       weight: 1
-
-    

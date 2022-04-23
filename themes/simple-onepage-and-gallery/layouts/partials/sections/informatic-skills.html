@@ -2,13 +2,12 @@
 <section id="informatic-skills" class="py-6 row">
     <h2 class="order-md-last col-md-6 display-3 ">Ils sont mes compagnons de travail</h2>
     <ul class="offset-md-1 col-md-5 mt-5 mt-md-3 list-unstyled">
-        <li class="mb-3"><img class="img-icon me-3" src="{{ .Site.Data.devicon.laravel }}" alt="Image de Laravel"/>Laravel</li>
-        <li class="mb-3"><img class="img-icon me-3" src="{{ .Site.Data.devicon.react }}" alt="Image de ReactJs"/>ReactJs</li>
-        <li class="mb-3"><img class="img-icon me-3" src="{{ .Site.Data.devicon.nodejs }}" alt="Image de Nodejs"/>NodeJs</li>
-        <li class="mb-3"><img class="img-icon me-3" src="{{ .Site.Data.devicon.tailwindcss }}" alt="Image de TailwindCss"/>TailwindCss</li>
-        <li class="mb-3"><img class="img-icon me-3" src="{{ .Site.Data.devicon.figma }}" alt="Image de Figma"/>Figma</li>
-        <li class="mb-3"><img class="img-icon me-3" src="{{ .Site.Data.devicon.debian }}" alt="Image de Debian"/>Debian</li>
-        <li class="mb-3"><img class="img-icon me-3" src="{{ .Site.Data.devicon.webpack }}" alt="Image de Webpack"/>Webpack</li>
+        {{ range .Site.Data.sections.technos }}
+            {{ $technos := where $.Site.Pages "Section" "technos" }}
+            {{ range where $technos ".Params.techno" . }}
+                <li class="mb-3">{{ partial "image/icon" . }}<span class="ms-3">{{ humanize .Params.techno }}</span></li>
+            {{ end }}
+        {{ end }}
     </ul>
 
 </section>
