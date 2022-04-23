@@ -9,18 +9,21 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link defer href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
+    <link href="" rel="stylesheet">
+
+    {{ partial "link-load" "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;400;800&display=swap" }}
 
 
     {{ $sass := resources.Get "sass/application.scss" }}
     {{ $sassOpts := (dict "outputStyle" "compressed")}}
 	{{ $style := $sass | resources.ToCSS $sassOpts | resources.Fingerprint }}
-	<link defer rel="stylesheet" href="{{ $style.Permalink }}?v={{ $t }}" integrity="{{ $style.Data.Integrity }}">
+	<!-- <link defer rel="stylesheet" href="{{ $style.Permalink }}?v={{ $t }}" integrity="{{ $style.Data.Integrity }}"> -->
+    {{ partial "link-load" (printf "%s?v=%s" $style.Permalink  $t ) }}
 
 
     <!-- swiper -->
     
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    {{ partial "link-load" "https://unpkg.com/swiper/swiper-bundle.min.css" }}
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script defer src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
