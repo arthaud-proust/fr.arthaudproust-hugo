@@ -17,7 +17,7 @@ $position-values: map-merge((
 ), $spacers);
 
 
-
+$enable-smooth-scroll: false;
 $enable-negative-margins: true;
 $enable-rounded: false;
 
@@ -37,6 +37,12 @@ $hr-color: $black;
 $hr-height: 2px;
 $hr-opacity: 1;
 $hr-margin-y: 0;
+
+$input-btn-focus-width: 1px;
+$input-btn-focus-color-opacity: 1;
+$input-btn-focus-color: $black;
+$input-btn-focus-blur: 0;
+$input-btn-focus-box-shadow: none;
 
 $border-width: 2px;
 $border-color: $black;

@@ -46,7 +46,7 @@
         &.superCursor-layer-outter
             --w: 3.5rem
             --h: 3.5rem   
-            --hoverAltContent: 'Voir'
+            --hoverText: 'Voir'
 
             border: 1px solid $white
             z-index: 99999
@@ -88,10 +88,23 @@
             --w: 4rem
             --h: 4rem  
 
+            &::after
+                content: ' '
+                height: 1.5rem
+                width: 1.5rem
+                border-radius: 100%
+                position: relative
+                mix-blend-mode: difference
+                margin: auto
+                display: block
+                background: $white
+
         .superCursor-layer-outter
             --w: 10rem
             --h: 5rem  
             border-radius: 100%
+
+            
 
     &.state-HOVER_TEXT
         .superCursor-layer-pointer
@@ -105,7 +118,7 @@
             border: none
 
             &::after
-                content: var(--hoverAltContent)
+                content: var(--hoverText)
                 position: relative
                 mix-blend-mode: difference
                 margin: auto
@@ -127,13 +140,28 @@
 
     &.state-ACTIVEABLE_X
         .superCursor-layer-pointer
-            --w: 3rem
+            --w: 6rem
             --h: 3rem  
+            border-radius: 2rem
+            &::after
+                content: '<>'
+                position: relative
+                mix-blend-mode: difference
+                margin: auto
+                font-size: 3rem
+                font-weight: bold
+                display: block
+                color: $white
+            
 
         .superCursor-layer-outter
-            --w: 8rem
+            --w: 7rem
             --h: 4rem  
             border-radius: 2rem
+
+            
+
+            
 
     &.state-HIDE
         display: none

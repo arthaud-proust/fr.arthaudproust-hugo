@@ -18,6 +18,11 @@
 	<link rel="stylesheet" href="{{ $style.Permalink }}?v={{ $t }}" integrity="{{ $style.Data.Integrity }}">
 
 
+    {{ $neededSass := resources.Get "sass/needed.scss" }}
+    {{ $neededSassOpts := (dict "outputStyle" "compressed")}}
+	{{ $neededStyle := $neededSass | resources.ToCSS $neededSassOpts }}
+	<style>{{ $neededStyle.Content | safeCSS }}</style>
+
     <!-- swiper -->
     
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -30,4 +35,6 @@
     {{ $js := resources.Get "js/application.js" | js.Build (dict "shims" $shims) }}
     <script defer src="{{ $js.Permalink }}?v={{ $t }}"></script>
         
+
+
 </head>

@@ -1,27 +1,12 @@
-<section class="swiper-slide" id="intro" data-hash="a-propos" aria-title="404">
-    <div class="sub">
-        <div>
-            <h2>Oups (404)</h2>
-        </div>
-        
-        <div class="section-swiper-1">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <h1 class="title" data-swiper-parallax-x="-400">
-                        Il n'y a rien ici <br/>
-                        <span class="hoverable">:'(</span>
-                    <h1>
-                    <p data-swiper-parallax-x="-600" class="pt">
-                        Enfin, rien, c'est un bien grand mot. 
-                    </p>   
-                    <p data-swiper-parallax-x="-250"  class="pt">
-                        Ce n'est pas le vide intersidéral non plus...
-                    </p>
-                    <p class="pt">
-                        Vous voulez {{ partial "components/link.html" (dict "href" "/" "content" "revenir à l'accueil" ) }}?
-                    </p>
-                </div>
-            </div>
-        </div>
+<section class="py-6 row">
+    <div class="col-12">
+        <h1 class="mb-3 supercursor-hover-text" data-hover-text="404">
+            Page introuvable
+        </h1>
+        <h2>{{ partial "components/link.html" (dict "href" "/" "content" "Revenir à l'accueil" ) }}</h2>
+    </div>
+
+    <div class="col-12 text-end mt-7">
+        <span class="px-2">Rien à dire de plus</span>
     </div>
 </section>

@@ -1,8 +1,7 @@
 technos: 
   - laravel
-  - reactjs
+  - hugo
+  - react
   - nodejs
+  - bootstrap
   - tailwindcss
-  - figma
-  - debian
-  - webpack

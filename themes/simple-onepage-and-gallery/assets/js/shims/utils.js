@@ -1,10 +1,7 @@
 module.exports = {
     mobileAndTabletCheck,
     botCheck, 
-    fallbackCopyTextToClipboard, 
-    copyTextToClipboard,
-    toggleMenu,
-    setMenu
+    copyTextToClipboard
 };
 
 function mobileAndTabletCheck() {
@@ -32,34 +29,32 @@ function fallbackCopyTextToClipboard(text) {
     textArea.focus();
     textArea.select();
 
+    let success = false;
     try {
-    var successful = document.execCommand('copy');
-    var msg = successful ? 'successful' : 'unsuccessful';
-    console.log('Fallback: Copying text command was ' + msg);
+        success = document.execCommand('copy');
+        var msg = success ? 'successful' : 'unsuccessful';
+        console.log('Fallback: Copying text command was ' + msg);
     } catch (err) {
-    console.error('Fallback: Oops, unable to copy', err);
+        console.error('Fallback: Oops, unable to copy', err);
     }
 
     document.body.removeChild(textArea);
+    return success;
 }
 function copyTextToClipboard(text) {
-    if (!navigator.clipboard) {
-    fallbackCopyTextToClipboard(text);
-    return;
-    }
-    navigator.clipboard.writeText(text).then(function() {
-    console.log('Async: Copying to clipboard was successful!');
-    }, function(err) {
-    console.error('Async: Could not copy text: ', err);
+    return new Promise((resolve, reject) => {
+        if (!navigator.clipboard) {
+            if(fallbackCopyTextToClipboard(text)) {
+                resolve();
+            } else {
+                reject();
+            }
+        }
+        navigator.clipboard.writeText(text).then(function() {
+            resolve();
+        }, function(err) {
+            console.error('Async: Could not copy text: ', err);
+            reject();
+        });
     });
-}
-
-function toggleMenu() {
-    const open = document.body.dataset.menuOpen==="true";
-    setMenu(!open);
-}
-
-function setMenu(closed) {
-    document.body.dataset.menuOpen = closed;
-    document.getElementById('menu-toggle').src= `/assets/${closed?'close':'menu'}.svg`;
 }

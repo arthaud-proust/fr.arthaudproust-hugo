@@ -1,8 +1,10 @@
+import * as Turbo from "@hotwired/turbo"
 import * as bootstrap from "./bootstrap.js";
 import * as utils from './shims/utils';
 import { SuperCursor } from './shims/supercursor';
+import anime from 'animejs';
 
-window.addEventListener('DOMContentLoaded', function() {
+addEventListener('turbo:load', function() {
     const SESSION_KEY_ANIM = 'arthaudproust-animation';
 
     window.superCursor = new SuperCursor({ root: document.body });
@@ -38,8 +40,8 @@ window.addEventListener('DOMContentLoaded', function() {
         speed: 0.15,
         updateEl: {
             HOVER_TEXT: function() {
-                if(this.cursor.elementHovered && this.cursor.elementHovered.dataset.hoverTextContent) {
-                    this.element.style.setProperty('--hoverTextContent', `"${this.cursor.elementHovered.dataset.hoverTextContent}"`);
+                if(this.cursor.elementHovered && this.cursor.elementHovered.dataset.hoverText) {
+                    this.element.style.setProperty('--hoverText', `"${this.cursor.elementHovered.dataset.hoverText}"`);
                 }
                 this.element.style.left = this.position.x + "px";
                 this.element.style.top = this.position.y + "px";
@@ -48,6 +50,25 @@ window.addEventListener('DOMContentLoaded', function() {
     })
     if(!utils.mobileAndTabletCheck()) {
         superCursor.init();
+    }
+
+    const linksToCopy = document.querySelectorAll('.toCopy');
+    for(let link of linksToCopy) {
+        link.addEventListener('click', function() {
+            if(!link.dataset.baseText) link.dataset.baseText = link.innerText;
+            utils.copyTextToClipboard(link.innerText)
+                .then(()=>{
+                    link.innerText = `${link.dataset.baseText} (copié)`;
+                })
+                .catch(()=>{
+                    link.innerText = `${link.dataset.baseText} (pas copié)`;
+                })
+                .finally(()=>{
+                    setTimeout(function() {
+                        link.innerText = link.dataset.baseText;
+                    }, 4000);
+                })
+        })
     }
 
     const projectsGroup = document.getElementById('projects-group');
