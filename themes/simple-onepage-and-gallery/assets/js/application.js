@@ -2,9 +2,12 @@ import * as Turbo from "@hotwired/turbo"
 import * as bootstrap from "./bootstrap.js";
 import * as utils from './shims/utils';
 import { SuperCursor } from './shims/supercursor';
-import anime from 'animejs';
+import { setEffects } from './shims/effets';
 
 addEventListener('turbo:load', function() {
+
+    setEffects();
+    
     const SESSION_KEY_ANIM = 'arthaudproust-animation';
 
     window.superCursor = new SuperCursor({ root: document.body });

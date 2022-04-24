@@ -33,7 +33,7 @@
     
     <div class="col-md-7 col-xl-6 mt-5" id="project-sections-root">
         <div class="mb-5">
-            {{ partial "components/link.html" (dict "href" "/#projects" "content" "Retour aux réalisations") }}
+            <a href="/#projects">Retour aux réalisations</a>
             <h1 class="display-2">{{ .Title }}</h1>
             {{ if .Params.subtitle }}
                 <h3>{{ .Params.subtitle }}</h3>
@@ -81,14 +81,14 @@
 
         <div class="mb-7">
             {{ if .Params.project_url }}
-                <h2 class=""><strong>{{ partial "components/link.html" (dict "href" .Params.project_url "content" "Voir le site") }}</strong></h2>
+                <h2 class=""><strong><a href="{{ .Params.project_url }}" target="_blank" rel="noopener">Voir le site</a></strong></h2>
             {{ end }}
             
             <ul class="list-unstyled">
                 {{ if .Params.github_url }}
-                    <li class="mb-3">{{ partial "components/link.html" (dict "href" .Params.github_url "content" "Lien github") }}</li>
+                    <li class="mb-3"><a href="{{ .Params.github_url }}" target="_blank" rel="noopener">Lien github</a></li>
                 {{ end }}
-                <li>{{ partial "components/link.html" (dict "href" "/#projects" "content" "Retour aux réalisations") }}</li>
+                <li><a href="/#projects">Retour aux réalisations</a></li>
             </ul>
         </div>
     </div>  
