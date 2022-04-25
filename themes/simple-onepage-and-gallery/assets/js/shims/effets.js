@@ -17,11 +17,15 @@ function setEffects() {
     for(const horizontalCord of horizontalCords) {
         horizontalCord.addEventListener('mouseover', function() {
             const pathToAnimate = horizontalCord.querySelector('.component-horizontal-cord-path')
+            const v = window.superCursor.mouse.velocity;
+            const p = Math.max(1, Math.min(2, v));
+            const startD = window.superCursor.mouse.direction.y < 1 ?
+                            horizontalCordStates.start : horizontalCordStates.end;
             anime({
                 targets: pathToAnimate,
-                d: [horizontalCordStates.start, horizontalCordStates.middle],
+                d: [startD, horizontalCordStates.middle],
                 duration: 2000,
-                easing: 'easeOutElastic(2, .1)'
+                easing: `easeOutElastic(${p}, .1)`
             })
         })
     }
@@ -30,11 +34,15 @@ function setEffects() {
     for(const verticalCord of verticalCords) {
         verticalCord.addEventListener('mouseover', function() {
             const pathToAnimate = verticalCord.querySelector('.component-vertical-cord-path')
+            const v = window.superCursor.mouse.velocity;
+            const p = Math.max(1, Math.min(2, v));
+            const startD = window.superCursor.mouse.direction.x < 1 ?
+                                verticalCordStates.start : verticalCordStates.end;
             anime({
                 targets: pathToAnimate,
-                d: [verticalCordStates.start, verticalCordStates.middle],
+                d: [startD, verticalCordStates.middle],
                 duration: 2000,
-                easing: 'easeOutElastic(2, .1)'
+                easing: `easeOutElastic(${p}, .1)`
             })
         })
     }

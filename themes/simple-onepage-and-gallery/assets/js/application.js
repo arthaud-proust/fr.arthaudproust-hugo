@@ -6,7 +6,6 @@ import { setEffects } from './shims/effets';
 
 addEventListener('turbo:load', function() {
 
-    setEffects();
     
     const SESSION_KEY_ANIM = 'arthaudproust-animation';
 
@@ -51,9 +50,14 @@ addEventListener('turbo:load', function() {
             }
         }
     })
+    superCursor.init();
     if(!utils.mobileAndTabletCheck()) {
-        superCursor.init();
+        superCursor.enable();
+    } else {
+        superCursor.disable();
     }
+
+    setEffects();
 
     const linksToCopy = document.querySelectorAll('.toCopy');
     for(let link of linksToCopy) {

@@ -47,7 +47,13 @@ class SuperCursor {
 
         this.mouse = {
 			x: window.innerWidth/2,
-			y: window.innerHeight/2
+			y: window.innerHeight/2,
+            velocity: 0,
+            direction: {
+                x:0,
+                y:0
+            },
+            movedAt: 0
 		}
     }
 
@@ -105,12 +111,31 @@ class SuperCursor {
     }
 
     updateMouseFromEvent(event) {
-		this.mouse = {
-			// x: event.pageX,
-			// y: event.pageY
-            x: event.clientX,
-			y: event.clientY
-		}
+		// this.mouse = {
+		// 	x: event.pageX,
+		// 	y: event.pageY
+        // }
+
+        const { x: oldX, y: oldY } = this.mouse, 
+            { clientX: newX, clientY: newY } = event,
+            movedAt = event.timeStamp;
+
+        
+        this.mouse.x = newX;
+        this.mouse.y = newY;
+        const dist = Math.sqrt(
+            Math.pow(Math.abs(oldX-newX), 2)
+            +
+            Math.pow(Math.abs(oldY-newY), 2)
+        );
+        const time = movedAt - this.mouse.movedAt;
+        
+        this.mouse.direction.x = oldX == newX ? 0 : (oldX > newX ? -1 : 1);
+        this.mouse.direction.y = oldY == newY ? 0 : (oldY > newY ? -1 : 1);
+
+        this.mouse.velocity = (dist/time)*1000;
+
+        this.mouse.lastMoved = movedAt;
 	}
 
     animate() {
