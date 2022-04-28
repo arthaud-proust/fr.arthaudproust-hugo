@@ -106,7 +106,8 @@ addEventListener('turbo:load', function() {
                 },
             },
             mousewheel: {
-                enabled: true
+                enabled: true,
+                releaseOnEdges: true
             }
         });
         projectsSwiper.on('touchStart', function (swiper, event) {
