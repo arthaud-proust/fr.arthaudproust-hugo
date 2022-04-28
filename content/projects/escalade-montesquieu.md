@@ -2,7 +2,7 @@
 visibleInCms: true
 draft: false
 title: Escalade Montesquieu
-image: /images/projects/escalade-montesquieu.fr_.jpg
+image: /images/projects/escalade-montesquieu.fr_la-salle.jpg
 description: Site de la section escalade du lycée Montesquieu à Bordeaux.
 technos:
   - laravel
