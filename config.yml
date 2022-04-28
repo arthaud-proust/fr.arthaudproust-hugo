@@ -12,6 +12,7 @@ params:
     title: Développeur web junior à Bordeaux
     desc: "Developpement web, photographie, étudiant au MMI Bordeaux. Je suis passionné, curieux et créatif - Arthaud Proust"
     url: https://arthaudproust.fr
+    hero: /sprites/hero-min.jpg
     links:
       github: https://github.com/arthaud-proust
       linkedin: https://www.linkedin.com/in/arthaud-proust/

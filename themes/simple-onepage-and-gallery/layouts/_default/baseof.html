@@ -6,7 +6,7 @@
 
         {{ partial "seo" . }}
         {{ block "seoHero" . }}
-            {{$heroUrl := printf "%s/sprites/hero.png" .Site.Params.seo.url }}
+            {{$heroUrl := printf "%s%s" .Site.Params.seo.url .Site.Params.seo.hero }}
             <meta name="twitter:image" content="{{ $heroUrl }}" />
             <meta property="og:image" content="{{ $heroUrl }}" />
         {{ end }}
