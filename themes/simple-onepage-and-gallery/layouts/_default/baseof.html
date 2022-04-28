@@ -11,15 +11,23 @@
             <meta property="og:image" content="{{ $heroUrl }}" />
         {{ end }}
         {{ block "seoTitle" . }}
-                <title>{{ .Site.Params.seo.title }}</title>
-            <meta name="twitter:title" content="{{ .Site.Params.seo.title }}" />
-            <meta property="og:title" content="{{ .Site.Params.seo.title }}" />
-            <meta name="apple-mobile-web-app-title" content="{{ .Site.Params.seo.title }}" />
+            {{ $title := .Site.Params.seo.title }}
+            {{ if .Title }}
+                {{ $title = .Title}}
+            {{ end }}
+            <title>{{ $title }}</title>
+            <meta name="twitter:title" content="{{ $title }}" />
+            <meta property="og:title" content="{{ $title }}" />
+            <meta name="apple-mobile-web-app-title" content="{{ $title }}" />
         {{ end }}
         {{ block "seoDescription" . }}
-            <meta name="description" content="{{ .Site.Params.seo.desc }}" />
-            <meta property="og:description" content="{{ .Site.Params.seo.desc }}" />
-            <meta name="twitter:description" content="{{ .Site.Params.seo.desc }}" />
+            {{ $description := .Site.Params.seo.desc }}
+            {{ if .Description }}
+                {{ $description = .Description}}
+            {{ end }}
+            <meta name="description" content="{{ $description }}" />
+            <meta property="og:description" content="{{ $description }}" />
+            <meta name="twitter:description" content="{{ $description }}" />
         {{ end}}
     </head> 
     <body>

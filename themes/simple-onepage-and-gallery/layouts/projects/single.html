@@ -1,7 +1,14 @@
 {{ define "seoHero" }}
-    {{ $heroImg := ((resources.Get .Params.image).Fill "1200x628" ).Crop "1200x628" }}
+    {{ $heroImg := ((resources.Get .Params.image).Fill "1200x628 Top" ).Crop "1200x628 Top" }}
     <meta name="twitter:image" content="{{ $heroImg.Permalink}}" />
     <meta property="og:image" content="{{ $heroImg.Permalink}}" />
+{{ end }}
+{{ define "seoTitle" }} 
+    {{ $title := printf "Réalisation - %s" .Title}}
+    <title>{{ $title }}</title>
+    <meta name="twitter:title" content="{{ $title }}" />
+    <meta property="og:title" content="{{ $title }}" />
+    <meta name="apple-mobile-web-app-title" content="{{ $title }}" />
 {{ end }}
 
 {{ define "main" }}
