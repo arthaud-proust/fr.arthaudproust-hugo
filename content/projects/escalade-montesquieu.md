@@ -17,11 +17,8 @@ content:
       réaliser le site de la section escalade. À ce moment, j'ai rejoint cette
       section sportive depuis déjà deux ans.
     image: /images/projects/escalade-montesquieu.fr_.jpg
-  - paraph1: Je grimpe donc régulièrement dans la salle d'escalade, et je me forme
+    paraph2: Je grimpe donc régulièrement dans la salle d'escalade, et je me forme
       en parallèle au développement de site.
-    paraph2: Cette proposition tombe donc à merveille, en lien avec mon projet d'études.
-    title: Le contexte
-    image: /images/projects/escalade-montesquieu.fr_la-salle.jpg
   - title: Le besoin initial
     image: /images/projects/escalade-montesquieu.fr_evenements-et-sorties_session-au-lycee.jpg
     paraph1: L'idée est d'avoir un site fonctionnel pour que la section escalade
