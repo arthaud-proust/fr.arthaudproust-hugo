@@ -17,7 +17,7 @@ content:
     paraph1: Lorsque je retouche des photos sur ligthroom depuis mon pc, j'ai envie
       de comparer l'affichage sur pc avec celui du téléphone avant de poster sur
       instagram.
-    image: /images/projects/preview-preview.jpg
+    image: /images/projects/preview.arthaud.dev_aller_plus_vite.jpg
     paraph2: Pour afficher les images sur différents appareils, j'utilise un cable,
       je copie-colle la photo et l'ouvre.
   - title: Une meilleure idée
