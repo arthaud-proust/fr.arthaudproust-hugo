@@ -1,14 +1,22 @@
 import { CursorLayer } from './cursorLayer';
 import { Enum } from './enum';
 class SuperCursor {
-	constructor({root}) {
+	constructor({root, layers}) {
 
         this.root = root;
 
-        this.element = document.createElement('div');
-        this.element.id = 'superCursor';
-        this.element.setAttribute('disabled', true);
-        this.root.appendChild(this.element);
+        this.elId = 'superCursor'
+
+        this.element = document.getElementById(this.elId);
+        if(!this.element) {
+            this.element = document.createElement('div');
+            this.element.id = this.elId;
+            this.element.setAttribute('disabled', true);
+            this.root.appendChild(this.element);
+        }
+        while(this.element.lastChild) {
+            this.element.lastChild.remove()
+        }
 
         this.states = Enum(
             'NORMAL',
@@ -45,6 +53,10 @@ class SuperCursor {
 
         this.layers = [];
 
+        for(const layer of layers) {
+            this.addLayer(layer);
+        }
+
         this.mouse = {
 			x: window.innerWidth/2,
 			y: window.innerHeight/2,
@@ -59,12 +71,14 @@ class SuperCursor {
 
 
     addLayer(layerOpt) {
-        this.layers.push(
-            new CursorLayer({
-                cursor: this,
-                ...layerOpt
-            })
-        );
+        if( this.layers.filter(layer=>layer.name==layerOpt.name).length<=0) {
+            this.layers.push(
+                new CursorLayer({
+                    cursor: this,
+                    ...layerOpt
+                })
+            );
+        }
     }
 
     init() {
