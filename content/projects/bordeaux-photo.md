@@ -2,7 +2,7 @@
 visibleInCms: true
 draft: false
 title: Bordeaux Photo
-image: /images/projects/bordeaux-photo.fr_first_event.png
+image: /images/projects/bordeaux-photo.fr_first_event.jpg
 description: Des jeunes Bordelais et Bordelaises qui organisent des concours
   photo aux thèmes variés.
 technos:
@@ -19,7 +19,7 @@ content:
       confinement dû au covid-19. J'avais participé à un marathon photo à
       Bordeaux avec mon père il y plusieurs années.
     paraph2: Je décide de me lancer dans l'organisation de concours photos.
-    image: /images/projects/bordeaux-photo.fr_events.png
+    image: /images/projects/bordeaux-photo.fr_events.jpg
   - title: La création du projet
     paraph1: "Je tâte le terrain autour de moi, j'obtiens des avis favorables: bon
       nombre de personnes aimeraient participer à des concours photo."
@@ -37,13 +37,13 @@ content:
   - title: Premier concours
     date: Avril 2021
     paraph1: "On y est ! Premier thème choisi par le jury : Le temps passe."
-    image: /images/projects/bordeaux-photo.fr_first_event.png
+    image: /images/projects/bordeaux-photo.fr_first_event.jpg
   - title: Évolution du projet
     date: Avril à novembre 2021
     paraph1: "L'équipe évolue, plusieurs autres concours s'organisent. Nous
       prévoyons l'ouverture à d'autres types d'évènements : rallyes à thèmes,
       concours sur google maps, etc."
-    image: /images/projects/bordeaux-photo.fr_events.png
+    image: /images/projects/bordeaux-photo.fr_infos.jpg
   - title: Nous sommes en pause
     date: Depuis novembre 2021
     paraph1: Chacun fait ses études, le temps manque... Le projet reste en suspens
