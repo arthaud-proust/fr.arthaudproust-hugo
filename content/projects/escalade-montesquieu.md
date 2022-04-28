@@ -20,7 +20,7 @@ content:
     paraph2: Je grimpe donc régulièrement dans la salle d'escalade, et je me forme
       en parallèle au développement de site.
   - title: Le besoin initial
-    image: /images/projects/escalade-montesquieu.fr_evenements-et-sorties_session-au-lycee.jpg
+    image: /images/projects/escalade-montesquieu.fr_evenements-et-sorties_sortie-en-salle.jpg
     paraph1: L'idée est d'avoir un site fonctionnel pour que la section escalade
       puisse organiser des sorties, des sessions au lycée et afficher les
       informations importantes.
