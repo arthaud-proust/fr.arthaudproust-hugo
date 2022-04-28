@@ -3,19 +3,27 @@
         transition: #{$i / 10}s
 
 
+.grayscale
+    --filterGrayscale: 1
+
+.effect-hover
+    --transfromScale: 1
+    --transformRotateZ: 0
+    transform: rotateZ(var(--transformRotateZ)) scale(var(--transformScale))
+    filter: #{"grayscale(var(--filterGrayscale))"}
+
 .hoverable:hover
-    &.effect-hover, .effect-hover
-        --scale: 1
-        --rotateZ: 0
-        transform: rotateZ(var(--rotateZ)) scale(var(--scale))
 
     @for $i from 0 through 36
         &.hover-rotate-#{$i}, .hover-rotate-#{$i}
-            --rotateZ: #{$i}deg
+            --transformRotateZ: #{$i}deg
         
         &.hover-rotate-n#{$i}, .hover-rotate-n#{$i}
-            --rotateZ: -#{$i}deg
+            --transformRotateZ: -#{$i}deg
 
     @for $i from 0 through 10
         &.hover-scale-#{$i}, .hover-scale-#{$i}
-            --scale: #{$i / 10}
+            --transformScale: #{$i / 10}
+
+    &.hover-grayscale-0, .hover-grayscale-0
+        --filterGrayscale: 0

@@ -1,3 +1,4 @@
+$superCursorColor: $white
 .superCursor-hide-cursor, .superCursor-hide-cursor *
     cursor: none !important
 
@@ -48,15 +49,15 @@
             --h: 3.5rem   
             --hoverText: 'Voir'
 
-            border: 1px solid $white
+            border: 1px solid $superCursorColor
             z-index: 99999
 
         &.superCursor-layer-pointer
             --w: 1rem
             --h: 1rem   
 
-            // border: 1px solid white
-            background: $white
+            // border: 1px solid super$superCursorColor
+            background: $superCursorColor
             border-radius: 4rem
     // End layers default
 
@@ -97,7 +98,7 @@
                 mix-blend-mode: difference
                 margin: auto
                 display: block
-                background: $white
+                background: $superCursorColor
 
         .superCursor-layer-outter
             --w: 10rem
@@ -125,7 +126,7 @@
                 font-size: 3rem
                 font-weight: bold
                 display: block
-                color: $white
+                color: $superCursorColor
 
 
     &.state-ACTIVE
@@ -151,7 +152,7 @@
                 font-size: 3rem
                 font-weight: bold
                 display: block
-                color: $white
+                color: $superCursorColor
             
 
         .superCursor-layer-outter
