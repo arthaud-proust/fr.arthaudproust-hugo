@@ -1,3 +1,9 @@
+{{ define "seoHero" }}
+    {{ $heroImg := ((resources.Get .Params.image).Fill "1200x628" ).Crop "1200x628" }}
+    <meta name="twitter:image" content="{{ $heroImg.Permalink}}" />
+    <meta property="og:image" content="{{ $heroImg.Permalink}}" />
+{{ end }}
+
 {{ define "main" }}
 <section 
     itemscope itemtype="https://www.schema.org/CreativeWork"
@@ -40,7 +46,9 @@
             {{ end }}
 
             {{ if .Description }}
-                <p itemprop="about">{{ .Description }}</p>
+                <p itemprop="about">
+                    {{ .Description | markdownify }}
+                </p>
             {{ end }}
         </div>
 
@@ -67,12 +75,12 @@
                 <h2><strong>{{ .title }}</strong></h2>
                 {{ if isset . "paraph1" }}
                     <p>
-                        {{ .paraph1 }}
+                        {{ .paraph1 | markdownify }}
                     </p>
                 {{ end }}
                 {{ if isset . "paraph2" }}
                     <p class="pt">
-                        {{ .paraph2 }}
+                        {{ .paraph2 | markdownify }}
                     </p>
                 {{ end }}
             </div>

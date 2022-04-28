@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
-    {{- partial "head.html" . -}}
+    <head prefix="og: http://ogp.me/ns#">
+        {{- partial "head.html" . -}}
+
+
+        {{ partial "seo" . }}
+        {{ block "seoHero" . }}
+            {{$heroUrl := printf "%s/sprites/hero.png" .Site.Params.seo.url }}
+            <meta name="twitter:image" content="{{ $heroUrl }}" />
+            <meta property="og:image" content="{{ $heroUrl }}" />
+        {{ end }}
+        {{ block "seoTitle" . }}
+                <title>{{ .Site.Params.seo.title }}</title>
+            <meta name="twitter:title" content="{{ .Site.Params.seo.title }}" />
+            <meta property="og:title" content="{{ .Site.Params.seo.title }}" />
+            <meta name="apple-mobile-web-app-title" content="{{ .Site.Params.seo.title }}" />
+        {{ end }}
+        {{ block "seoDescription" . }}
+            <meta name="description" content="{{ .Site.Params.seo.desc }}" />
+            <meta property="og:description" content="{{ .Site.Params.seo.desc }}" />
+            <meta name="twitter:description" content="{{ .Site.Params.seo.desc }}" />
+        {{ end}}
+    </head> 
     <body>
         <!-- <div class="corner" id="corner-a"></div>
         <div class="corner" id="corner-b"></div>
