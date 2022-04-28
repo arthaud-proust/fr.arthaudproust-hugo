@@ -1,5 +1,5 @@
 languageCode: 'fr'
-title: 'POC - netlify'
+title: Développeur web junior à Bordeaux
 theme: 'simple-onepage-and-gallery'
 baseURL: https://arthaudproust.fr
 removePathAccents: true
@@ -10,7 +10,7 @@ params:
   seo:
     author: Arthaud
     title: Développeur web junior à Bordeaux
-    desc: "Passionné, curieux et créatif, je conçois des solutions digitales, maquette et développe des sites - Arthaud Proust"
+    desc: "Developpement web, photographie, étudiant au MMI Bordeaux. Je suis passionné, curieux et créatif - Arthaud Proust"
     url: https://arthaudproust.fr
     links:
       github: https://github.com/arthaud-proust

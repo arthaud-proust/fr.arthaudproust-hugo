@@ -1,4 +1,4 @@
 ---
-title: À propos
+title: Mentions légales
 layout: index
 ---
