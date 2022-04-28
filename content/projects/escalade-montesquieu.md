@@ -2,7 +2,7 @@
 visibleInCms: true
 draft: false
 title: Escalade Montesquieu
-image: images/projects/escalade-montesquieu-preview.jpg
+image: /images/projects/escalade-montesquieu.fr_.jpg
 description: Site de la section escalade du lycée Montesquieu à Bordeaux.
 technos:
   - laravel
@@ -16,19 +16,19 @@ content:
     paraph1: Guilhem Granier, professeur d'EPS au lycée Montesquieu, me propose de
       réaliser le site de la section escalade. À ce moment, j'ai rejoint cette
       section sportive depuis déjà deux ans.
-    image: images/projects/escalade-montesquieu-preview.jpg
+    image: /images/projects/escalade-montesquieu.fr_.jpg
   - paraph1: Je grimpe donc régulièrement dans la salle d'escalade, et je me forme
       en parallèle au développement de site.
     paraph2: Cette proposition tombe donc à merveille, en lien avec mon projet d'études.
     title: Le contexte
-    image: images/projects/escalade-montesquieu-preview.jpg
+    image: /images/projects/escalade-montesquieu.fr_la-salle.jpg
   - title: Le besoin initial
-    image: images/projects/escalade-montesquieu-preview.jpg
+    image: /images/projects/escalade-montesquieu.fr_evenements-et-sorties_session-au-lycee.jpg
     paraph1: L'idée est d'avoir un site fonctionnel pour que la section escalade
       puisse organiser des sorties, des sessions au lycée et afficher les
       informations importantes.
   - title: Les débuts
-    image: images/projects/escalade-montesquieu-login.jpg
+    image: /images/projects/escalade-montesquieu.fr_login.jpg
     paraph1: >-
       Nous commençons par établir un cahier des charges suivant ce premier
       besoin. 
@@ -38,15 +38,13 @@ content:
 
 
       Cette maquette voyage beaucoup entre nous deux, et évolue jusqu'à sa version finale.
-  - date: Août 2020
-    title: Intégration du site
-    paraph1: Planche de design dans une main, cahier des charges dans l'autre, je me
+    paraph2: Planche de design dans une main, cahier des charges dans l'autre, je me
       tourne vers Laravel pour réaliser le site. Je commence à prendre en main
       ce framework, c'est l'occasion de continuer mon apprentissage!
-    image: images/projects/escalade-montesquieu-home.jpg
+    date: Août 2020
   - title: Livraison de la première version
     date: Septembre 2020
-    image: images/projects/escalade-montesquieu-login.jpg
+    image: /images/projects/escalade-montesquieu.fr_.jpg
     paraph1: Développement de la première version terminé. Nous présentons le site
       aux élèves de la section, les premières sessions s'organisent, la galerie
       photo se remplit au fil des mois. Bref, le site prend vie.
@@ -56,5 +54,5 @@ content:
       exemple commencé à ajouter la modélisation 3D de la salle. L'objectif
       étant de créer une plus grande connexion autour de la salle d'escalade du
       lycée.
-    image: images/projects/escalade-montesquieu-salle3d-2.jpg
+    image: /images/projects/escalade-montesquieu.fr_la-salle.jpg
 ---
