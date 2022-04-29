@@ -54,11 +54,9 @@ addEventListener('turbo:load', function() {
         ]
     });
 
-    superCursor.init();
     if(!utils.mobileAndTabletCheck()) {
+        superCursor.init();
         superCursor.enable();
-    } else {
-        superCursor.disable();
     }
 
     setEffects();

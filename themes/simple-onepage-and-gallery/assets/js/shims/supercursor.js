@@ -82,6 +82,7 @@ class SuperCursor {
     }
 
     init() {
+        console.log('Supercursor initialized');
         document.addEventListener("mouseleave", ()=>this.disable())
 		document.addEventListener("mouseenter", ()=>this.enable())
         document.addEventListener("mousedown", ()=>this.setState(this.states.ACTIVE))
@@ -91,7 +92,6 @@ class SuperCursor {
         })
 
         document.addEventListener("mousemove", event=>this.updateMouseFromEvent(event))
-        this.enable();
     }
 
     enable() {
@@ -115,6 +115,7 @@ class SuperCursor {
     }
 
     setState(newState) {
+        if(!this.enabled) return;
         if(newState===undefined) {
             console.warn("SuperCursor: undefined state provided");
         } else if (newState !== this.state) {
@@ -125,6 +126,7 @@ class SuperCursor {
     }
 
     updateMouseFromEvent(event) {
+        if(!this.enabled) return;
 		// this.mouse = {
 		// 	x: event.pageX,
 		// 	y: event.pageY
