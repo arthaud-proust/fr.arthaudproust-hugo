@@ -30,7 +30,7 @@
             <meta name="twitter:description" content="{{ $description }}" />
         {{ end}}
     </head> 
-    <body>
+    <body class="min-vh-100">
         <!-- <div class="corner" id="corner-a"></div>
         <div class="corner" id="corner-b"></div>
         <div class="corner" id="corner-c"></div>
@@ -43,7 +43,7 @@
             {{ partial "components/vertical-cord" . }}
         </div>
 
-        <main class="page-transition container flex-grow-1 min-vh-100">
+        <main class="page-transition container flex-grow-1 h-full">
             {{- block "main" . }}{{- end }}
         </main>
 

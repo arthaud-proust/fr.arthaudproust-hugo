@@ -5,7 +5,7 @@ import { SuperCursor } from './shims/supercursor';
 import { setEffects } from './shims/effets';
 
 addEventListener('turbo:load', function() {
-
+    const gridGutter = 16*3;
     
     const SESSION_KEY_ANIM = 'arthaudproust-animation';
 
@@ -95,16 +95,16 @@ addEventListener('turbo:load', function() {
             breakpoints: {
                 576: { // >= sm
                     slidesPerView: 2,
-                    spaceBetween: 16*1.5
+                    spaceBetween: gridGutter
                 },
                 992: { // >= lg
                     slidesPerView: 2,
-                    spaceBetween: 16*1.5
+                    spaceBetween: gridGutter
                 },
 
                 1200: { // >= xl
                     slidesPerView: 2,
-                    spaceBetween: 16*1.5
+                    spaceBetween: gridGutter
                 },
             },
             mousewheel: {
