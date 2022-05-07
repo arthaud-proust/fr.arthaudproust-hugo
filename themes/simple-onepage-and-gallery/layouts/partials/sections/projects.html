@@ -5,16 +5,17 @@
 
         <section id="projects" class="py-6">
             <h2 class="display-4 mb-4">Réalisations</h2>
-            <div id="projects-group">
-                <div class="swiper-wrapper">
+            <div id="projects-group" class="position-relative">
+                <div class="swiper-wrapper pb-5">
                     {{ range (where .Site.Pages "Section" "projects") }}
-                    {{ range .Pages }}
-                    <div class="h-100 d-flex swiper-slide">
-                        {{ .Render "card"}}
-                    </div>
-                    {{ end}}
+                        {{ range .Pages }}
+                            <div class="h-100 d-flex swiper-slide">
+                                {{ .Render "card"}}
+                            </div>
+                        {{ end}}
                     {{ end }}
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
     </div>

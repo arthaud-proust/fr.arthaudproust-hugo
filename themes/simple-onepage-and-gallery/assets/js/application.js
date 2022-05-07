@@ -91,6 +91,9 @@ addEventListener('turbo:load', function() {
             // autoHeight: true,
             // resistance: false,
             resistanceRatio: 0.9,
+            pagination: {
+                el: '.swiper-pagination',
+            },
 
             breakpoints: {
                 576: { // >= sm
