@@ -25,7 +25,7 @@
                 {{ partial "image/resize" (dict
                     "img" .Params.image
                     "opt" (dict
-                        "size" "700x webp"
+                        "size" "1000x webp"
                         "class" "project-image img-fluid h-auto"
                         "id" "sic-preview"
                     )
@@ -35,7 +35,7 @@
                 {{ partial "image/resize" (dict
                     "img" .image
                     "opt" (dict
-                        "size" "700x webp"
+                        "size" "1000x webp"
                         "class" "project-image img-fluid h-auto d-none"
                         "id" (printf "sic-%s" (urlize .title))
                     )
@@ -55,7 +55,7 @@
                     {{ partial "image/resize" (dict
                         "img" .Params.image
                         "opt" (dict
-                            "size" "700x webp"
+                            "size" "1000x webp"
                             "class" "img-fluid h-auto"
                         )
                     )}}
@@ -103,7 +103,7 @@
                         {{ partial "image/resize" (dict
                             "img" .image
                             "opt" (dict
-                                "size" "700x webp"
+                                "size" "1000x webp"
                                 "class" "img-fluid h-auto d-md-none"
                             )
                         )}}
