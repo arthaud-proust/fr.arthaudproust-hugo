@@ -41,13 +41,21 @@
                     )
                 )}}
             {{ end }}
+
+            
         </div>
     </div>
     
     <div class="col-md-7 col-xl-6 mt-5" id="project-sections-root">
         <div class="mb-5">
             <a href="/#projects">Retour aux réalisations</a>
-            <h1 class="display-2">{{ .Title }}</h1>
+            <h1 class="display-2 mt-5" >{{ .Title }}</h1>
+            {{ if .Params.project_url }}
+                <h2><strong><a href="{{ .Params.project_url }}" target="_blank" rel="noopener">Voir le site</a></strong></h2>
+            {{ end }}
+        </div>
+        
+        <div class="mb-7">
             {{ if .Params.subtitle }}
                 <h3>{{ .Params.subtitle }}</h3>
             {{ end }}
@@ -61,13 +69,13 @@
 
         {{ if isset .Params "technos" }}
             <div class="mb-7">
-                <h5>Réalisé avec</h5>
-                <p>
+                <h2><strong>Réalisé avec</strong></h2>
+                <ul class="list-unstyled">
                     {{ $relatedTechnos := site.RegularPages.RelatedTo ( keyVals "techno" .Params.technos)}}
                     {{ range $relatedTechnos }}
-                        <img class="img-icon" src="{{ .Params.img }}" alt="techno">
+                        <li class="mb-3">{{ partial "image/icon" . }}<span class="ms-3">{{ humanize .Params.techno }}</span></li>
                     {{ end }}
-                </p>
+                </ul>
             </div>
         {{ end }}
 
@@ -96,7 +104,7 @@
 
         <div class="mb-7">
             {{ if .Params.project_url }}
-                <h2 class=""><strong><a href="{{ .Params.project_url }}" target="_blank" rel="noopener">Voir le site</a></strong></h2>
+                <h2 class="mb-4"><strong><a href="{{ .Params.project_url }}" target="_blank" rel="noopener">Voir le site</a></strong></h2>
             {{ end }}
             
             <ul class="list-unstyled">
