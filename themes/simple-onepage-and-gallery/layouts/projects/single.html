@@ -56,8 +56,7 @@
                         "img" .Params.image
                         "opt" (dict
                             "size" "480x webp"
-                            "class" "project-image img-fluid h-auto"
-                            "id" "sic-preview"
+                            "class" "img-fluid h-auto"
                         )
                     )}}
                 {{ end }}
@@ -106,7 +105,6 @@
                             "opt" (dict
                                 "size" "480x webp"
                                 "class" "img-fluid h-auto d-md-none"
-                                "id" (printf "sic-%s" (urlize .title))
                             )
                         )}}
                     </div>
