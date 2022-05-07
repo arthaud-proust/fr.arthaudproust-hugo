@@ -96,19 +96,23 @@
 
 
 
-
+        {{ $previousImg := ""  }}
         {{ range .Params.Content }}
             <div class="project-section mb-7" data-image="{{ (printf "sic-%s" (urlize .title)) }}">
-                <div class="w-full mb-4">
-                    {{ partial "image/resize" (dict
-                        "img" .image
-                        "opt" (dict
-                            "size" "480x webp"
-                            "class" "img-fluid h-auto d-md-none"
-                            "id" (printf "sic-%s" (urlize .title))
-                        )
-                    )}}
-                </div>
+                {{ if (ne $previousImg .image) }}
+                    <div class="w-full mb-4">
+                        {{ partial "image/resize" (dict
+                            "img" .image
+                            "opt" (dict
+                                "size" "480x webp"
+                                "class" "img-fluid h-auto d-md-none"
+                                "id" (printf "sic-%s" (urlize .title))
+                            )
+                        )}}
+                    </div>
+                {{ end }}
+                {{ $previousImg = .image }}
+
                 {{ if isset . "date" }}
                     <span>{{ .date }}</span>
                 {{ end }}
