@@ -48,12 +48,27 @@
     
     <div class="col-md-7 col-xl-6 mt-5" id="project-sections-root">
         <div class="mb-5">
-            <a href="/#projects">Retour aux réalisations</a>
-            <h1 class="display-2 mt-5" >{{ .Title }}</h1>
+            <a href="/#projects" class="mb-5">Retour aux réalisations</a>
+
+            <div class="w-full d-md-none mt-5">
+                {{ if .Params.image }}
+                    {{ partial "image/resize" (dict
+                        "img" .Params.image
+                        "opt" (dict
+                            "size" "480x webp"
+                            "class" "project-image img-fluid h-auto"
+                            "id" "sic-preview"
+                        )
+                    )}}
+                {{ end }}
+            </div>
+
+            <h1 class="display-2 mt-3 mt-md-5" >{{ .Title }}</h1>
             {{ if .Params.project_url }}
                 <h2><strong><a href="{{ .Params.project_url }}" target="_blank" rel="noopener">Voir le site</a></strong></h2>
             {{ end }}
         </div>
+
         
         <div class="mb-7">
             {{ if .Params.subtitle }}
@@ -84,6 +99,16 @@
 
         {{ range .Params.Content }}
             <div class="project-section mb-7" data-image="{{ (printf "sic-%s" (urlize .title)) }}">
+                <div class="w-full mb-4">
+                    {{ partial "image/resize" (dict
+                        "img" .image
+                        "opt" (dict
+                            "size" "480x webp"
+                            "class" "img-fluid h-auto d-md-none"
+                            "id" (printf "sic-%s" (urlize .title))
+                        )
+                    )}}
+                </div>
                 {{ if isset . "date" }}
                     <span>{{ .date }}</span>
                 {{ end }}

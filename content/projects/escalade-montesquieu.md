@@ -6,8 +6,8 @@ image: /images/projects/escalade-montesquieu.fr_la-salle.jpg
 description: Site de la section escalade du lycée Montesquieu à Bordeaux. Modélisation 3D de la salle.
 technos:
   - laravel
-  - javascript
-  - css3
+  - mysql
+  - bootstrap
 project_url: https://escalade-montesquieu.fr
 github_url: https://github.com/arthaud-proust/fr.escalade-montesquieu
 content:

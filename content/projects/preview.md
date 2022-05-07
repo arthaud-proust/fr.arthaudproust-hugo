@@ -9,6 +9,7 @@ technos:
   - nodejs
   - express
   - socketio
+  - tailwindcss
 project_url: https://preview.arthaud.dev
 github_url: https://github.com/arthaud-proust/dev.arthaud.preview
 content:

@@ -8,7 +8,6 @@ description: Des jeunes Bordelais et Bordelaises qui organisent des concours
 technos:
   - laravel
   - mysql
-  - javascript
   - tailwindcss
 project_url: https://bordeaux-photo.fr
 github_url: https://github.com/arthaud-proust/fr.bordeaux-photo

@@ -39,7 +39,7 @@ class SuperCursor {
             '.supercursor-hover-text'
         ]);
         this.stateOn.set('HOVER_SEE', [
-            '.supercursor-hover-see'
+            '.supercursor-hover-see',
         ]);
         this.stateOn.set('HOVER', [
             'a', 
