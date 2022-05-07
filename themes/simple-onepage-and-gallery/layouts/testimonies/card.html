@@ -23,6 +23,9 @@
             {{ if .Params.site }}
                 <a href="{{ .Params.site }}">Voir le site</a>
             {{ end }}
+            {{ if .Params.project }}
+                <a href="{{ .Params.project }}">Voir le projet</a>
+            {{ end }}
         </div>
     </div>
     {{ if .Params.content }}
