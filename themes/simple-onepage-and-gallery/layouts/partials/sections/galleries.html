@@ -1,12 +1,9 @@
-{{ define "main" }}
-    <a href="/">Retour à l'accueil</a>
-    <h1>Galerie photo</h1>
-
-    <div class="row my-5">
+<section id="galleries">
+    {{ range (where .Site.Pages "Section" "galleries") }}
         {{ range .Pages }}
             <div class="col-12 col-md-4">
                 {{ .Render "card" }}
             </div>
         {{ end }}
-    </div>
-{{ end }}
+    {{ end }}
+</section>

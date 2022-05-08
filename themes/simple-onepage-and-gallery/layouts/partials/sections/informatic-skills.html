@@ -1,7 +1,7 @@
 
 <section id="informatic-skills" class="py-6 row">
-    <h2 class="order-md-last col-md-6 display-3 ">Ils sont mes compagnons de travail</h2>
-    <ul class="offset-md-1 col-md-5 mt-5 mt-md-3 list-unstyled">
+    <h2 class="order-md-last col-md-7 display-3 ">Ils sont mes compagnons de travail</h2>
+    <ul class="col-md-5 mt-5 mt-md-3 list-unstyled">
         {{ range .Site.Data.sections.technos }}
             {{ $technos := where $.Site.Pages "Section" "technos" }}
             {{ range where $technos ".Params.techno" . }}

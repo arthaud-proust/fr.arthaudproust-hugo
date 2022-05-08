@@ -1,7 +1,7 @@
-<div class="px-md-5 pt-4 pt-md-0 pb-5">
+<div class="px-lg-5 pt-4 pt-md-0 pb-5">
     <div class="row mb-3">
         {{ if .Params.img }}
-            <div class="col-3">
+            <div class="col-3 col-md-2 col-lg-4 col-xl-3 pb-lg-3 pb-xl-0">
                 {{ partial "image/resize" (dict
                     "img" .Params.img
                     "opt" (dict
@@ -15,7 +15,7 @@
         {{ end }}
 
         
-        <div class="col-9 my-auto">
+        <div class="col-9 col-lg-12 col-xl-9 my-auto">
             <h3 class="mt-0">{{ .Title }}</h3>
             {{ if .Params.subtitle }}
                 <p class="m-0">{{ .Params.subtitle }}</p>
