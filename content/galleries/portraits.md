@@ -12,4 +12,9 @@ images:
   - image: /images/galleries/seefdin-dsc1342-min.jpg
   - image: /images/galleries/seefdin-dsc1345-min.jpg
   - image: /images/galleries/seefdin-dsc1347-3-min.jpg
+  - image: /images/galleries/portrait-quentin-mmi-2.jpg
+  - image: /images/galleries/portrait-quentin-mmi-3.jpg
+  - image: /images/galleries/portrait-quentin-mmi-1.jpg
+  - image: /images/galleries/portrait-quentin-mmi-4.jpg
+  - image: /images/galleries/portrait-quentin-mmi-5.jpg
 ---
