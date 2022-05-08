@@ -32,6 +32,12 @@ function setEffects() {
 
     const verticalCords = document.querySelectorAll('.component-vertical-cord');
     for(const verticalCord of verticalCords) {
+        // anime({
+        //     targets: verticalCord.children[0],
+        //     duration: 1000,
+        //     height: ['0%', '100%'],
+        //     easing: 'easeOutQuint'
+        // }, 1000)
         verticalCord.addEventListener('mouseover', function() {
             const pathToAnimate = verticalCord.querySelector('.component-vertical-cord-path')
             const v = window.superCursor.mouse.velocity;
