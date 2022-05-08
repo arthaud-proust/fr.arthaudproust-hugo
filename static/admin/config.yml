@@ -15,13 +15,16 @@ collections:
     folder: content/galleries
     create: true
     editor: { preview: false }
-    slug: "{{year}}-{{month}}-{{day}}-{{hour}}{{minute}}{{second}}"
     filter: {field: "visibleInCms", value: true}
     fields:
       - { label: "Visible", name: "visibleInCms", widget: hidden, default: true}
       - { label: Titre, name: title }
       - { label: Description, name: description, widget: markdown, minimal: true, required: false, buttons: [bold, link], editor_components: [], modes: [rich_text] }
-      - {label: "Images", name: images, widget: list, fields: [{label: "Image", name: "image", widget: "image", media_folder: /assets/media, public_folder: /media}]}
+      - { label: "Image", name: "image", required: true, widget: "image", allow_multiple: false, choose_url: false, media_folder: /assets/images/galleries, public_folder: /images/galleries},
+      - { label: "Contenu", name: images, widget: list, fields: [
+          { label: "Image", name: "image", required: true, widget: "image", allow_multiple: false, choose_url: false, media_folder: /assets/images/galleries, public_folder: /images/galleries},
+      ]}
+
     
   - name: projects
     label: Projects
