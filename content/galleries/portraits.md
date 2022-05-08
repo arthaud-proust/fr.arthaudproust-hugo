@@ -20,4 +20,6 @@ images:
   - image: /images/galleries/portrait-jason-mmi-1.jpg
   - image: /images/galleries/portrait-jason-mmi-2.jpg
   - image: /images/galleries/portrait-jason-mmi-3.jpg
+  - image: /images/galleries/portrait-leily-mmi-1.jpg
+  - image: /images/galleries/portrait-leily-mmi-2.jpg
 ---
