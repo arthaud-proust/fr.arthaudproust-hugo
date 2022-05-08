@@ -43,7 +43,8 @@ class SuperCursor {
         ]);
         this.stateOn.set('HOVER', [
             'a', 
-            '.supercursor-hover'
+            '.supercursor-hover',
+            '.pswp__button'
         ]);
         this.stateOn.set('ACTIVEABLE_X', [
             '.supercursor-activeable-x'

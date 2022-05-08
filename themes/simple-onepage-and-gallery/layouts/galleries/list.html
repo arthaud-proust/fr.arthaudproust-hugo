@@ -1,13 +1,12 @@
 {{ define "main" }}
     <a href="/">Home</a>
-	<main id="event-list-container">
-		<h1>Les galeries</h1>
+    <h1>Les galeries</h1>
 
-		{{ range .Pages }}
-			<div class="flex">
-				<h2 class="event-year">{{.Params.year}}</h2>
-				<div class="event-sum">{{ .Render "gallery-summary" }}</div>
-			</div>
-		{{ end }}
-	</main>
+    <div class="row mt-5">
+        {{ range .Pages }}
+            <div class="col-6 col-md-4">
+                {{ .Render "card" }}
+            </div>
+        {{ end }}
+    </div>
 {{ end }}

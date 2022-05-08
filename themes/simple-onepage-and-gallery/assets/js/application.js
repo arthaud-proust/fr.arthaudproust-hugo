@@ -2,10 +2,15 @@ import * as Turbo from "@hotwired/turbo"
 import * as bootstrap from "./bootstrap.js";
 import * as utils from './shims/utils';
 import { SuperCursor } from './shims/supercursor';
-import { setEffects } from './shims/effets';
+import { setEffects } from './shims/effects';
+
+
 
 addEventListener('turbo:load', function() {
     const gridGutter = 16*3;
+
+
+    
     
     const SESSION_KEY_ANIM = 'arthaudproust-animation';
 

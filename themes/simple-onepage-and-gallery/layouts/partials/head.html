@@ -16,10 +16,11 @@
 <link rel="stylesheet" href="{{ $style.Permalink }}?v={{ $t }}" integrity="{{ $style.Data.Integrity }}">
 
 
-{{ $neededSass := resources.Get "sass/needed.scss" }}
-{{ $neededSassOpts := (dict "outputStyle" "compressed")}}
-{{ $neededStyle := $neededSass | resources.ToCSS $neededSassOpts }}
-<style>{{ $neededStyle.Content | safeCSS }}</style>
+{{ $sass := resources.Get "sass/application.scss" }}
+{{ $sassOpts := (dict "outputStyle" "compressed")}}
+{{ $style := $sass | resources.ToCSS $sassOpts | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}?v={{ $t }}" integrity="{{ $style.Data.Integrity }}">
+
 
 <!-- swiper -->
 

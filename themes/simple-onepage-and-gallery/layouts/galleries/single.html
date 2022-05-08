@@ -1,15 +1,39 @@
+{{ define "pageHead" }}
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css" /> 
+{{ end }}
+
 {{ define "main" }}
-	<main id="gallery-container">
-        <a href="/galleries">Galeries</a>
-		<article>
-			<h1>{{ .Title }}</h1>
-		</article>
-        {{ with .Params.images }}
-            <div id="gallery-images">
-                {{ range . }}
-                    <img src="{{ .image }}">
-                {{ end }}
-            </div>
-        {{ end }}
-	</main>
+    <a href="/galleries">Galeries</a>
+    <h1>{{ .Title }}</h1>
+
+    {{ with .Params.images }}
+        <div id="gallery-images" class="mt-5 row grid-masonry">
+            {{ range . }}
+                <div class="col-6 col-md-4 mb-5">
+                    {{ $img := resources.Get .image }}
+                    {{ $fullResized := $img.Resize "2000x webp" }}
+                    <a 
+                        href="{{ $fullResized.Permalink }}" 
+                        class="gallery-image supercursor-hover-see"
+                        data-pswp-width="{{ $fullResized.Width }}" 
+                        data-pswp-height="{{ $fullResized.Height }}" 
+                        target="_blank"
+                    >
+                        {{ partial "image/resize" (dict
+                            "img" .image
+                            "opt" (dict
+                            "size" "1000x webp"
+                            "class" "img-fluid h-auto"
+                            )
+                        )}}
+                    </a>
+                </div>
+            {{ end }}
+        </div>
+    {{ end }}
+
+
+    {{ $t := mul 1000 (time "2016-05-28T10:30:00.00+10:00").Unix }}
+    {{ $js := resources.Get "js/gallery.js" | js.Build }}
+    <script defer src="{{ $js.Permalink }}?v={{ $t }}"></script>
 {{ end }}

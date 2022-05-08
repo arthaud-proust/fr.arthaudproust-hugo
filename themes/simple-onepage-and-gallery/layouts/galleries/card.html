@@ -1,0 +1,30 @@
+<div 
+    itemscope itemtype="https://www.schema.org/CreativeWork"
+    class="pe-4 hoverable w-100 position-relative" 
+>
+    <meta itemprop="url" content="{{ .Permalink }}">
+
+
+    {{ if .Params.image }}
+        {{ partial "image/resize" (dict
+            "img" .Params.image
+            "opt" (dict
+                "size" "1000x webp"
+                "itemprop" "thumbnailUrl"
+                "alt" .Title
+                "class" " transition-2 effect-hover hover-rotate-n5 hover-scale-9 col-12 h-auto"
+            )
+        )}}
+    {{ end }}     
+
+    <div>
+        <h3 class="display-6 mt-3" itemprop="name"><a data-hover-text="Voir" class="supercursor-hover-see text-black text-decoration-none stretched-link" href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        {{ if .Description }}
+        <p class="" itemprop="about">{{ .Description | markdownify }}</p>
+        {{ end }}
+    </div>
+
+    
+   
+    
+</div>

@@ -3,6 +3,9 @@
     "@hotwired/turbo": "^7.1.0",
     "animejs": "^3.2.1",
     "bootstrap": "^5.1.3",
+    "imagesloaded": "^5.0.0",
+    "masonry-layout": "^4.2.2",
+    "photoswipe": "^5.2.4",
     "swiper": "^8.1.3"
   }
 }

@@ -3,6 +3,9 @@
     <head prefix="og: http://ogp.me/ns#">
         {{- partial "head.html" . -}}
 
+        {{ block "pageHead" . }}
+        {{ end }}
+
 
         {{ partial "seo" . }}
         {{ block "seoHero" . }}
