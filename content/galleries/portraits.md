@@ -17,4 +17,7 @@ images:
   - image: /images/galleries/portrait-quentin-mmi-1.jpg
   - image: /images/galleries/portrait-quentin-mmi-4.jpg
   - image: /images/galleries/portrait-quentin-mmi-5.jpg
+  - image: /images/galleries/portrait-jason-mmi-1.jpg
+  - image: /images/galleries/portrait-jason-mmi-2.jpg
+  - image: /images/galleries/portrait-jason-mmi-3.jpg
 ---
