@@ -1,5 +1,5 @@
 languageCode: 'fr'
-title: Développeur web junior à Bordeaux
+title: Arthaud Proust - Développeur web junior à Bordeaux
 theme: 'simple-onepage-and-gallery'
 baseURL: https://arthaudproust.fr
 removePathAccents: true
@@ -9,8 +9,8 @@ params:
   phone: "07 83 39 28 88"
   seo:
     author: Arthaud
-    title: Développeur web junior à Bordeaux
-    desc: "Developpement web, photographie, étudiant au MMI Bordeaux. Je suis passionné, curieux et créatif - Arthaud Proust"
+    title: Arthaud Proust - Développeur web junior à Bordeaux
+    desc: "Développement web, photographie, étudiant au MMI Bordeaux. Je suis passionné, curieux et créatif - Arthaud Proust"
     url: https://arthaudproust.fr
     hero: /sprites/hero-min.jpg
     links:
