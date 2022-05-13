@@ -15,7 +15,7 @@ github_url: https://github.com/arthaud-proust/dev.arthaud.preview
 content:
   - date: Mars 2021
     title: Aux origines
-    paraph1: Lorsque je retouche des photos sur ligthroom depuis mon pc, j'ai envie
+    paraph1: Lorsque je retouche des photos sur lightroom depuis mon pc, j'ai envie
       de comparer l'affichage sur pc avec celui du téléphone avant de poster sur
       instagram.
     image: /images/projects/preview.arthaud.dev_aller_plus_vite.jpg
@@ -23,7 +23,7 @@ content:
       je copie-colle la photo et l'ouvre.
   - title: Une meilleure idée
     paraph1: Il me faut un service rapide, multi-plateforme, qui me permette de
-      visualier un feed instagram ou un carousel.
+      visualiser un feed instagram ou un carousel.
     paraph2: Je crée alors un proof of concept du projet qui s'appela Preview.
     image: /images/projects/preview.arthaud.dev_.jpg
     date: ""

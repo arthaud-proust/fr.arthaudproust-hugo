@@ -97,7 +97,7 @@ class SuperCursor {
 
     enable() {
         this.enabled = true;
-        this.setState(this.states.NORMAL)
+        this.setState(this.states.HIDDEN)
         this.element.removeAttribute('disabled');
         document.body.classList.add('superCursor-hide-cursor');
         
