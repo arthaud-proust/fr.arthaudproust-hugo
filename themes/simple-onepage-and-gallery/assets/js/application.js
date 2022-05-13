@@ -48,8 +48,12 @@ addEventListener('turbo:load', function() {
                 speed: 0.15,
                 updateEl: {
                     HOVER_TEXT: function() {
-                        if(this.cursor.elementHovered && this.cursor.elementHovered.dataset.hoverText) {
-                            this.element.style.setProperty('--hoverText', `"${this.cursor.elementHovered.dataset.hoverText}"`);
+                        if(this.cursor.elementHovered) {
+                            if(this.cursor.elementHovered.dataset && this.cursor.elementHovered.dataset.hoverText) {
+                                this.element.style.setProperty('--hoverText', `"${this.cursor.elementHovered.dataset.hoverText}"`);
+                            } else if(this.cursor.elementHovered.alt) {
+                                this.element.style.setProperty('--hoverText', `"${this.cursor.elementHovered.alt}"`);
+                            }
                         }
                         this.element.style.left = this.position.x + "px";
                         this.element.style.top = this.position.y + "px";

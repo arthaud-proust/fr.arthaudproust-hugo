@@ -5,3 +5,14 @@ technos:
   - nodejs
   - bootstrap
   - tailwindcss
+
+show: 
+  - image: /images/show/escalade-montesquieu.fr.jpg
+    title: 3D
+    link: /projects/escalade-montesquieu/
+  - image: /images/show/porte-telephone.jpg
+    title: Bois
+    link: /projects/porte-telephone-en-bois/
+  - image: /images/show/portrait-frederic.jpg
+    title: Photo
+    link: /galleries/
