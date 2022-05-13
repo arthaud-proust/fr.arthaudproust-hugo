@@ -1,11 +1,11 @@
 <div class="image-show pe-none">
-    <a class="d-flex" href="{{ .link }}">
+    <a class="pe-auto d-flex mt-auto hoverable supercursor-hover-text effect-hover effect-transition-2 effect-hover-scale-11" href="{{ .link }}">
         {{ partial "image/resize" (dict
             "img" .image
             "opt" (dict
                 "size" "1000x webp"
                 "alt" .title
-                "class" " hoverable effect-hover effect-transition-2 effect-hover-scale-11 pe-auto supercursor-hover-text mt-auto d-block w-100 h-auto"
+                "class" " d-block w-100 h-auto"
             )
         )}}
     </a>
