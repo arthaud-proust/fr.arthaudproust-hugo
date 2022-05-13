@@ -45,7 +45,7 @@ addEventListener('turbo:load', function() {
             },
             {
                 name: "outter",
-                speed: 0.15,
+                speed: 0.13,
                 updateEl: {
                     HOVER_TEXT: function() {
                         if(this.cursor.elementHovered) {

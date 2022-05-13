@@ -86,8 +86,8 @@ class SuperCursor {
         console.log('Supercursor initialized');
         document.addEventListener("mouseleave", ()=>this.disable())
 		document.addEventListener("mouseenter", ()=>this.enable())
-        document.addEventListener("mousedown", ()=>this.setState(this.states.ACTIVE))
-        document.addEventListener("mouseup", ()=>this.setState(this.states.NORMAL))
+        // document.addEventListener("mousedown", ()=>this.setState(this.states.ACTIVE))
+        // document.addEventListener("mouseup", ()=>this.setState(this.states.NORMAL))
         document.addEventListener("contextmenu", e=>{
             e.preventDefault();
         })

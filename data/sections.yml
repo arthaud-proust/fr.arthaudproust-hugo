@@ -8,8 +8,8 @@ technos:
 
 show: 
   - image: /images/show/escalade-montesquieu.fr.jpg
-    title: 3D
-    link: /projects/escalade-montesquieu/
+    title: Web
+    link: "#projects"
   - image: /images/show/porte-telephone.jpg
     title: Bois
     link: /projects/porte-telephone-en-bois/

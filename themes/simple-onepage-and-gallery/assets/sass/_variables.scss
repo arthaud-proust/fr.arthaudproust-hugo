@@ -17,7 +17,7 @@ $position-values: map-merge((
 ), $spacers);
 
 
-$enable-smooth-scroll: false;
+$enable-smooth-scroll: true;
 $enable-negative-margins: true;
 $enable-rounded: false;
 
@@ -38,13 +38,17 @@ $black: #000001;
 // $backgroundLine: #fafafa;
 // $dark: #000001;
 
-$primary: #6912e4;
-// $primary: #de4429;
+// $primary: #6912e4;
+$primary: #de4429;
 // $primary: #2a922e;
 
 // $primary: #F18C79;
 // $primary: #EF7660;
 // $primary: #f2644a;
+
+// $secondary: #dcceef;
+$secondary: #f4e1dd;
+
 
 
 $body-bg: $white;

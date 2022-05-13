@@ -1,4 +1,7 @@
 $superCursorColor: $white
+$superCursorColorBg: $black
+$superCursorColorAccent: $secondary
+
 .superCursor-hide-cursor, .superCursor-hide-cursor *
     cursor: none !important
 
@@ -110,24 +113,27 @@ $superCursorColor: $white
 
     &.state-HOVER_TEXT
         .superCursor-layer-pointer
-            --h: 8rem
+            --h: 10rem
             --w: 10rem
-            border-radius: 0
+            border-radius: 100%
+            mix-blend-mode: normal
+            background: $superCursorColorAccent
 
         .superCursor-layer-outter
             --h: 8rem
             --w: 8rem
             border: none
+            mix-blend-mode: normal
 
             &::after
                 content: var(--hoverText)
                 position: relative
-                mix-blend-mode: difference
+                mix-blend-mode: normal
                 margin: auto
-                font-size: 3rem
+                font-size: 2.5rem
                 font-weight: bold
                 display: block
-                color: $superCursorColor
+                color: $superCursorColorBg
 
 
     &.state-ACTIVE
