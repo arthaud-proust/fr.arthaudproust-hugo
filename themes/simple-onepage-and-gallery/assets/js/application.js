@@ -121,7 +121,8 @@ addEventListener('turbo:load', function() {
             },
             mousewheel: {
                 enabled: true,
-                releaseOnEdges: true
+                releaseOnEdges: true,
+                forceToAxis: true
             }
         });
         projectsSwiper.on('touchStart', function (swiper, event) {
@@ -151,10 +152,12 @@ addEventListener('turbo:load', function() {
             // autoHeight: true,
             // resistance: false,
             resistanceRatio: 0.9,
-            spaceBetween: 16*1.5
-            // mousewheel: {
-            //     enabled: true
-            // }
+            spaceBetween: 16*1.5,
+            mousewheel: {
+                enabled: true,
+                releaseOnEdges: true,
+                forceToAxis: true
+            }
         });
 
         testimoniesSwiper.on('touchStart', function (swiper, event) {
