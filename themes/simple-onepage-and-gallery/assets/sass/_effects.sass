@@ -2,28 +2,49 @@
     .transition-#{$i}
         transition: #{$i / 10}s
 
+    .effect-transition-#{$i}
+        transition: #{$i / 10}s
 
-.grayscale
-    --filterGrayscale: 1
+
+
+
+
 
 .effect-hover
     --transfromScale: 1
     --transformRotateZ: 0
+    --opacity: 1
     transform: rotateZ(var(--transformRotateZ)) scale(var(--transformScale))
     filter: #{"grayscale(var(--filterGrayscale))"}
+    opacity: var(--opacity)
+
+.effect-grayscale-1
+    --filterGrayscale: 1
+
+.effect-opacity-0
+    --opacity: 0
+
+.effect-opacity-1
+    --opacity: 1
 
 .hoverable:hover
 
     @for $i from 0 through 36
-        &.hover-rotate-#{$i}, .hover-rotate-#{$i}
+        &.effect-hover-rotate-#{$i}, .effect-hover-rotate-#{$i}
             --transformRotateZ: #{$i}deg
         
-        &.hover-rotate-n#{$i}, .hover-rotate-n#{$i}
+        &.effect-hover-rotate-n#{$i}, .effect-hover-rotate-n#{$i}
             --transformRotateZ: -#{$i}deg
 
     @for $i from 0 through 10
-        &.hover-scale-#{$i}, .hover-scale-#{$i}
+        &.effect-hover-scale-#{$i}, .effect-hover-scale-#{$i}
             --transformScale: #{$i / 10}
 
-    &.hover-grayscale-0, .hover-grayscale-0
+    &.effect-hover-grayscale-0, .effect-hover-grayscale-0
         --filterGrayscale: 0
+
+    &.effect-hover-opacity-1, .effect-hover-opacity-1
+        --opacity: 1
+
+    &.effect-hover-opacity-0, .effect-hover-opacity-0
+        --opacity: 0

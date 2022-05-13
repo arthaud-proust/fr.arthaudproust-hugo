@@ -1,0 +1,24 @@
+<div class="col-6 col-md-4 mb-5">
+    {{ $img := resources.Get .image }}
+    {{ $fullResized := $img.Resize "2000x webp" }}
+    <a 
+        href="{{ $fullResized.Permalink }}" 
+        class="d-block hoverable h-100 position-relative gallery-image supercursor-hover-see"
+        data-pswp-width="{{ $fullResized.Width }}" 
+        data-pswp-height="{{ $fullResized.Height }}" 
+        target="_blank"
+    >
+        {{ partial "image/resize" (dict
+            "img" .image
+            "opt" (dict
+            "size" "1000x webp"
+            "class" "effect-hover effect-brightness-100 effect-hover-brightness-50 img-fluid h-auto"
+            )
+        )}}
+        <div class="h-100 w-100 d-flex flex-column justify-content-end bg-shadow effect-hover effect-transition-2 effect-opacity-0 effect-hover-opacity-1 text-white py-2 px-3 position-absolute bottom-0">
+            {{ with .title }}<h3>{{ . }}</h3>{{ end }}
+            {{ with .desc }}<p>{{ . }}</p>{{ end }}
+        </div>
+    </a>
+    
+</div>

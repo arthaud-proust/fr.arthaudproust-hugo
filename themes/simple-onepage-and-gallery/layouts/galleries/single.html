@@ -9,25 +9,7 @@
     {{ with .Params.images }}
         <div id="gallery-images" class="mt-5 row grid-masonry">
             {{ range . }}
-                <div class="col-6 col-md-4 mb-5">
-                    {{ $img := resources.Get .image }}
-                    {{ $fullResized := $img.Resize "2000x webp" }}
-                    <a 
-                        href="{{ $fullResized.Permalink }}" 
-                        class="gallery-image supercursor-hover-see"
-                        data-pswp-width="{{ $fullResized.Width }}" 
-                        data-pswp-height="{{ $fullResized.Height }}" 
-                        target="_blank"
-                    >
-                        {{ partial "image/resize" (dict
-                            "img" .image
-                            "opt" (dict
-                            "size" "1000x webp"
-                            "class" "img-fluid h-auto"
-                            )
-                        )}}
-                    </a>
-                </div>
+                {{ partial "components/photo" . }}
             {{ end }}
         </div>
     {{ end }}
