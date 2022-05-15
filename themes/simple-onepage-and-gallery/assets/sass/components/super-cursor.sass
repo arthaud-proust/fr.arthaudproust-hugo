@@ -84,8 +84,9 @@ $superCursorColorAccent: $secondary
             // --blendMode: difference
 
         .superCursor-layer-outter
-            --h: 2rem
-            --w: 2rem
+            --h: 1rem
+            --w: 1rem
+            background: $superCursorColorBg
             --rotateZ: 90deg
 
     &.state-ALT
@@ -104,10 +105,10 @@ $superCursorColorAccent: $secondary
                 width: 1.5rem
                 border-radius: 100%
                 position: relative
-                mix-blend-mode: difference
+                // mix-blend-mode: difference
                 margin: auto
                 display: block
-                background: $superCursorColor
+                background: $black
 
         .superCursor-layer-outter
             --w: 10rem
@@ -135,7 +136,7 @@ $superCursorColorAccent: $secondary
                 position: relative
                 mix-blend-mode: normal
                 margin: auto
-                font-size: 2.5rem
+                font-size: 2rem
                 font-weight: bold
                 display: block
                 color: $superCursorColorBg
