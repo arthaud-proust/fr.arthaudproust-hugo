@@ -1,5 +1,5 @@
-$superCursorColor: $white
-$superCursorColorBg: $black
+$superCursorColor: $peach
+$superCursorColorBg: $peach
 $superCursorColorAccent: $secondary
 
 .superCursor-hide-cursor, .superCursor-hide-cursor *
@@ -20,7 +20,7 @@ $superCursorColorAccent: $secondary
         --rotateY: 0
         --rotateZ: 0
         --hoverAltContent: " "
-        --blendMode: difference
+        --blendMode: normal
 
         --w: 3.5rem
         --h: 3.5rem 
@@ -39,7 +39,7 @@ $superCursorColorAccent: $secondary
         opacity: 1
         mix-blend-mode: var(--blendMode)
 
-        transition: height .5s, width .5s, opacity .3s, transform .3s, border-radius .3s
+        transition: height .5s, width .5s, opacity .3s, transform .3s, border-radius .3s, background .3s, color .3s, mix-blend-mode .3s
 
         top: 0
         left: 0
@@ -52,13 +52,14 @@ $superCursorColorAccent: $secondary
             --h: 3.5rem   
             --hoverText: 'Voir'
 
-            border: 1px solid $superCursorColor
+            border: 2px solid $superCursorColor
+            border-radius: 100%
             z-index: 900001
 
 
         &.superCursor-layer-pointer
-            --w: 1rem
-            --h: 1rem   
+            --w: 2rem
+            --h: 2rem   
 
             // border: 1px solid super$superCursorColor
             background: $superCursorColor
@@ -77,7 +78,10 @@ $superCursorColorAccent: $secondary
         .superCursor-layer-pointer
             --h: 4rem
             --w: 6rem
-            border-radius: 0
+            border-radius: 99999rem
+            background: transparent
+            border: 2px solid $superCursorColor
+            // --blendMode: difference
 
         .superCursor-layer-outter
             --h: 2rem
@@ -92,6 +96,7 @@ $superCursorColorAccent: $secondary
         .superCursor-layer-pointer
             --w: 4rem
             --h: 4rem  
+
 
             &::after
                 content: ' '
@@ -115,8 +120,8 @@ $superCursorColorAccent: $secondary
         .superCursor-layer-pointer
             --h: 10rem
             --w: 10rem
+            --blendMode: normal
             border-radius: 100%
-            mix-blend-mode: normal
             background: $superCursorColorAccent
 
         .superCursor-layer-outter
@@ -154,12 +159,12 @@ $superCursorColorAccent: $secondary
             &::after
                 content: '<>'
                 position: relative
-                mix-blend-mode: difference
+                // mix-blend-mode: difference
                 margin: auto
                 font-size: 3rem
                 font-weight: bold
                 display: block
-                color: $superCursorColor
+                color: $superCursorColorAccent
             
 
         .superCursor-layer-outter

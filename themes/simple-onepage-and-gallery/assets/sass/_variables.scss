@@ -46,12 +46,15 @@ $primary: #de4429;
 // $primary: #EF7660;
 // $primary: #f2644a;
 
+
 // $secondary: #dcceef;
-$secondary: #f4e7e5;
+$secondary: #ffe0d9;
+
+// scss-docs-start color-variables
+$peach: #e94b2f;
 
 
-
-$body-bg: $white;
+$body-bg: #fffaf8;
 $body-color: $black;
 
 $hr-color: $black;
@@ -69,6 +72,7 @@ $border-width: 2px;
 $border-color: $black;
 
 // $link-color: $light;
+$link-hover-color: $primary;
 $link-decoration: none;
 $link-hover-decoration: underline;
 
@@ -95,10 +99,10 @@ $small-font-size: 0.8rem;
 
 
 $offcanvas-padding-y: $spacer * 3;
-// $offcanvas-bg-color: $white;
+// $offcanvas-bg-color: $peach;
 // $offcanvas-color: $white;
 $offcanvas-border-color: $black;
-// $offcanvas-border-width: 2;
+$offcanvas-border-width: 0;
 $offcanvas-backdrop-opacity: 0.1;
 
 
