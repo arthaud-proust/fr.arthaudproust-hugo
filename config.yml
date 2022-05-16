@@ -5,7 +5,7 @@ baseURL: https://arthaudproust.fr
 removePathAccents: true
 
 params:
-  email: contact@arthaudproust.fr
+  email: proust@arthaud.dev
   phone: "07 83 39 28 88"
   seo:
     author: Arthaud
