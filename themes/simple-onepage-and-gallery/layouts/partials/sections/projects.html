@@ -6,7 +6,7 @@
         <section id="projects" class="py-6">
             <h2 class="display-4 mb-4">Réalisations principales</h2>
             <div id="projects-group" class="position-relative">
-                <div class="swiper-wrapper pb-5">
+                <div class="swiper-wrapper pb-5 supercursor-activeable-x">
                     {{ range (where .Site.Pages "Section" "projects") }}
                         {{ range .Pages }}
                             <div class="h-100 d-flex swiper-slide">

@@ -4,18 +4,23 @@ import * as utils from './shims/utils';
 import { SuperCursor } from './shims/supercursor';
 import { setEffects } from './shims/effects';
 
+addEventListener('turbo:before-render', function(event) {
+    event.preventDefault();
+    console.log('pageTransition: out');
+    console.log(event);
+    superCursor.setState(superCursor.states.COVER_PAGE)
+    // document.getElementById('pageTransition').classList.remove('in')
+    // document.getElementById('pageTransition').classList.add('out')
+    setTimeout(()=>{
+        superCursor.setState(superCursor.states.NORMAL)
+        event.detail.resume()
+    }, 300)
+});
 
 
-addEventListener('turbo:load', function() {
-    const gridGutter = 16*3;
-
-
-    
-    
-    const SESSION_KEY_ANIM = 'arthaudproust-animation';
-
+addEventListener('DOMContentLoaded', function() {
     window.superCursor = new SuperCursor({ 
-        root: document.body,
+        root: document.getElementById('keep'),
         layers: [
             {
                 name: "pointer",
@@ -67,6 +72,17 @@ addEventListener('turbo:load', function() {
         superCursor.init();
         superCursor.enable();
     }
+})
+
+
+addEventListener('turbo:load', function() {
+    const gridGutter = 16*3;
+
+    console.log(superCursor);
+
+    
+    
+    const SESSION_KEY_ANIM = 'arthaudproust-animation';
 
     setEffects();
 

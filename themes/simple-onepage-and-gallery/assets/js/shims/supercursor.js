@@ -25,7 +25,8 @@ class SuperCursor {
             'HOVER_SEE',
             'ACTIVE',
             'HIDDEN',
-            'ACTIVEABLE_X'
+            'ACTIVEABLE_X',
+            'COVER_PAGE'
         );
         this.state = this.states.HIDDEN;
 
@@ -120,6 +121,7 @@ class SuperCursor {
         if(newState===undefined) {
             console.warn("SuperCursor: undefined state provided");
         } else if (newState !== this.state) {
+            console.log('New state: '+newState.toText());
             this.element.classList.value = ''
             this.element.classList.add(`state-${newState.toText()}`);
             this.state = newState;
@@ -166,6 +168,7 @@ class SuperCursor {
                 if(shouldChangeState) break;
                 // console.log(state);
                 for(let selector of selectors) {
+                    selector+=':not(.supercursor-none)'
                     let shouldChange = this.elementHovered.matches(selector) || this.elementHovered.closest(selector);
                     if( shouldChange!==false && shouldChange !==null) {
                         shouldChangeState = this.states[state];
@@ -175,7 +178,7 @@ class SuperCursor {
             }
         }
 
-        if(this.state !== this.states.ACTIVE) {
+        if(this.state !== this.states.ACTIVE && this.state !== this.states.COVER_PAGE) {
             if(shouldChangeState) {
                 this.setState(shouldChangeState);
             } else {

@@ -1,5 +1,5 @@
 languageCode: 'fr'
-title: Arthaud Proust - Développeur web junior à Bordeaux
+title: Arthaud Proust
 theme: 'simple-onepage-and-gallery'
 baseURL: https://arthaudproust.fr
 removePathAccents: true
@@ -38,7 +38,7 @@ menu:
 
     - name: Galerie photo
       pre: galleries
-      url: "/galleries"
+      url: "/galleries/"
       weight: 4
     - name: Me contacter
       pre: meet-us

@@ -1,6 +1,7 @@
 $superCursorColor: $peach
 $superCursorColorBg: $peach
 $superCursorColorAccent: $secondary
+$superCursorCoverPageColor: $secondary
 
 .superCursor-hide-cursor, .superCursor-hide-cursor *
     cursor: none !important
@@ -173,9 +174,24 @@ $superCursorColorAccent: $secondary
             --h: 4rem  
             border-radius: 2rem
 
-            
+
+    &.state-COVER_PAGE
+        .superCursor-layer-pointer
+            --w: 210vmax
+            --h: 210vmax
+            background: $superCursorCoverPageColor
 
             
 
     &.state-HIDE
         display: none
+
+
+
+// @keyframes coverPage
+//     from
+//         height: 0
+//         width: inherit
+//     to
+//         height: 200vh
+//         width: 200vw

@@ -34,11 +34,6 @@
         {{ end}}
     </head> 
     <body class="min-vh-100">
-        <!-- <div class="corner" id="corner-a"></div>
-        <div class="corner" id="corner-b"></div>
-        <div class="corner" id="corner-c"></div>
-        <div class="corner" id="corner-d"></div> -->
- 
         {{- partial "header" . -}}
 
         <div style="pointer-events: none;" class="container mx-auto translate-middle p-0 position-fixed top-50 start-50 h-100 d-flex flex-row justify-content-between">
@@ -53,5 +48,7 @@
         {{- partial "footer" . -}}
 
         {{- partial "components/pageTransition" . -}}
+
+        <div id="keep" data-turbo-permanent></div>
     </body>
 </html>

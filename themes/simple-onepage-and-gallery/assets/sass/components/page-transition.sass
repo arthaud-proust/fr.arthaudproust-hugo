@@ -1,0 +1,130 @@
+#pageTransition
+    position: fixed
+    top: 0
+    left: 0
+    height: 100vh
+    right: 0
+    pointer-events: none
+    z-index: 999999999
+
+
+    #pageTransition-back
+        position: absolute
+        left: 0
+        right: 0
+        background: $secondary
+        height: 100%
+
+    #pageTransition-inner
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        color: $primary
+
+
+    // arrive sur la page
+    &.in
+        #pageTransition-back
+            // opacity: 1
+            // animation: fadeOut .6s .2s forwards
+            
+            // top: auto
+            // height: 100%
+            // animation: minimize .4s .2s forwards
+            // animation: topBottom .5s 1s forwards
+            animation: uncoverPage .5s 1s forwards
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            border-radius: 100%
+            height: 210vmax
+            width: 210vmax
+
+            #pageTransition-inner
+                opacity: 0
+                // animation: fadeIn .4s .1s forwards
+                animation: fadeInOut 1s .1s forwards
+            
+
+    // quitte la page
+    &.out
+        #pageTransition-back
+            // opacity: 0
+            // animation: fadeIn .5s forwards
+            
+            // top: 0
+            // height: 0
+            // animation: grow .3s forwards
+            // animation: bottomTop .2s forwards
+            animation: transitionIn .4s forwards
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            border-radius: 100%
+
+            #pageTransition-inner
+                opacity: 0
+
+@keyframes minimize
+    from
+        height: 100%
+    to
+        height: 0
+
+@keyframes grow
+    from
+        height: 0
+    to
+        height: 100%
+
+
+@keyframes transitionIn
+    from
+        height: 0
+        width: 0
+    to
+        height: 200vh
+        width: 200vw
+
+@keyframes uncoverPage
+    from
+        transform: translate(-50%, -50%)
+    to
+        // transform: translate(-50%, -50%) scale(0)
+        transform: translate(-50%, -50%)
+        opacity: 0
+
+@keyframes topBottom
+    from
+        transform: translateY(0)
+    to
+        transform: translateY(100%)
+
+@keyframes bottomTop
+    from
+        transform: translateY(-100%)
+    to
+        transform: translateY(0)
+
+
+
+@keyframes fadeIn
+    from
+        opacity: 0
+    to
+        opacity: 1
+
+@keyframes fadeOut
+    from
+        opacity: 1
+    to
+        opacity: 0
+
+@keyframes fadeInOut
+    0%
+        opacity: 0
+    30%, 70%
+        opacity: 1
+    100%
+        opacity: 0
