@@ -68,14 +68,17 @@ addEventListener('DOMContentLoaded', function() {
         ]
     });
 
-    if(!utils.mobileAndTabletCheck()) {
-        superCursor.init();
-        superCursor.enable();
-    }
+    superCursor.init();
+    superCursor.enable();
+
 })
 
 
 addEventListener('turbo:load', function() {
+    if(!utils.mobileAndTabletCheck()) {
+        superCursor.enableMouseMode()
+    }
+    
     const gridGutter = 16*3;
 
     console.log(superCursor);

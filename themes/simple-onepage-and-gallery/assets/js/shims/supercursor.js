@@ -52,6 +52,7 @@ class SuperCursor {
         ]);
 
         this.enabled = false;
+        this.mouseMode = true;
 
         this.layers = [];
 
@@ -114,6 +115,25 @@ class SuperCursor {
         document.body.classList.remove('superCursor-hide-cursor');
         this.enabled = false;
         this.element.setAttribute('disabled', true);
+    }
+
+    enableMouseMode() {
+        this.mouseMode = true;
+        document.body.classList.add('superCursor-mouse-mode');
+        document.body.classList.remove('superCursor-touch-mode');
+
+        
+        for(let layer of this.layers) {
+            layer.setPositionFromMouse(this.mouse);
+        }
+        
+        this.animate();
+    }
+ 
+    disableMouseMode() {
+        document.body.classList.remove('superCursor-mouse-mode');
+        document.body.classList.add('superCursor-touch-mode');
+        this.mouseMode = false;
     }
 
     setState(newState) {

@@ -6,8 +6,6 @@ $superCursorCoverPageColor: $secondary
 .superCursor-hide-cursor, .superCursor-hide-cursor *
     cursor: none !important
 
-
-
 #superCursor
     &[disabled]
         display: none
@@ -23,8 +21,8 @@ $superCursorCoverPageColor: $secondary
         --hoverAltContent: " "
         --blendMode: normal
 
-        --w: 3.5rem
-        --h: 3.5rem 
+        --w: 0
+        --h: 0 
 
         z-index: 900000
         position: fixed
@@ -47,7 +45,32 @@ $superCursorCoverPageColor: $secondary
         pointer-events: none
         transform: translateX(var(--translateX)) translateY(var(--translateY)) translateZ(var(--translateZ)) rotateX(var(--rotateX)) rotateY(var(--rotateY)) rotateZ(var(--rotateZ))
     
+    
+    // End layers default
 
+.superCursor-mouse-mode #superCursor, .superCursor-touch-mode #superCursor
+    &.state-COVER_PAGE 
+        .superCursor-layer.superCursor-layer-pointer
+            opacity: 1
+            --w: 210vmax
+            --h: 210vmax
+            border-radius: 100%
+            transition-timing-function: cubic-bezier(.64,-0.03,.97,.92)
+            background: $superCursorCoverPageColor
+
+.superCursor-touch-mode #superCursor
+    .superCursor-layer
+        &.superCursor-layer-outter
+            display: none
+  
+        &.superCursor-layer-pointer
+            // background: none
+            // --w: 0
+            // --h: 0
+
+.superCursor-mouse-mode #superCursor
+    // States
+    .superCursor-layer
         &.superCursor-layer-outter
             --w: 3.5rem
             --h: 3.5rem   
@@ -65,10 +88,7 @@ $superCursorCoverPageColor: $secondary
             // border: 1px solid super$superCursorColor
             background: $superCursorColor
             border-radius: 4rem
-    // End layers default
-
-
-    // States
+            
     &.state-HIDDEN
         .superCursor-layer
             --h: 0rem
@@ -174,19 +194,9 @@ $superCursorCoverPageColor: $secondary
             --h: 4rem  
             border-radius: 2rem
 
-
-    &.state-COVER_PAGE
-        .superCursor-layer-pointer
-            --w: 210vmax
-            --h: 210vmax
-            border-radius: 100%
-            transition-timing-function: cubic-bezier(.64,-0.03,.97,.92)
-            background: $superCursorCoverPageColor
-
-            
-
     &.state-HIDE
         display: none
+
 
 
 
