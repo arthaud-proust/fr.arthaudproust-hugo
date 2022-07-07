@@ -14,7 +14,7 @@ addEventListener('turbo:before-render', function(event) {
     setTimeout(()=>{
         superCursor.setState(superCursor.states.NORMAL)
         event.detail.resume()
-    }, 300)
+    }, 700)
 });
 
 
