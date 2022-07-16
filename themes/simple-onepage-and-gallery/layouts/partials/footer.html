@@ -2,11 +2,34 @@
 <div class="page-transition container pt-5">
     <footer class="py-3 py-4">
         <ul class="nav justify-content-center pb-3 mb-3">
-            <li class="nav-item"><a href="/mentions-legales/" class="px-2">Mentions légales</a></li>
-            <li class="nav-item"><a href="/resources/" class="px-2">Ressources</a></li>
-            <li class="nav-item"><a href="{{ .Site.Params.seo.links.github }}" class="px-2">Github</a></li>
+
+            {{ with .Site.GetPage "/references" }}
+            <li class="nav-item">
+                {{ partial "components/internal-link" (dict "page" . "class" "px-2") }}
+            </li>
+            {{ end }}
+            
+            {{ with .Site.GetPage "/resources" }}
+            <li class="nav-item">
+                {{ partial "components/internal-link" (dict "page" . "class" "px-2") }}
+            </li>
+            {{ end }}
+            
+            <li class="nav-item">
+                <a href="{{ .Site.Params.seo.links.github }}" class="px-2">Github</a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="{{ .Site.Params.seo.links.githubArchive }}" class="px-2">Archive</a>
+            </li>
+
         </ul>
         <div id="wcb" class="me-auto carbonbadge"></div> 
-        <p class="text-center"><small>&copy; 2020-{{ now.Year }} Arthaud Proust Tous droits réservés</small></p>
+        <p class="text-center">
+            <small>&copy; 2020-{{ now.Year }} Arthaud Proust Tous droits réservés</small>
+            {{ with .Site.GetPage "/mentions-legales" }}
+                <small>{{ partial "components/internal-link" (dict "page" .) }}</small>
+            {{ end }}
+        </p>
     </footer>
 </div>

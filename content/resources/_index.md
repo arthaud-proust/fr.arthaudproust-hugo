@@ -2,7 +2,7 @@
 title: Ressources
 layout: index
 
-description: Je recense sur cette page des adresse utiles au développement de certains de mes projets
+description: Je recense sur cette page des adresses utiles au développement de certains de mes projets
 
 categories:
 
@@ -46,6 +46,7 @@ categories:
           link: https://animejs.com/
         - text: GSAP
           link: https://greensock.com/gsap/
+    
     - title: Assets
       subtitle: Bibliothèques, génération...
       links:
@@ -70,6 +71,10 @@ categories:
         - text: I love img
           link: https://www.iloveimg.com/resize-image
 
-    
+    - title: Typo
+      subtitle: Polices d'écritures, outils
+      links:
+        - text: Atipo Foundry
+          link: https://www.atipofoundry.com/
 
 ---

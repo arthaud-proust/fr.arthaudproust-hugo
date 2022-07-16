@@ -1,0 +1,2 @@
+{{ $page := .page }}
+{{ partial "components/link" (dict "link" $page.Permalink "text" $page.Title "class" .class) }}

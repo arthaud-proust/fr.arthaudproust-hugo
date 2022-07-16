@@ -64,7 +64,9 @@
 
             <h1 class="display-2 mt-3 mt-md-5" >{{ .Title }}</h1>
             {{ if .Params.project_url }}
-                <h2><strong><a href="{{ .Params.project_url }}" target="_blank" rel="noopener">Voir le site</a></strong></h2>
+                <h2><strong>
+                    {{ partial "components/external-link" (dict "link" .Params.github_url "text" "Voir le site") }}
+                </strong></h2>
             {{ end }}
         </div>
 
@@ -131,12 +133,16 @@
 
         <div class="mb-7">
             {{ if .Params.project_url }}
-                <h2 class="mb-4"><strong><a href="{{ .Params.project_url }}" target="_blank" rel="noopener">Voir le site</a></strong></h2>
+                <h2 class="mb-4"><strong>
+                    {{ partial "components/external-link" (dict "link" .Params.github_url "text" "Voir le site") }}
+                </strong></h2>
             {{ end }}
             
             <ul class="list-unstyled">
                 {{ if .Params.github_url }}
-                    <li class="mb-3"><a href="{{ .Params.github_url }}" target="_blank" rel="noopener">Lien github</a></li>
+                    <li class="mb-3">
+                        {{ partial "components/external-link" (dict "link" .Params.github_url "text" "Lien github") }}
+                    </li>
                 {{ end }}
                 <li><a href="/#projects">Retour aux réalisations</a></li>
             </ul>

@@ -1,0 +1,7 @@
+<a 
+    href="{{ .link }}" 
+    class="{{ .class }}"
+    {{ if .external }}
+        target="_blank" rel="noopener"
+    {{ end }}
+>{{ .text }}</a>

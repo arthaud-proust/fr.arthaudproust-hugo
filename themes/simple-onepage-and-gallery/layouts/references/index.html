@@ -1,0 +1,41 @@
+{{ define "main" }}
+<section class="row pt-6">
+    <div class="col-lg-6 pb-6">
+        <div class="position-sticky top-6">
+            <h1 class="display-2">{{ .Title }}</h1>
+            {{ with .Description }}
+                <p>{{ . }}</p>
+            {{end}}
+        </div>
+    </div>
+    <div class="col-lg-6 mt-3">
+        {{ range .Params.Books}}
+            <div class="mb-6">
+                {{ with .image }}
+                    {{ partial "image/resize" (dict
+                        "img" .
+                        "opt" (dict
+                            "size" "500x webp"
+                            "class" "img-fluid h-auto w-50 mb-3"
+                            "itemprop" "image"
+                        )
+                    )}}
+                {{ end }}
+                {{ with .title }}<h2>{{ . }}</h2>{{ end }}
+                
+                <div>
+                    {{ range .author }}
+                        <span>
+                            {{ if .link }}
+                                {{ partial "components/link" (dict "link" .link "text" .name)}}
+                            {{ else }}
+                                {{ .name }}
+                            {{ end }}
+                        </span>
+                    {{ end }}
+                </div>  
+            </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
