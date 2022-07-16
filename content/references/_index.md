@@ -2,9 +2,15 @@
 title: Références
 layout: index
 
-description: Voici la liste des livres qui m'ont été conseillés ou que j'ai découvert, sur lesquels j'appuie mon travail.
+description: J'appuie mon travail sur des références qui m'ont été conseillées ou que j'ai découvertes. En voici la liste non-exhaustive.
 
 books:
+    - title: Culture numérique
+      author: 
+        - name: Dominique Cardon
+          link: https://fr.wikipedia.org/wiki/Dominique_Cardon_(sociologue)
+      image: /images/references/culture-numerique.jpg
+
     - title: Clean Code
       author: 
         - name: Robert C. Martin
