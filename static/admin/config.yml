@@ -73,10 +73,9 @@ collections:
         label: Références
         file: content/references/_index.md
         fields:
-          - { label: Title, name: titre }
+          - { label: Titre, name: title }
           - { label: Description, name: description, widget: "text" }
           - { label: Livres, name: books, widget: list, fields: [
-              { label: Brouillon, name: draft, widget: "boolean", default: false},
               { label: Titre, name: title },
               { label: "Auteur(s)", name: author, widget: list, fields: [
                   { label: Nom, name: name },
