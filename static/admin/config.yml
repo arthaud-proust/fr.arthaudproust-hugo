@@ -64,3 +64,19 @@ collections:
       - { label: Brouillon, name: draft, widget: "boolean", default: false}
       - { label: Techno, name: techno }
       - { label: Image url, name: img }
+
+  - name: content
+    label: Contenu
+    editor: { preview: false }
+    files: 
+      - name: references
+        label: Références
+        file: content/references/_index.md
+        fields:
+          - { label: Brouillon, name: draft, widget: "boolean", default: false}
+          - { label: Titre, name: title }
+          - { label: "Auteur(s)", name: author, widget: list, fields: [
+              { label: Nom, name: name },
+              { label: Lien, name: link, required: false },
+            ]}
+          - { label: "Image", name: "image", widget: "image", allow_multiple: false, choose_url: false, media_folder: /assets/images/references, public_folder: /images/references}
