@@ -83,4 +83,18 @@ collections:
               ]},
               { label: "Image", name: "image", widget: "image", allow_multiple: false, choose_url: false, media_folder: /assets/images/references, public_folder: /images/references}
             ]}
+      - name: resources
+        label: Resources
+        file: content/resources/_index.md
+        fields:
+          - { label: Titre, name: title }
+          - { label: Description, name: description, widget: "text" }
+          - { label: Catégories, name: categories, widget: list, fields: [
+              { label: Titre, name: title },
+              { label: Sous-titre, name: subtitle },
+              { label: "Liens", name: links, widget: list, fields: [
+                  { label: Texte, name: text },
+                  { label: Lien, name: link },
+              ]}
+            ]}
           
