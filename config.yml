@@ -1,6 +1,5 @@
 languageCode: 'fr'
 title: Arthaud Proust
-theme: 'simple-onepage-and-gallery'
 baseURL: https://arthaudproust.fr
 removePathAccents: true
 
