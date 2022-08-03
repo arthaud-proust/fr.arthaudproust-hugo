@@ -6,8 +6,6 @@ import { setEffects } from './shims/effects';
 
 addEventListener('turbo:before-render', function(event) {
     event.preventDefault();
-    console.log('pageTransition: out');
-    console.log(event);
     superCursor.setState(superCursor.states.COVER_PAGE)
     // document.getElementById('pageTransition').classList.remove('in')
     // document.getElementById('pageTransition').classList.add('out')
@@ -70,19 +68,16 @@ addEventListener('DOMContentLoaded', function() {
 
     superCursor.init();
     superCursor.enable();
-
 })
 
 
 addEventListener('turbo:load', function() {
+    superCursor.enable();
     if(!utils.mobileAndTabletCheck()) {
         superCursor.enableMouseMode()
     }
     
     const gridGutter = 16*3;
-
-    console.log(superCursor);
-
     
     
     const SESSION_KEY_ANIM = 'arthaudproust-animation';

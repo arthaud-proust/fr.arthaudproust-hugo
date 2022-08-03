@@ -18,10 +18,10 @@
 <link rel="stylesheet" href="{{ $style.Permalink }}?v={{ $t }}" integrity="{{ $style.Data.Integrity }}">
 
 
-{{ $sass := resources.Get "sass/application.scss" }}
+{{ $sass := resources.Get "sass/needed.scss" }}
 {{ $sassOpts := (dict "outputStyle" "compressed")}}
-{{ $style := $sass | resources.ToCSS $sassOpts | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}?v={{ $t }}" integrity="{{ $style.Data.Integrity }}">
+{{ $style = $sass | toCSS | minify }}
+<style>{{ $style.Content | safeCSS }}</style>
 
 
 <!-- swiper -->

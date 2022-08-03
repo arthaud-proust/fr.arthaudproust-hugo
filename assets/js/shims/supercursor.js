@@ -95,6 +95,7 @@ class SuperCursor {
         })
 
         document.addEventListener("mousemove", event=>this.updateMouseFromEvent(event))
+        
     }
 
     enable() {
@@ -111,10 +112,10 @@ class SuperCursor {
     }
 
     disable() {
-        this.setState(this.states.HIDDEN);
-        document.body.classList.remove('superCursor-hide-cursor');
         this.enabled = false;
+        this.setState(this.states.HIDDEN);
         this.element.setAttribute('disabled', true);
+        document.body.classList.remove('superCursor-hide-cursor');
     }
 
     enableMouseMode() {
@@ -141,7 +142,6 @@ class SuperCursor {
         if(newState===undefined) {
             console.warn("SuperCursor: undefined state provided");
         } else if (newState !== this.state) {
-            console.log('New state: '+newState.toText());
             this.element.classList.value = ''
             this.element.classList.add(`state-${newState.toText()}`);
             this.state = newState;
@@ -186,7 +186,6 @@ class SuperCursor {
         if(this.elementHovered) {
             for(let [state, selectors] of this.stateOn) {
                 if(shouldChangeState) break;
-                // console.log(state);
                 for(let selector of selectors) {
                     selector+=':not(.supercursor-none)'
                     let shouldChange = this.elementHovered.matches(selector) || this.elementHovered.closest(selector);
