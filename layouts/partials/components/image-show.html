@@ -1,12 +1,14 @@
 <div class="image-show pe-none">
-    <a class="pe-auto d-flex mt-auto hoverable supercursor-hover-text effect-hover effect-transition-2 effect-hover-scale-11" href="{{ .link }}">
-        {{ partial "image/resize" (dict
-            "img" .image
-            "opt" (dict
-                "size" "1000x webp"
-                "alt" .title
-                "class" " d-block w-100 h-auto"
-            )
-        )}}
+    <a class="pe-auto overflow-hidden d-flex mt-auto hoverable supercursor-hover-text effect-hover effect-transition-3 effect-hover-scale-11" href="{{ .link }}">
+        <div paint-y>
+            {{ partial "image/resize" (dict
+                "img" .image
+                "opt" (dict
+                    "size" "1000x webp"
+                    "alt" .title
+                    "class" " d-block w-100 h-auto"
+                )
+            )}}
+        </div>
     </a>
 </div>

@@ -2,9 +2,9 @@
     <a href="/">Retour à l'accueil</a>
     <h1>Galerie photo</h1>
 
-    <div class="row my-5">
+    <div class="row my-5" anime-paint-y>
         {{ range .Pages }}
-            <div class="col-12 col-md-4 mb-5">
+            <div paint-y class="col-12 col-md-4 mb-5">
                 {{ .Render "card" }}
             </div>
         {{ end }}

@@ -3,6 +3,10 @@ import * as bootstrap from "./bootstrap.js";
 import * as utils from './shims/utils';
 import { SuperCursor } from './shims/supercursor';
 import { setEffects } from './shims/effects';
+import { setScrollEffects } from './shims/scrollEffects';
+import { setPaintYComponents, animePaintYComponents } from './shims/paintYEffect';
+
+var funcAfterAnimations = [];
 
 addEventListener('turbo:before-render', function(event) {
     event.preventDefault();
@@ -82,7 +86,10 @@ addEventListener('turbo:load', function() {
     
     const SESSION_KEY_ANIM = 'arthaudproust-animation';
 
+    setPaintYComponents();
+    setTimeout(()=>document.querySelectorAll('[anime-paint-y]').forEach(root=>animePaintYComponents(root)), 800);
     setEffects();
+    setScrollEffects();
 
     const linksToCopy = document.querySelectorAll('.toCopy');
     for(let link of linksToCopy) {
@@ -211,12 +218,6 @@ addEventListener('turbo:load', function() {
             rootMargin,
         }
         
-        const observer = new IntersectionObserver(handleSectionIntersect, options);
-
-        for(let section of projectSections) {
-            observer.observe(section)
-        }
-
         function showProjectImageOfSection(section) {
             for(let image of projectImages) {
                 if(image.id !== section.dataset.image) {
@@ -234,5 +235,13 @@ addEventListener('turbo:load', function() {
                 }
             }
         }
+
+        const observer = new IntersectionObserver(handleSectionIntersect, options);
+
+        for(let section of projectSections) {
+            observer.observe(section)
+        }
+
+
     }
 });
