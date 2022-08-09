@@ -34,7 +34,7 @@ $white: #f4f4f4;
 $black: #000001;
 
 
-// $light: #f4f4f4;
+$light: #fffaf8;
 // $backgroundLine: #fafafa;
 // $dark: #000001;
 
@@ -54,7 +54,7 @@ $secondary: #ffe0d9;
 $peach: #e94b2f;
 
 
-$body-bg: #fffaf8;
+$body-bg: $light;
 $body-color: $black;
 
 $hr-color: $black;
@@ -99,7 +99,7 @@ $small-font-size: 0.8rem;
 
 
 $offcanvas-padding-y: $spacer * 3;
-// $offcanvas-bg-color: $peach;
+$offcanvas-bg-color: $light;
 // $offcanvas-color: $white;
 $offcanvas-border-color: $black;
 $offcanvas-border-width: 0;

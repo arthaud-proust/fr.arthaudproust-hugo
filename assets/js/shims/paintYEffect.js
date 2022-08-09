@@ -10,7 +10,7 @@ function setPaintYComponents() {
 }
 
 function animePaintYComponents(root) {
-    const DURATION = 900;
+    const DURATION = 800;
     const DELAY = DURATION*0.4;
     const EASING = 'easeOutCubic'
     anime({

@@ -66,7 +66,7 @@
             <h1 class="display-2 mt-3 mt-md-5" >{{ .Title }}</h1>
             {{ if .Params.project_url }}
                 <h2><strong>
-                    {{ partial "components/external-link" (dict "link" .Params.github_url "text" "Voir le site") }}
+                    {{ partial "components/external-link" (dict "link" .Params.project_url "text" "Voir le site") }}
                 </strong></h2>
             {{ end }}
         </div>
@@ -135,7 +135,7 @@
         <div class="mb-7">
             {{ if .Params.project_url }}
                 <h2 class="mb-4"><strong>
-                    {{ partial "components/external-link" (dict "link" .Params.github_url "text" "Voir le site") }}
+                    {{ partial "components/external-link" (dict "link" .Params.project_url "text" "Voir le site") }}
                 </strong></h2>
             {{ end }}
             

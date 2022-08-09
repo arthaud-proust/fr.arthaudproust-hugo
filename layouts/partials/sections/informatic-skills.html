@@ -5,7 +5,7 @@
         {{ range .Site.Data.sections.technos }}
             {{ $technos := where $.Site.Pages "Section" "technos" }}
             {{ range where $technos ".Params.techno" . }}
-                <li class="mb-3">{{ partial "image/icon" . }}<span class="ms-3">{{ humanize .Params.techno }}</span></li>
+                <li class="ps-md-4 mb-3">{{ partial "image/icon" . }}<span class="ms-3">{{ humanize .Params.techno }}</span></li>
             {{ end }}
         {{ end }}
     </ul>

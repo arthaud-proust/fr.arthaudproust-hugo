@@ -1,4 +1,5 @@
 import { animePaintYComponents} from './paintYEffect';
+import { isLandscapeView } from './utils';
 
 function setScrollEffects() {
     setTimeout(setAllSectionScrollEffects, 1000);
@@ -9,14 +10,13 @@ function setAllSectionScrollEffects() {
 
     function handleSectionIntersect(entries, observer) {
         entries.forEach(entry=>{
-            console.log(entry.target)
             if(entry.isIntersecting) {
                 animePaintYComponents(entry.target)
             }
         })
     }
     const aboutSectionObserver = new IntersectionObserver(handleSectionIntersect, {
-        threshold: 0.55
+        threshold: isLandscapeView() ? 0.55 : 0.3
     });
     sections.forEach(section=>aboutSectionObserver.observe(section))
 }

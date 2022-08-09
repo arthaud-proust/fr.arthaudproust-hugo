@@ -1,8 +1,13 @@
 module.exports = {
     mobileAndTabletCheck,
     botCheck, 
-    copyTextToClipboard
+    copyTextToClipboard,
+    isLandscapeView
 };
+
+function isLandscapeView() {
+    return window.innerHeight < window.innerWidth
+}
 
 function mobileAndTabletCheck() {
     let check = false;
