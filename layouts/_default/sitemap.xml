@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
     {{ $removedTechnos := where .Site.Pages "Section" "!=" "technos"}}
     {{ $removedTestimonies := where $removedTechnos "Section" "!=" "testimonies"}}
-    {{ range $removedTestimonies }}
-        {{ partial "sitemap-url" . }}
-    {{ end }}
+    {{- range $removedTestimonies -}}
+        {{- partial "sitemap-url" . -}}
+    {{- end -}}
 </urlset>
