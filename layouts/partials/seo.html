@@ -42,12 +42,14 @@
 
 <link rel="shortcut icon" href="{{ .Site.Params.seo.url }}/sprites/favicon-48x48.ico">
 
+<!-- page url -->
+<link rel="canonical" href="{{ .Permalink }}" />
+<meta property="twitter:url" content="{{ .Permalink }}">
+<meta property="og:url" content="{{ .Permalink }}" />
+
+<!-- site url -->
 <meta name="url" content="{{ .Site.Params.seo.url }}">
 <meta name="identifier-URL" content="{{ .Site.Params.seo.url }}">
-<link rel="canonical" href="{{ .Site.Params.seo.url }}" />
-<meta property="twitter:url" content="{{ .Site.Params.seo.url }}">
-<meta name="twitter:site" content="{{ .Site.Params.seo.url }}" />
-<meta property="og:url" content="{{ .Site.Params.seo.url }}" />
 
 
 <meta name="subject" content="informatic">
