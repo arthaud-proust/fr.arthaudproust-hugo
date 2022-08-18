@@ -7,18 +7,19 @@ params:
   email: proust@arthaud.dev
   phone: "07 83 39 28 88"
   seo:
-    author: Arthaud
+    author: Arthaud Proust
     title: Arthaud Proust - Développeur web junior à Bordeaux
     desc: "Développeur de site web freelance, front & back, photographe amateur, MMI Bordeaux. Passionné, curieux et créatif - Arthaud Proust"
     url: https://arthaudproust.fr
     hero: /sprites/hero-min.jpg
+    logo: /sprites/logo.png
     links:
       github: https://github.com/arthaud-proust
       githubArchive: https://github.com/arthaud-proust-archive
       linkedin: https://www.linkedin.com/in/arthaud-proust/
       twitter: https://twitter.com/arthaud_proust
       facebook: https://www.facebook.com/arthaudproust.fr
-      instagram: https://www.instagram.com/arthaudproust/
+      instagram: https://www.instagram.com/arthaudproust/      
 
 menu:
   main:

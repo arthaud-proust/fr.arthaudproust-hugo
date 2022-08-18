@@ -5,23 +5,21 @@
 <meta name="language" content="fr">
 <meta http-equiv="content-language" content="fr" />
 
+
 <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": "{{ .Site.Params.seo.author }}",
-        "url": "{{ .Site.Params.seo.url }}",
-        "address": "Bordeaux",
-        "sameAs": [
-            {{ $list := .Site.Params.seo.links -}}
-            {{ $len := (len $list) -}}
-            {{ $i := 0 -}}
-            {{ range $key, $value := $list -}}
-                {{ $i = add $i 1 -}}
-                "{{ $value }}"{{ if gt $len $i }},{{ end }}
-            {{ end -}}
-        ]
-    }
+    {{- $sameAs := slice -}}
+    {{- range $key, $value := .Site.Params.seo.links -}}
+        {{- $sameAs = $sameAs | append $value -}}
+    {{- end -}}
+    {{ (dict 
+        "@context" "http://schema.org"
+        "@type" "Organization"
+        "name" .Site.Params.seo.author
+        "url" .Site.Params.seo.url
+        "logo" .Site.Params.seo.logo
+        "address" "Bordeaux"
+        "sameAs" $sameAs
+    )}}
 </script>
 
 
