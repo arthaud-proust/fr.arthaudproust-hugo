@@ -6,8 +6,13 @@
         {{ block "pageHead" . }}
         {{ end }}
 
+        {{ block "seoRobots" . }}
+            <meta name="robots" content="all">
+        {{ end }}
 
         {{ partial "seo" . }}
+
+        
         {{ block "seoHero" . }}
             {{$heroUrl := printf "%s%s" .Site.Params.seo.url .Site.Params.seo.hero }}
             <meta name="twitter:image" content="{{ $heroUrl }}" />
