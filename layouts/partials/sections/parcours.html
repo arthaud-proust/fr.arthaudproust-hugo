@@ -1,0 +1,28 @@
+<section id="testimonies" class=" py-6 row">
+    <div class="col-lg-6 pb-6">
+        <h2 paint-y class="display-4 position-sticky top-6">
+            <span class="supercursor-hover-text" data-hover-text="🤝">Mon parcours</span>
+        </h2>
+    </div>
+    <div paint-y class="position-relative overflow-hidden col-lg-6 pt-3">
+        {{ range .Site.Data.sections.parcours }}
+        <div class="paint-y mb-5">
+            <h3>{{ .title }}</h3>
+            <p>
+                {{ with .place }}
+                    <span>{{ . }}</span>
+                {{ end }}
+                {{ with .date }}
+                    <span>- {{ . }}</span>
+                {{ end }}
+
+            </p>
+
+
+            {{ with .description }}
+                <p>{{ . }}</p>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>

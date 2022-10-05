@@ -41,7 +41,7 @@
     <body class="min-vh-100 superCursor-touch-mode">
         {{- partial "header" . -}}
 
-        <div style="pointer-events: none;" class="container mx-auto translate-middle p-0 position-fixed top-50 start-50 h-100 d-flex flex-row justify-content-between">
+        <div style="pointer-events: none; z-index:1035;" class="container mx-auto translate-middle p-0 position-fixed top-50 start-50 h-100 d-flex flex-row justify-content-between">
             {{ partial "components/vertical-cord" . }}
             {{ partial "components/vertical-cord" . }}
         </div>

@@ -1,10 +1,10 @@
 technos: 
   - laravel
+  - vuejs
+  - tailwindcss
   - hugo
   - react
   - nodejs
-  - bootstrap
-  - tailwindcss
 
 show: 
   - image: /images/show/escalade-montesquieu.fr.jpg
@@ -16,3 +16,21 @@ show:
   - image: /images/show/portrait-frederic.jpg
     title: Photo
     link: /galleries/
+
+parcours:
+  - title: Développeur web
+    date: 2022 à 2024
+    place: Agence Mink
+
+  - title: Développeur web
+    date: 2022
+    place: Dotsafe
+
+  - title: BUT MMI
+    date: 2021 à 2024
+    place: IUT Bordeaux Montaigne
+
+  - title: Bac Général
+    date: 2021
+    place: Lycée Montesquieu Bordeaux
+    description: Spécialités Maths, Physique, NSI
