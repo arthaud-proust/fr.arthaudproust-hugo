@@ -15,4 +15,5 @@ content:
     date: Septembre 2022
     paraph2: N﻿ous avions pour objectif cette année de faire découvrir le patrimoine
       culturel de Bordeaux aux nouveaux arrivants.
+    image: /images/projects/capture-d-e-cran-2022-10-06-a-13.10.34-1-.jpg
 ---
