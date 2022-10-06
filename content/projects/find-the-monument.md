@@ -13,7 +13,7 @@ content:
       l'intégration des premières années.
     title: Projet MMI Bordeaux
     date: Septembre 2022
-    paraph2: N﻿ous avions pour objectif cette année de faire découvrir le patrimoine
-      culturel de Bordeaux aux nouveaux arrivants.
+    paraph2: C﻿ette année, n﻿ous avions pour objectif de faire découvrir aux
+      nouveaux arrivants le patrimoine culturel de Bordeaux.
     image: /images/projects/capture-d-e-cran-2022-10-06-a-13.10.34-1-.jpg
 ---
