@@ -8,4 +8,11 @@ technos:
   - javascript
 project_url: https://findthemonument.netlify.app
 github_url: https://github.com/arthaud-proust/findthemonument
+content:
+  - paraph1: Au MMI Bordeaux, la première semaine de cours est consacrée à
+      l'intégration des premières années.
+    title: Projet MMI Bordeaux
+    date: Septembre 2022
+    paraph2: N﻿ous avions pour objectif cette année de faire découvrir le patrimoine
+      culturel de Bordeaux aux nouveaux arrivants.
 ---
