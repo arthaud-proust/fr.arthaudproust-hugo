@@ -1,6 +1,6 @@
 ---
 visibleInCms: true
-draft: false
+draft: true
 title: Find the Monument
 image: /images/projects/capture-d-e-cran-2022-10-06-a-13.10.34-1-.jpg
 description: Découvrez Bordeaux en 10 monuments via une chasse au QR code dans la ville
