@@ -1,6 +1,6 @@
 <div class="col-6 col-md-4 mb-5">
     {{ $img := resources.Get .image }}
-    {{ $fullResized := $img.Resize "2000x webp" }}
+    {{ $fullResized := $img.Resize "2000x" }}
     <a 
         paint-y
         href="{{ $fullResized.Permalink }}" 
@@ -12,7 +12,7 @@
         {{ partial "image/resize" (dict
             "img" .image
             "opt" (dict
-            "size" "1000x webp"
+            "size" "1000x"
             "class" "effect-hover effect-brightness-100 effect-hover-brightness-50 img-fluid h-auto"
             )
         )}}

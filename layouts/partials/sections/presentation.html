@@ -1,24 +1,28 @@
-<section id="presentation" class="pt-6 pb-6 row">
-    <div paint-y>
-        <div class="col-5 col-md-2 offset-md-0 mb-4">
+<section id="presentation" class="pt-0 pt-md-4 pt-xxl-6 pb-6 row">
+        <div paint-y class="effect-hover hoverable offset-4 offset-md-0 col-8 col-md-5 col-lg-5 col-xl-4 mb-5">
             {{ partial "image/resize" (dict
-                "img" "images/faces/me-2/me-x256.jpg"
+                "img" "images/faces/me-3/1.jpg"
                 "opt" (dict
-                    "size" "500x webp"
+                    "size" "2000x"
                     "alt" "Photo de profil de Arthaud"
-                    "class" "img-fluid h-auto rounded-circle"
+                    "class" "img-fluid h-auto"
                     "itemprop" "image"
                 )
             )}}
+            <span class="effectable effect-opacity-0 effect-hover-opacity-1 transition-3">
+                Photo par {{ partial "components/external-link" (dict "text" "Emma Guillaume" "link" "https://emmaguillaume.fr/" ) }}
+            </span>
         </div>
-        <h1 class="display-1 col-12">
-            <span class="supercursor-hover-text" data-hover-text="Prénom">Arthaud</span>
-            <span class="supercursor-hover-text" data-hover-text="Nom">Proust</span>
-        </h1>
-        <h2 class="col-12">Développeur web passionné et créatif</h2>
-        <p class="mt-3 col-md-6">
-            Basé à <b>Bordeaux</b>, je conçois, design et modélise des {{ partial "components/link" (dict "text" "solutions numériques" "link" "/#projects" ) }}.
-            Je compose également avec le monde physique, en sculptant le bois et en {{ partial "components/link" (dict "text" "photographiant" "link" "/galleries/" ) }}.
-        </p>
-    </div>
+        <div class="col-12 col-xxl-8">
+            <h1 class="display-1">
+                <span class="supercursor-hover-text" data-hover-text="Prénom">Arthaud</span>
+                <span class="supercursor-hover-text" data-hover-text="Nom">Proust</span>
+            </h1>
+            <h2 class="">Développeur web passionné et créatif</h2>
+            <p class="mt-3 md:w-75">
+                Basé à <b>Bordeaux</b>, je conçois, design et modélise des {{ partial "components/link" (dict "text" "solutions numériques" "link" "/#projects" ) }}.
+                Je compose également avec le monde physique, en sculptant le bois et en {{ partial "components/link" (dict "text" "photographiant" "link" "/galleries/" ) }}.
+            </p>
+        </div>
+
 </section>
