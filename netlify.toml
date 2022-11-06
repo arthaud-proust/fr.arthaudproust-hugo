@@ -16,6 +16,7 @@ HUGO_VERSION = "0.97.0"
     [headers.values]
     Access-Control-Allow-Origin = "*"
 
+[[headers]]
   for = "*.pdf"
     [headers.values]
     X-Robots-Tag = "none"
