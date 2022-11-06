@@ -18,4 +18,4 @@ HUGO_VERSION = "0.97.0"
 
   for = "*.pdf"
     [headers.values]
-    X-Robots-Tag "none"
+    X-Robots-Tag = "none"
