@@ -1,6 +1,6 @@
 ---
 visibleInCms: true
-draft: false
+draft: true
 title: Mathéo Savarit
 image: /images/projects/matheosavarit.com_gallery_coffee.jpg
 description: Commande professionnelle pour le photographe indépendant Mathéo
