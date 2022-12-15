@@ -169,6 +169,7 @@ addEventListener('turbo:load', function() {
             },
             autoplay: {
                 delay: 5000,
+                disableOnInteraction: true,
             },
             // autoHeight: true,
             // resistance: false,
