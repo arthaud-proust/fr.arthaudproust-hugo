@@ -2,7 +2,6 @@ import { CursorLayer } from './cursorLayer';
 import { Enum } from './enum';
 class SuperCursor {
 	constructor({root, layers}) {
-
         this.root = root;
 
         this.elId = 'superCursor'
@@ -74,7 +73,7 @@ class SuperCursor {
 
 
     addLayer(layerOpt) {
-        if( this.layers.filter(layer=>layer.name==layerOpt.name).length<=0) {
+        if( this.layers.filter(layer=>layer.name===layerOpt.name).length<=0) {
             this.layers.push(
                 new CursorLayer({
                     cursor: this,
@@ -86,16 +85,12 @@ class SuperCursor {
 
     init() {
         console.log('Supercursor initialized');
+
         document.addEventListener("mouseleave", ()=>this.disable())
+
 		document.addEventListener("mouseenter", ()=>this.enable())
-        // document.addEventListener("mousedown", ()=>this.setState(this.states.ACTIVE))
-        // document.addEventListener("mouseup", ()=>this.setState(this.states.NORMAL))
-        document.addEventListener("contextmenu", e=>{
-            e.preventDefault();
-        })
 
         document.addEventListener("mousemove", event=>this.updateMouseFromEvent(event))
-        
     }
 
     enable() {
@@ -122,7 +117,6 @@ class SuperCursor {
         this.mouseMode = true;
         document.body.classList.add('superCursor-mouse-mode');
         document.body.classList.remove('superCursor-touch-mode');
-
         
         for(let layer of this.layers) {
             layer.setPositionFromMouse(this.mouse);
@@ -139,6 +133,7 @@ class SuperCursor {
 
     setState(newState) {
         if(!this.enabled) return;
+
         if(newState===undefined) {
             console.warn("SuperCursor: undefined state provided");
         } else if (newState !== this.state) {
@@ -150,15 +145,10 @@ class SuperCursor {
 
     updateMouseFromEvent(event) {
         if(!this.enabled) return;
-		// this.mouse = {
-		// 	x: event.pageX,
-		// 	y: event.pageY
-        // }
 
         const { x: oldX, y: oldY } = this.mouse, 
             { clientX: newX, clientY: newY } = event,
             movedAt = event.timeStamp;
-
         
         this.mouse.x = newX;
         this.mouse.y = newY;
@@ -169,8 +159,8 @@ class SuperCursor {
         );
         const time = movedAt - this.mouse.movedAt;
         
-        this.mouse.direction.x = oldX == newX ? 0 : (oldX > newX ? -1 : 1);
-        this.mouse.direction.y = oldY == newY ? 0 : (oldY > newY ? -1 : 1);
+        this.mouse.direction.x = oldX === newX ? 0 : (oldX > newX ? -1 : 1);
+        this.mouse.direction.y = oldY === newY ? 0 : (oldY > newY ? -1 : 1);
 
         this.mouse.velocity = (dist/time)*1000;
 
@@ -179,7 +169,6 @@ class SuperCursor {
 
     animate() {
         if(!this.enabled) return;
-
 
         this.elementHovered = document.elementFromPoint(this.mouse.x, this.mouse.y);
         let shouldChangeState = false;
@@ -204,10 +193,6 @@ class SuperCursor {
                 this.setState(this.states.NORMAL)
             }
         }
-        
-        
-
-
 
         for(let layer of this.layers) {
             layer.updatePositionFromMouse(this.mouse);
