@@ -6,6 +6,23 @@
 <meta name="apple-mobile-web-app-title" content="{{ $title }}" />
 {{ end }}
 
+{{ define "seoRobots" }}
+<meta name="robots" content="noindex, follow">
+{{ end }}
+
 {{ define "main" }}
-    {{ partial "sections/404.html" . }}
+<section class="py-6 row">
+    <div class="col-12 mb-5">
+        <h1 class="mb-3 supercursor-hover-text" data-hover-text="😤">
+            Page introuvable
+        </h1>
+        <p><a href="/">Aller à l'accueil</a></p>
+        <p><a href="/site-map">Plan du site</a></p>
+
+    </div>
+    <div class="col-12 offset-lg-6 col-lg-6">
+        <h2 class="supercursor-hover-text" data-hover-text="🤓">“Il faut être perdu, il faut avoir perdu le monde, pour se trouver soi-même.”</h2>
+        <p>Henry David Thoreau</p>
+    </div>
+</section>
 {{ end }}
