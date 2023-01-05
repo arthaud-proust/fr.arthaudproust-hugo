@@ -1,7 +1,12 @@
 <a 
     href="{{ .link }}" 
     class="{{ .class }}"
-    {{ if .external }}
+    {{ if .openTab }}
         target="_blank" rel="noopener"
     {{ end }}
->{{ .text }}</a>
+>
+    {{ .text }}
+    {{ if .external }}
+    (externe)
+    {{ end }}
+</a>

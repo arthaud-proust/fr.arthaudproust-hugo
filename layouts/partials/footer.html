@@ -21,11 +21,11 @@
             {{ end }}
             
             <li class="nav-item">
-                <a href="{{ .Site.Params.seo.links.github }}" class="px-2">Github</a>
+                {{ partial "components/external-link" (dict "text" "Github" "link" .Site.Params.seo.links.github "class" "px-2") }}
             </li>
             
             <li class="nav-item">
-                <a href="{{ .Site.Params.seo.links.githubArchive }}" class="px-2">Archive</a>
+                {{ partial "components/external-link" (dict "text" "Archive" "link" .Site.Params.seo.links.githubArchive "class" "px-2") }}
             </li>
 
         </ul>

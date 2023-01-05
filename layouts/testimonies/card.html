@@ -21,7 +21,7 @@
                 <p class="m-0">{{ .Params.subtitle }}</p>
             {{ end }}
             {{ if .Params.site }}
-                <a href="{{ .Params.site }}">Voir le site</a>
+                {{ partial "components/external-link" (dict "text" "Voir le site" "link" .Params.site) }}
             {{ end }}
             {{ if .Params.project }}
                 <a href="{{ .Params.project }}">Voir le projet</a>
