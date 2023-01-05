@@ -15,7 +15,11 @@
             {{ with .Site.Menus.main }}
             <ul class="list-unstyled px-5">
                 {{ range .ByWeight  }}
-                    <li><h2><a href="{{ .URL | relURL }}">{{ .Name }}</a></h2></li>
+                    <li class="d-flex">
+                        <h2 class="d-flex m-0">
+                            <a href="{{ .URL | relURL }}" class="py-2">{{ .Name }}</a>
+                        </h2>
+                    </li>
                 {{ end }}
             </ul>
             {{ end }}
