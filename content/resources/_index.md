@@ -43,6 +43,8 @@ categories:
         link: https://greensock.com/gsap/
       - text: Alpinejs
         link: https://alpinejs.dev/
+      - link: http://fabricjs.com/
+        text: FabricJs
   - title: Assets
     subtitle: Bibliothèques, génération...
     links:
