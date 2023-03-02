@@ -7,6 +7,6 @@
 >
     {{- .text -}}
     {{- if .external }}
-    (externe)
+    {{ partial "svg/external-link" .}}
     {{- end -}}
 </a>

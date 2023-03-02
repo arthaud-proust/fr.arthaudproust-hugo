@@ -22,29 +22,37 @@ params:
       instagram: https://www.instagram.com/arthaudproust/      
 
 menu:
-  main:
+  homepage:
     - name: À propos
       pre: about
       url: "/#about"
       weight: 1
-     
-    - name: Compétences
-      pre: skills
-      url: "/#skills"
-      weight: 2
     - name: Réalisations
       pre: projects
       url: "/#projects"
+      weight: 2
+    - name: Compétences
+      pre: skills
+      url: "/#skills"
       weight: 3
+    - name: Me contacter
+      pre: meet-us
+      url: "/#meet-us"
+      weight: 4
 
+  main:
     - name: Galerie photo
       pre: galleries
       url: "/galleries/"
       weight: 4
-    - name: Me contacter
-      pre: meet-us
-      url: "/#meet-us"
+    - name: Références
+      pre: references
+      url: "/references/"
       weight: 5
+    - name: Ressources
+      pre: resources
+      url: "/resources/"
+      weight: 6
     
 taxonomies:
     
