@@ -44,6 +44,10 @@ menu:
     - name: Galerie photo
       pre: galleries
       url: "/galleries/"
+      weight: 3
+    - name: Lab
+      pre: lab
+      url: "/lab/"
       weight: 4
     - name: Références
       pre: references
