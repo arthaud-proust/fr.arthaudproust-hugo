@@ -11,9 +11,25 @@
         </button>
     </div>
     <div class="offcanvas-body pt-0">
-        <div class="my-4">
+        <div class="my-4 d-flex flex-column gap-4">
+            <div class="w-100 bg-secondary" style="height: 1px"></div>
+
+            {{ with .Site.Menus.homepage }}
+            <ul class="list-unstyled m-0 px-5">
+                {{ range .ByWeight  }}
+                <li class="d-flex">
+                    <h2 class="d-flex m-0">
+                        <a href="{{ .URL | relURL }}" class="py-2">{{ .Name }}</a>
+                    </h2>
+                </li>
+                {{ end }}
+            </ul>
+            {{ end }}
+
+            <div class="w-100 bg-secondary" style="height: 1px"></div>
+
             {{ with .Site.Menus.main }}
-            <ul class="list-unstyled px-5">
+            <ul class="list-unstyled m-0 px-5">
                 {{ range .ByWeight  }}
                     <li class="d-flex">
                         <h2 class="d-flex m-0">
