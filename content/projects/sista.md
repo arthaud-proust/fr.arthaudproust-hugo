@@ -1,6 +1,6 @@
 ---
 visibleInCms: true
-draft: true
+draft: false
 title: Sista
 image: /images/projects/frame-1.png
 technos:
