@@ -1,22 +1,14 @@
 technos: 
-  - laravel
-  - vuejs
-  - tailwindcss
-  - hugo
-  - react
-  - nodejs
+  - gutenberg
+  - docs
 
-show: 
-  - image: /images/show/escalade-montesquieu.fr.jpg
-    title: Web
-    link: "#projects"
-  - image: /images/show/porte-telephone.jpg
-    title: Bois
-    link: /projects/porte-telephone-en-bois/
-  - image: /images/show/portrait-frederic.jpg
-    title: Photo
-    link: /galleries/
-
+show:
+  - image: /images/show/gutenberg.jpg
+    title: Print
+  - image: /images/show/c.jpg
+    title: Book
+  - image: /images/show/helvetica.png
+    title: Print
 parcours:
   - title: Développeur web
     date: 2022 à 2024
