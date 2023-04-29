@@ -5,7 +5,7 @@
 
         <section id="projects" class="py-6">
             <h2 paint-y class="display-4 mb-4">Réalisations principales</h2>
-            <div id="projects-group" class="position-relative" style="z-index: 1036;">
+            <div id="projects-group" class="position-relative">
                 <div class="swiper-wrapper pb-5 supercursor-activeable-x">
                     {{ range (where .Site.Pages "Section" "projects") }}
                         {{ range .Pages }}
@@ -19,6 +19,6 @@
             </div>
         </section>
     </div>
-</main> 
+</main>
 {{ partial "components/horizontal-cord" . }}
 <main class="page-transition container">
