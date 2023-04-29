@@ -37,7 +37,7 @@ content:
       Cette maquette voyage beaucoup entre nous deux, et évolue jusqu'à sa version finale.
     paraph2: Planche de design dans une main, cahier des charges dans l'autre, je me
       tourne vers Laravel pour réaliser le site. Je commence à prendre en main
-      ce framework, c'est l'occasion de continuer mon apprentissage!
+      ce framework, c'est l'occasion de continuer mon apprentissage !
     date: Août 2020
   - title: Livraison de la première version
     date: Septembre 2020

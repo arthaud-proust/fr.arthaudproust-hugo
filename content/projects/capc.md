@@ -16,7 +16,7 @@ sitemap:
 <li class="swiper-slide" data-cover="/assets/realisations/bordeaux-photo.fr/preview.jpg">
     <div class="intro-card">
         <span>Novembre 2021</span>
-        <h2>Une refonte du site du Musée CAPC de Bordeaux?</h2>
+        <h2>Une refonte du site du Musée CAPC de Bordeaux ?</h2>
         <p>
             C'est le projet sur lequel nous avons travaillé avec Quentin Wegera, Jason Nago, Leïly Coquard et Maxime Lust.
         </p>
