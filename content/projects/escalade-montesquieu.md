@@ -2,14 +2,15 @@
 visibleInCms: true
 draft: false
 title: Escalade Montesquieu
-image: /images/projects/escalade-montesquieu.fr_la-salle.jpg
-description: Site de la section escalade du lycée Montesquieu à Bordeaux. Modélisation 3D de la salle.
+image: /images/projects/escalade-montesquieu-home.png
+description: Site de la section escalade du lycée Montesquieu à Bordeaux.
+  Modélisation 3D de la salle.
 technos:
   - laravel
   - mysql
-  - bootstrap
+  - tailwindcss
 project_url: https://escalade-montesquieu.fr
-github_url: https://github.com/arthaud-proust/fr.escalade-montesquieu
+github_url: https://github.com/escalade-montesquieu/www
 content:
   - title: Aux origines
     date: Juin 2020
@@ -24,9 +25,7 @@ content:
     paraph1: L'idée est d'avoir un site fonctionnel pour que la section escalade
       puisse organiser des sorties, des sessions au lycée et afficher les
       informations importantes.
-  - title: Les débuts
-    image: /images/projects/escalade-montesquieu.fr_login.jpg
-    paraph1: >-
+    paraph2: >-
       Nous commençons par établir un cahier des charges suivant ce premier
       besoin. 
 
@@ -35,16 +34,15 @@ content:
 
 
       Cette maquette voyage beaucoup entre nous deux, et évolue jusqu'à sa version finale.
-    paraph2: Planche de design dans une main, cahier des charges dans l'autre, je me
+  - title: Première version
+    image: /images/projects/escalade-montesquieu.fr_login.jpg
+    paraph1: Planche de design dans une main, cahier des charges dans l'autre, je me
       tourne vers Laravel pour réaliser le site. Je commence à prendre en main
       ce framework, c'est l'occasion de continuer mon apprentissage !
-    date: Août 2020
-  - title: Livraison de la première version
-    date: Septembre 2020
-    image: /images/projects/escalade-montesquieu.fr_.jpg
-    paraph1: Développement de la première version terminé. Nous présentons le site
+    paraph2: Développement de la première version terminé. Nous présentons le site
       aux élèves de la section, les premières sessions s'organisent, la galerie
       photo se remplit au fil des mois. Bref, le site prend vie.
+    date: Août à Septembre 2020
   - date: Depuis Octobre 2020
     title: Évolution du site
     paraph1: Le site a subi plusieurs modifications et ajouts depuis. J'ai par
