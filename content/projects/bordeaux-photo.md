@@ -1,6 +1,6 @@
 ---
 visibleInCms: true
-draft: false
+draft: true
 title: Bordeaux Photo
 image: /images/projects/bordeaux-photo.fr_first_event.jpg
 description: Des jeunes Bordelais et Bordelaises qui organisent des concours
