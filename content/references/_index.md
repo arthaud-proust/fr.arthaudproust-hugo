@@ -47,4 +47,9 @@ books:
     author:
       - name: Robert C. Martin
     image: /images/references/architecture-logicielle-propre.jpg
+  - image: /images/references/assurance-qualite-web.jpg
+    title: Assurance Qualité Web - Opquast
+    author:
+      - name: Élie Sloïm
+      - name: Laurent Denis
 ---
