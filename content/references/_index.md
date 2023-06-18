@@ -43,4 +43,8 @@ books:
         link: https://www.babelio.com/auteur/Damien-Gautier/132281
       - name: Florence Cortat Roller
         link: https://www.linkedin.com/in/florence-cortat-roller-a88935211/?originalSubdomain=fr
+  - title: Architecture Logicielle Propre
+    author:
+      - name: Robert C. Martin
+    image: /images/references/architecture-logicielle-propre.jpg
 ---
