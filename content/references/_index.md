@@ -4,21 +4,31 @@ layout: index
 description: J'appuie mon travail sur des références qui m'ont été conseillées
   ou que j'ai découvertes. En voici la liste non-exhaustive.
 books:
-  - title: Culture numérique
-    author:
-      - name: Dominique Cardon
-        link: https://fr.wikipedia.org/wiki/Dominique_Cardon_(sociologue)
-    image: /images/references/culture-numerique.jpg
-  - title: Clean Code
+  - title: Architecture Logicielle Propre
     author:
       - name: Robert C. Martin
         link: https://fr.wikipedia.org/wiki/Robert_C._Martin
-    image: /images/references/clean-code.jpg
+    image: /images/references/architecture-logicielle-propre.jpg
   - title: Dive Into Design Patterns
     author:
       - name: Alexander Shvets
         link: https://www.linkedin.com/in/neochief/?originalSubdomain=ua
     image: /images/references/dive-into-design-pattern.jpg
+  - title: Culture numérique
+    author:
+      - name: Dominique Cardon
+        link: https://fr.wikipedia.org/wiki/Dominique_Cardon_(sociologue)
+    image: /images/references/culture-numerique.jpg
+  - image: /images/references/assurance-qualite-web.jpg
+    title: Assurance Qualité Web - Opquast
+    author:
+      - name: Élie Sloïm
+      - name: Laurent Denis
+  - title: Clean Code
+    author:
+      - name: Robert C. Martin
+        link: https://fr.wikipedia.org/wiki/Robert_C._Martin
+    image: /images/references/clean-code.jpg
   - title: La palette parfaite pour le graphisme et l'illustration
     author:
       - name: Sara Caldas
@@ -43,13 +53,4 @@ books:
         link: https://www.babelio.com/auteur/Damien-Gautier/132281
       - name: Florence Cortat Roller
         link: https://www.linkedin.com/in/florence-cortat-roller-a88935211/?originalSubdomain=fr
-  - title: Architecture Logicielle Propre
-    author:
-      - name: Robert C. Martin
-    image: /images/references/architecture-logicielle-propre.jpg
-  - image: /images/references/assurance-qualite-web.jpg
-    title: Assurance Qualité Web - Opquast
-    author:
-      - name: Élie Sloïm
-      - name: Laurent Denis
 ---
