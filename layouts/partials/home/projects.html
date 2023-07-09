@@ -8,7 +8,7 @@
             <div id="projects-group" class="position-relative">
                 <div class="swiper-wrapper pb-5 supercursor-activeable-x">
                     {{ range (where .Site.Pages "Section" "projects") }}
-                        {{ range .Pages }}
+                        {{ range .Pages.ByDate.Reverse }}
                             <div class="h-100 d-flex swiper-slide">
                                 {{ .Render "card"}}
                             </div>
