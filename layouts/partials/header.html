@@ -1,16 +1,17 @@
 {{ $brandLinkText := "Accueil" }}
 {{ if .IsHome }}
-    {{ $brandLinkText = "Arthaud Proust" }}
+{{ $brandLinkText = "Arthaud Proust" }}
 {{ end }}
 
-<header class="header page-transition sticky-top bg-light">
-    <div class="container">
+<header class="header page-transition sticky-top">
+    <div class="container bg-light">
         <div class="row py-2">
             <nav class="navbar">
                 {{ with .Site.GetPage "/" }}
-                    {{ partial "components/internal-link" (dict "page" . "text" $brandLinkText "class" "text-black navbar-brand") }}
+                {{ partial "components/internal-link" (dict "page" . "text" $brandLinkText "class" "text-black navbar-brand") }}
                 {{ end }}
-                <button class="supercursor-hover ms-auto navbar-toggler p-2 me-n2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Ouvrir le menu">
+                <button class="supercursor-hover ms-auto navbar-toggler p-2 me-n2" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Ouvrir le menu">
                     Menu
                 </button>
             </nav>
