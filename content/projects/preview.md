@@ -3,7 +3,7 @@ visibleInCms: true
 draft: false
 title: Preview
 date: 2022-10-29
-image: /images/projects/preview.arthaud.dev_.jpg
+image: /images/projects/preview.jpg
 description: Visualisez, comparez, organisez, partagez vos photos depuis
   n'importe quel appareil.
 technos:
