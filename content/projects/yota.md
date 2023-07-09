@@ -9,5 +9,6 @@ technos:
   - react
   - express
   - tailwindcss
+  - firebase
 project_url: https://yota.arthaud.dev/
 ---
