@@ -2,7 +2,7 @@
 visibleInCms: true
 draft: false
 title: Web dressing
-date: 2023-07-09
+date: 2022-10-30
 image: /images/projects/webdressing.jpg
 description: Gérez votre dressing en ligne et recevez des recommandations en
   fonction de la météo
