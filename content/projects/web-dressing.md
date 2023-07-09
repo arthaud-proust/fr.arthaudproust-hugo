@@ -3,6 +3,8 @@ visibleInCms: true
 draft: false
 title: Web dressing
 image: /images/projects/webdressing.jpg
+description: G﻿érez votre dressing en ligne et recevez des recommandations en
+  fonction de la météo
 technos:
   - laravel
   - tailwindcss
