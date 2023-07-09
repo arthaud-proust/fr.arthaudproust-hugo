@@ -2,6 +2,7 @@
 visibleInCms: true
 draft: false
 title: Web dressing
+image: /images/projects/webdressing.jpg
 technos:
   - laravel
   - tailwindcss
