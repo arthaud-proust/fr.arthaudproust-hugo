@@ -12,4 +12,5 @@ technos:
   - javascript
 project_url: https://sista.arthaud.dev
 github_url: https://github.com/arthaud-proust/sister-and-brother
+content: []
 ---
