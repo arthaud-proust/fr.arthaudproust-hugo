@@ -4,7 +4,7 @@ draft: false
 title: Too Well Stolen
 date: 2023-03-21
 image: /images/projects/too-well-stolen.jpg
-description: Expérience interactive au Musée des Beaux-Arts de Bordeaux
+description: Expérience interactive au Musée des Beaux-Arts de Bordeaux.
 technos:
   - tailwindcss
   - svelte
