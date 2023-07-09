@@ -2,6 +2,7 @@
 visibleInCms: true
 draft: false
 title: Porte-téléphone en bois
+date: 2021-10-05
 image: /images/projects/porte-telephone-preview.jpg
 description: Découpe et sculpture dans un bloc de hêtre, objet esthétique et pratique.
 content:
