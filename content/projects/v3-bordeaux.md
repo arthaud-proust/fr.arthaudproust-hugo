@@ -1,6 +1,6 @@
 ---
 visibleInCms: true
-draft: false
+draft: true
 title: V3 Bordeaux
 date: 2023-07-09
 image: /images/projects/v3.jpg
