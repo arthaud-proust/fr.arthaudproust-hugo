@@ -8,5 +8,6 @@ description: L'application V3 pour les vélos en libre service re-visitée et en
 technos:
   - react
   - tailwindcss
+  - nextjs
 project_url: https://v3-bdx.vercel.app/
 ---
