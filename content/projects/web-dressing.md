@@ -8,6 +8,7 @@ description: G﻿érez votre dressing en ligne et recevez des recommandations en
 technos:
   - laravel
   - tailwindcss
+  - mysql
 project_url: https://webdressing.arthaud.ovh/
 github_url: https://github.com/arthaud-proust-rd/web-dressing
 ---
