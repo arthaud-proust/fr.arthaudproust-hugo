@@ -1,7 +1,7 @@
 ---
 visibleInCms: true
 weight: 1
-title: Dev front-end
+title: Front-end
 ---
 
 Je sais intégrer une maquette en responsive, lier le front au back-end, utiliser des frameworks (VueJs, Svelte, React etc),

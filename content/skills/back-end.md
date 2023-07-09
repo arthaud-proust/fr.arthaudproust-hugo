@@ -1,7 +1,7 @@
 ---
 visibleInCms: true
 weight: 2
-title: Dev back-end
+title: Back-end
 ---
 Je sais créer une application métier suivant un cahier des charges, challenger les fonctionnalités, développer une API, faire un POC pour choisir une
 techno ou encore dockériser un projet.
