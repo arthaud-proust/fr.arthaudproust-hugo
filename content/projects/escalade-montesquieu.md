@@ -2,7 +2,7 @@
 visibleInCms: true
 draft: false
 title: Escalade Montesquieu
-date: 2023-05-01T11:45:00.722Z
+date: 2023-05-01
 image: /images/projects/escalade-montesquieu-home.png
 description: Site de la section escalade du lycée Montesquieu à Bordeaux.
   Modélisation 3D de la salle.
