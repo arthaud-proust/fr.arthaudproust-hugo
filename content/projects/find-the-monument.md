@@ -4,7 +4,7 @@ draft: false
 title: Find the Monument
 date: 2022-10-06
 image: /images/projects/findthemonument.jpg
-description: Découvrez Bordeaux en 10 monuments via une chasse au QR code dans la ville
+description: Découvrez Bordeaux en 10 monuments via une chasse au QR code dans la ville.
 technos:
   - javascript
 project_url: https://findthemonument.netlify.app
