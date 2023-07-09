@@ -1,19 +1,19 @@
 $spacer: 1rem;
 $spacers: (
-  0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-  6: $spacer * 5,
-  7: $spacer * 10
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer,
+        4: $spacer * 1.5,
+        5: $spacer * 3,
+        6: $spacer * 5,
+        7: $spacer * 10
 );
 
 $position-values: map-merge((
-    0: 0,
-    50: 50%,
-    100: 100%
+        0: 0,
+        50: 50%,
+        100: 100%
 ), $spacers);
 
 
@@ -77,20 +77,19 @@ $link-decoration: underline;
 $link-hover-decoration: underline;
 
 
-
 $card-border-width: 0;
 
 $font-family-sans-serif: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-size-base: 1.1rem;
-$font-size-sm: $font-size-base * .9 ;
+$font-size-sm: $font-size-base * .9;
 $h1-font-size: $font-size-base * 4;
 
-$font-weight-lighter:         lighter !default;
-$font-weight-light:           300 !default;
-$font-weight-normal:          400 !default;
-$font-weight-semibold:        600 !default;
-$font-weight-bold:            700 !default;
-$font-weight-bolder:          bolder !default;
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
 
 $display-font-weight: $font-weight-bold;
 
@@ -107,4 +106,3 @@ $offcanvas-backdrop-opacity: 0.1;
 
 
 $accordion-border-color: transparent;
-$accordion-bg: transparent;

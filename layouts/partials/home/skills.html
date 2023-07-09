@@ -1,38 +1,27 @@
-
-<section id="skills" class="py-6 row">
+<article id="skills" class="py-6 row">
     <div class="col-lg-6 pb-6">
-        <h2 paint-y class="display-4 position-sticky top-6"><span class="supercursor-hover-text" data-hover-text="🎓">Domaines de compétences</span></h2>
+        <h2 class="display-4 position-sticky top-6"><span class="supercursor-hover-text" data-hover-text="🎓">Domaines de compétences</span>
+        </h2>
     </div>
-    <div class="col-lg-6" id="accordionExample">
-        <div paint-y>
-            <h3 class="mt-3">Développement web</h3>
-            <p>
-                J'ai acquis des compétences en réalisant des sites, en rejoignant ou en créant des projets, et à l'école.
-            </p>
-            <p>
-                Je suis en mesure d'intégrer une maquette en front-end, développer un site complet ou encore de mettre en place une API.
-            </p>
-            <p>
-                En parallèle, je me forme aux bonnes pratiques (clean code) et commence faire du mentorat.
-            </p>
-        </div>
-        <div paint-y>
-            <h3 class="mt-5">Photographie - <a href="/galleries/">Galerie photo</a></h3>
-            <p>
-                Je fais de la photo de rue et d'architecture ainsi que des portraits depuis 2018. 
-            </p>
-            <p>
-                C'est un loisir qui me permet de travailler ma vision de l'esthétique et la construction graphique. C'est aussi une grande expérience humaine en ce qui concerne les portraits de rue.
-            </p>
-        </div>
-        <div paint-y>
-            <h3 class="mt-5">Travail du bois</h3>
-            <p>
-                C'est une passion que je nourris à coté des études. Je sculpte divers objets, comme des prises d'escalade ou des repose-téléphone.
-            </p>
-            <p>
-                Je m'exerce ainsi sur la conception spatiale de l'objet et le dessin, ainsi que la réflexion à long terme des avantages et inconvénients d'une solution.
-            </p>
-        </div>
+    <div class="col-lg-6" id="accordionSkills">
+        {{ range (where .Site.Pages "Section" "skills") }}
+        {{ range $index, $skill :=.Pages.ByWeight }}
+        <article>
+            <h3 id="headingSkills{{ $index }}">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkills{{ $index }}"
+                        aria-expanded="false"
+                        aria-controls="collapseSkills{{ $index }}">
+                    {{ $skill.Title }}
+                </button>
+            </h3>
+            <div id="collapseSkills{{ $index }}" class="accordion-collapse collapse" aria-labelledby="headingSkills{{ $index }}"
+                 data-bs-parent="#accordionSkills">
+                <div class="accordion-body">
+                    {{ $skill.Content }}
+                </div>
+            </div>
+        </article>
+        {{ end }}
+        {{ end }}
     </div>
-</section>
+</article>
