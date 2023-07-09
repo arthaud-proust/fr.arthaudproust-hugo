@@ -4,7 +4,6 @@ backend:
 media_folder: 'assets/media'
 public_folder: '/media'
 locale: fr
-publish_mode: editorial_workflow
 slug:
   encoding: ascii
   clean_accents: true
