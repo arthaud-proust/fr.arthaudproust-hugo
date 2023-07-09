@@ -9,6 +9,7 @@ technos:
   - laravel
   - tailwindcss
   - mysql
+  - vuejs
 project_url: https://webdressing.arthaud.ovh/
 github_url: https://github.com/arthaud-proust-rd/web-dressing
 ---
