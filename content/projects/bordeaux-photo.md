@@ -2,6 +2,7 @@
 visibleInCms: true
 draft: true
 title: Bordeaux Photo
+date: 2022-05-09
 image: /images/projects/bordeaux-photo.fr_first_event.jpg
 description: Des jeunes Bordelais et Bordelaises qui organisent des concours
   photo aux thèmes variés.
