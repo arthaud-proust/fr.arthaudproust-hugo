@@ -9,7 +9,7 @@ params:
   seo:
     author: Arthaud Proust
     title: Arthaud Proust - Développeur web junior à Bordeaux
-    desc: "Développeur de site web freelance, front & back, photographe amateur, MMI Bordeaux. Passionné, curieux et créatif - Arthaud Proust"
+    desc: "Développeur de site web, front & back, photographe amateur, MMI Bordeaux. Passionné, curieux et créatif - Arthaud Proust"
     url: https://arthaudproust.fr
     hero: /sprites/hero-min.jpg
     logo: /sprites/logo.png
