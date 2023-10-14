@@ -1,6 +1,7 @@
+local_backend: true
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: main # Branch to update (optional; defaults to master)
 media_folder: 'assets/media'
 public_folder: '/media'
 locale: fr
@@ -29,7 +30,7 @@ collections:
 
     
   - name: projects
-    label: Projects
+    label: Projets
     label_singular: Projet
     folder: content/projects
     create: true
@@ -39,7 +40,7 @@ collections:
       - { label: "Visible", name: "visibleInCms", widget: hidden, default: true}
       - { label: Brouillon, name: draft, widget: "boolean", default: false}
       - { label: Titre, name: title }
-      - { label: "Date", name: date, required: false, widget: date, format: "YYYY-MM-DD" }
+      - { label: "Date", name: date, required: false, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
       - { label: "Image", name: "image", required: false, widget: "image", allow_multiple: false, choose_url: false, media_folder: /assets/images/projects, public_folder: /images/projects}
       - { label: Description, name: description, required: false, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] }
       - { label: Technologies, name: technos, required: false, widget: relation, collection: technos, value_field: techno, search_fields: [techno], multiple: true}
