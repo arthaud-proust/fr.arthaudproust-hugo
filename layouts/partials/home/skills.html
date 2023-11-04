@@ -7,7 +7,7 @@
         {{ range (where .Site.Pages "Section" "skills") }}
         {{ range $index, $skill :=.Pages.ByWeight }}
         <article>
-            <h3 id="headingSkills{{ $index }}">
+            <h3 id="headingSkills{{ $index }}" class="mb-0">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkills{{ $index }}"
                         aria-expanded="false"
                         aria-controls="collapseSkills{{ $index }}">

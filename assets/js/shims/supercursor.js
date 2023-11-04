@@ -22,6 +22,7 @@ class SuperCursor {
             'HOVER',
             'HOVER_TEXT',
             'HOVER_SEE',
+            'HOVER_SEE_LESS',
             'ACTIVE',
             'HIDDEN',
             'ACTIVEABLE_X',
@@ -40,6 +41,10 @@ class SuperCursor {
         ]);
         this.stateOn.set('HOVER_SEE', [
             '.supercursor-hover-see',
+            '[aria-expanded="false"]'
+        ]);
+        this.stateOn.set('HOVER_SEE_LESS', [
+            '[aria-expanded="true"]'
         ]);
         this.stateOn.set('HOVER', [
             'a', 

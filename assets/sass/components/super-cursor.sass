@@ -117,24 +117,45 @@ $superCursorCoverPageColor: $secondary
 
     &.state-HOVER_SEE
         .superCursor-layer-pointer
-            --w: 4rem
-            --h: 4rem  
+            --w: 3rem
+            --h: 3rem  
 
 
             &::after
                 content: ' '
-                height: 1.5rem
-                width: 1.5rem
+                height: 1.3rem
+                width: 1.3rem
                 border-radius: 100%
                 position: relative
-                // mix-blend-mode: difference
                 margin: auto
                 display: block
                 background: $black
 
         .superCursor-layer-outter
-            --w: 10rem
-            --h: 5rem  
+            --w: 8rem
+            --h: 3rem  
+            border-radius: 100%
+
+    
+    &.state-HOVER_SEE_LESS
+        .superCursor-layer-pointer
+            --w: 3rem
+            --h: 2rem  
+
+
+            &::after
+                content: ' '
+                height: 1.3rem
+                width: 1.3rem
+                border-radius: 100%
+                position: relative
+                margin: auto
+                display: block
+                background: $black
+
+        .superCursor-layer-outter
+            --w: 8rem
+            --h: 2rem  
             border-radius: 100%
 
             
