@@ -57,6 +57,10 @@ menu:
       pre: resources
       url: "/resources/"
       weight: 6
+    - name: Lectures
+      pre: readings
+      url: "/readings/"
+      weight: 7
     
 taxonomies:
     

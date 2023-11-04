@@ -99,4 +99,18 @@ collections:
                   { label: Lien, name: link },
               ]}
             ]}
+      - name: readings
+        label: Lectures
+        file: content/readings/_index.md
+        fields:
+          - { label: Titre, name: title }
+          - { label: Description, name: description, widget: "text" }
+          - { label: Catégories, name: categories, widget: list, fields: [
+              { label: Titre, name: title },
+              { label: Sous-titre, name: subtitle },
+              { label: "Liens", name: links, widget: list, fields: [
+                  { label: Texte, name: text },
+                  { label: Lien, name: link },
+              ]}
+            ]}
           
