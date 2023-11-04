@@ -19,6 +19,12 @@
                 {{ partial "components/internal-link" (dict "page" . "class" "p-2") }}
             </li>
             {{ end }}
+
+            {{ with .Site.GetPage "/readings" }}
+            <li class="nav-item d-flex">
+                {{ partial "components/internal-link" (dict "page" . "class" "p-2") }}
+            </li>
+            {{ end }}
             
             <li class="nav-item d-flex">
                 {{ partial "components/external-link" (dict "text" "Github" "link" .Site.Params.seo.links.github "class" "p-2") }}
