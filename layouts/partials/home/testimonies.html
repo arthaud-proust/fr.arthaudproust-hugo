@@ -1,8 +1,8 @@
 <section id="testimonies" class=" py-6 row">
     <h2 paint-y class="display-4 col-lg-6"><span class="supercursor-hover-text" data-hover-text="🤝">Ils m'ont fait confiance</span></h2>
-    <div paint-y class="position-relative overflow-hidden col-lg-6">
+    <div paint-y class="position-relative overflow-hidden mt-3 col-lg-6">
         <div id="testimonies-group" >
-            <div class="pt-md-3 swiper-wrapper supercursor-activeable-x">
+            <div class="swiper-wrapper supercursor-activeable-x">
                 {{ range (where .Site.Pages "Section" "testimonies") }}
                 {{ range .Pages.ByWeight }}
                 <div class="swiper-slide">

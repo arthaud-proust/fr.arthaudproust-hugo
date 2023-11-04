@@ -36,8 +36,8 @@ menu:
       url: "/#skills"
       weight: 3
     - name: Me contacter
-      pre: meet-us
-      url: "/#meet-us"
+      pre: contact
+      url: "/#contact"
       weight: 4
 
   main:
