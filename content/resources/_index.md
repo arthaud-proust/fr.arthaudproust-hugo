@@ -18,12 +18,14 @@ categories:
       - text: SemRush
         link: https://fr.semrush.com/
   - title: Laravel
-    subtitle: Pour des interfaces admin
+    subtitle: Packages souvent utilisés
     links:
       - text: Filament
         link: https://filamentadmin.com/
-      - text: Voyager
-        link: https://voyager.devdojo.com/
+      - text: Laravel Data by Spatie
+        link: https://spatie.be/docs/laravel-data/v3/introduction
+      - text: InertiaJs
+        link: https://inertiajs.com/
   - title: Javascript
     subtitle: Librairies
     links:
@@ -33,8 +35,6 @@ categories:
         link: https://swiperjs.com/
       - text: Socket.io
         link: https://socket.io/
-      - text: Axios
-        link: https://axios-http.com/
       - text: PeerJs
         link: https://peerjs.com/
       - text: AnimeJs
@@ -72,4 +72,15 @@ categories:
     links:
       - text: Atipo Foundry
         link: https://www.atipofoundry.com/
+      - link: https://open-foundry.com/fonts/
+        text: Open Foundry
+      - text: Font Share
+        link: https://www.fontshare.com/
+  - title: Accessibilité
+    subtitle: Couleurs, contrasts, outils
+    links:
+      - text: Random accessible colors
+        link: https://randoma11y.com/
+      - link: https://www.whocanuse.com/
+        text: Who can user - accessibility colors checker
 ---
