@@ -29,4 +29,6 @@ categories:
         text: L'écriture incluse n'est pas que le point médian
       - link: https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless
         text: What is serverless
+      - link: https://medium.com/publicis-sapient-france/figma-dev-mode-harmoniser-la-conception-et-le-d%C3%A9veloppement-pour-une-collaboration-sans-faille-b082dde77278
+        text: "Figma : Harmoniser la conception et le développement"
 ---
