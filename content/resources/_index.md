@@ -78,6 +78,8 @@ categories:
         link: https://www.fontshare.com/
       - link: https://typotheque.genderfluid.space/
         text: Typothèque de fonts inclusif·ves
+      - link: https://vj-type.com/3-typefaces
+        text: VJ type
   - title: Accessibilité
     subtitle: Couleurs, contrasts, outils
     links:
