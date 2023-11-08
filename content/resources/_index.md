@@ -76,6 +76,8 @@ categories:
         text: Open Foundry
       - text: Font Share
         link: https://www.fontshare.com/
+      - link: https://typotheque.genderfluid.space/
+        text: Typothèque de fonts inclusif·ves
   - title: Accessibilité
     subtitle: Couleurs, contrasts, outils
     links:
