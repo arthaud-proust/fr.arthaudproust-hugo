@@ -31,4 +31,6 @@ categories:
         text: What is serverless
       - link: https://medium.com/publicis-sapient-france/figma-dev-mode-harmoniser-la-conception-et-le-d%C3%A9veloppement-pour-une-collaboration-sans-faille-b082dde77278
         text: "Figma : Harmoniser la conception et le développement"
+      - link: https://www.patterns.dev/
+        text: Pattern front end
 ---
