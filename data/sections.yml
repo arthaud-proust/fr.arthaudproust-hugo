@@ -1,6 +1,7 @@
 technos: 
   - laravel
   - vuejs
+  - typescript
   - tailwindcss
   - hugo
   - react
