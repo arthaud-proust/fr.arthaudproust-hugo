@@ -17,6 +17,16 @@ addEventListener('turbo:before-render', function(event) {
 
 
 addEventListener('DOMContentLoaded', function() {
+    const offcanvasMenu = new bootstrap.Offcanvas(
+        document.getElementById("offcanvasMenu")
+    );
+
+    document.querySelectorAll("#offcanvasMenu a").forEach((el) => {
+        el.addEventListener("click", () => {
+            offcanvasMenu.hide();
+        });
+    });
+      
     window.superCursor = new SuperCursor({ 
         root: document.getElementById('keep'),
         layers: [
