@@ -29,20 +29,18 @@ content:
       interactif. Cela s'est opéré sans problème, et j'ai rapidement eu un front
       sobre et fonctionnel."
     title: Coder proprement, c'est chouette
-  - title: Mais ça doit server
-    paraph1: J'ai partagé le petit site à des amis. Malheureusement j'étais la tête
-      dans le guidon et le projet n'avais pas beaucoup de but pour les
-      utilisateur (en fait il n'avait pas d'utilisateur type). J'ai ajouté un
-      tutoriel et puis je me suis demandé ce que je voulais faire. Continuer la
-      preuve de compétence purement technique ? Aller vers un jeu avec une
-      réelle utilisation ?
-    paraph2: "Alors je suis parti sur un jeu. Car un projet sans utilisateurs c'est
-      un projet qui ne rapporte pas d'argent, qui n'a pas de retours, qui ne
-      s'améliore pas ? En partie. Je dois me confronter à des problématiques
-      réelles, des évolutions qui n'émanent pas de moi. J'ai donc cherché à
-      gamifier le jeu : j'ai ajouté une logique pour calculer un score, créé des
-      tips pour informer le joueur au fur et à mesure (plutôt que le bombarder
-      d'infos dès le début), etc. Certaines fonctionnalités sont passées,
-      d'autres sont plus complexes (comme le \"pokédex\" de patterns de
-      cellules)."
+  - title: Mais ça doit servir
+    paraph1: J'ai partagé le site à des amis. Malheureusement j'étais la tête dans
+      le guidon et le projet n'avais pas de but ni d'utilisateur type. J'ai
+      ajouté un tutoriel et puis je me suis demandé ce que je voulais en faire.
+      Continuer la preuve de compétence ? Aller vers un jeu ?
+    paraph2: "Alors je suis parti sur un jeu. En partie parce qu'un projet sans
+      utilisateurs c'est un projet qui ne rapporte pas d'argent, qui n'a pas de
+      retours et qui ne s'améliore pas. Je dois me confronter à des
+      problématiques réelles, des évolutions qui n'émanent pas de moi. J'ai donc
+      cherché à gamifier le jeu : j'ai ajouté une logique pour calculer un
+      score, créé des tips pour informer le joueur au fur et à mesure (plutôt
+      que le bombarder d'infos dès le début), etc. Certaines fonctionnalités
+      sont passées, d'autres sont plus complexes (comme le \"pokédex\" de
+      patterns de cellules)."
 ---
