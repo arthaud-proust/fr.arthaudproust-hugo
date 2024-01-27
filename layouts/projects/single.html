@@ -20,7 +20,7 @@
     <meta itemprop="url" content="{{ .Permalink }}">   
     
 
-    <div class="d-none d-md-block col-5 mt-5">
+    <section class="d-none d-md-block col-5 mt-5">
         <div paint-y class="position-sticky top-6" id="">
             {{ if .Params.image }}
                 {{ partial "image/resize" (dict
@@ -32,23 +32,24 @@
                     )
                 )}}
             {{ end }}
-            {{ range .Params.Content }}
-                {{ partial "image/resize" (dict
-                    "img" .image
-                    "opt" (dict
-                        "size" "1000x webp"
-                        "class" "project-image img-fluid h-auto d-none"
-                        "id" (printf "sic-%s" (urlize .title))
-                    )
-                )}}
+           
+            {{ range $index, $section := .Params.Content }}
+                {{ if isset . "image" }}
+                    {{ partial "image/resize" (dict
+                        "img" $section.image
+                        "opt" (dict
+                            "size" "1000x webp"
+                            "class" "project-image img-fluid h-auto d-none"
+                            "id" (printf "sic-%s" (urlize $index))
+                        )
+                    )}}
+                {{ end }}
             {{ end }}
-
-            
         </div>
-    </div>
+    </section>
     
-    <div class="col-md-7 col-xl-6 mt-5" id="project-sections-root">
-        <div paint-y class="mb-5">
+    <section class="col-md-7 col-xl-6 mt-5" id="project-sections-root">
+        <article paint-y class="mb-5">
             <a href="/#projects" class="mb-5">Retour aux réalisations</a>
 
             <div class="w-full d-md-none mt-5">
@@ -69,10 +70,10 @@
                     {{ partial "components/external-link" (dict "link" .Params.project_url "text" "Voir le site") }}
                 </strong></h2>
             {{ end }}
-        </div>
+        </article>
 
         
-        <div class="mb-7">
+        <article class="mb-7">
             {{ if .Params.subtitle }}
                 <h3>{{ .Params.subtitle }}</h3>
             {{ end }}
@@ -82,10 +83,10 @@
                     {{ .Description | markdownify }}
                 </p>
             {{ end }}
-        </div>
+        </article>
 
         {{ if isset .Params "technos" }}
-            <div class="mb-7">
+            <article class="mb-7">
                 <h2><strong>Réalisé avec</strong></h2>
                 <ul class="list-unstyled">
                     {{ $relatedTechnos := site.RegularPages.RelatedTo ( keyVals "techno" .Params.technos)}}
@@ -93,46 +94,55 @@
                         <li class="mb-3">{{ partial "image/icon" . }}<span class="ms-3">{{ humanize .Params.techno }}</span></li>
                     {{ end }}
                 </ul>
-            </div>
+            </article>
         {{ end }}
 
 
 
-        {{ $previousImg := ""  }}
-        {{ range .Params.Content }}
-            <div class="project-section mb-7" data-image="{{ (printf "sic-%s" (urlize .title)) }}">
-                {{ if (ne $previousImg .image) }}
-                    <div class="w-full mb-4">
-                        {{ partial "image/resize" (dict
-                            "img" .image
-                            "opt" (dict
-                                "size" "1000x webp"
-                                "class" "img-fluid h-auto d-md-none"
-                            )
-                        )}}
-                    </div>
+        {{ $sectionImageIndex := "preview"  }}
+        {{ $sectionImage := ""  }}
+        {{ range $index, $section := .Params.Content }}
+            {{ if isset $section "image" }}
+                {{ $sectionImageIndex = $index }}
+            {{ end }}
+            <article 
+                class="project-section mb-7" 
+                data-image="{{ (printf "sic-%s" (urlize $sectionImageIndex)) }}"
+            >
+                {{ if isset $section "image" }}
+                    {{ if (ne $sectionImage $section.image) }}
+                        <div class="w-full mb-4">
+                            {{ partial "image/resize" (dict
+                                "img" .image
+                                "opt" (dict
+                                    "size" "1000x webp"
+                                    "class" "img-fluid h-auto d-md-none"
+                                )
+                            )}}
+                        </div>
+                    {{ end }}
+                    {{ $sectionImage = $section.image }}
                 {{ end }}
-                {{ $previousImg = .image }}
 
-                {{ if isset . "date" }}
-                    <span>{{ .date }}</span>
+                {{ if isset $section "date" }}
+                    <span>{{ $section.date }}</span>
                 {{ end }}
-                <h2><strong>{{ .title }}</strong></h2>
-                {{ if isset . "paraph1" }}
+                <h2><strong>{{ $section.title }}</strong></h2>
+                {{ if isset $section "paraph1" }}
                     <p>
-                        {{ .paraph1 | markdownify }}
+                        {{ $section.paraph1 | markdownify }}
                     </p>
                 {{ end }}
-                {{ if isset . "paraph2" }}
+                {{ if isset $section "paraph2" }}
                     <p class="pt">
-                        {{ .paraph2 | markdownify }}
+                        {{ $section.paraph2 | markdownify }}
                     </p>
                 {{ end }}
-            </div>
+            </article>
         {{ end }}
 
 
-        <div class="mb-7">
+        <article class="mb-7">
             {{ if .Params.project_url }}
                 <h2 class="mb-4"><strong>
                     {{ partial "components/external-link" (dict "link" .Params.project_url "text" "Voir le site") }}
@@ -147,7 +157,7 @@
                 {{ end }}
                 <li><a href="/#projects">Retour aux réalisations</a></li>
             </ul>
-        </div>
-    </div>  
+        </article>
+    </section>  
 </section>
 {{ end }}
