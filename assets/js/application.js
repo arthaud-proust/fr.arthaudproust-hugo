@@ -1,10 +1,10 @@
-import * as Turbo from "@hotwired/turbo"
+import "@hotwired/turbo";
 import * as bootstrap from "./bootstrap.js";
-import * as utils from './shims/utils';
-import { SuperCursor } from './shims/supercursor';
 import { setEffects } from './shims/effects';
+import { animePaintYComponents, setPaintYComponents } from './shims/paintYEffect';
 import { setScrollEffects } from './shims/scrollEffects';
-import { setPaintYComponents, animePaintYComponents } from './shims/paintYEffect';
+import { SuperCursor } from './shims/supercursor';
+import * as utils from './shims/utils';
 
 addEventListener('turbo:before-render', function(event) {
     event.preventDefault();
@@ -247,13 +247,13 @@ function initProjectSectionsRoot() {
     }
 
     function showProjectImageOfSection(section) {
-        for(let image of projectImages) {
-            if(image.id !== section.dataset.image) {
-                image.classList.add('d-none');
-            } else {
-                image.classList.remove('d-none');
-            }
-        }
+        // if(projectImages.length<=1) {
+        //     return;
+        // }
+
+        projectImages.forEach((image)=>{
+            image.classList.toggle('d-none', image.id !== section.dataset.image)
+        })
     }
 
     function handleSectionIntersect(entries) {
