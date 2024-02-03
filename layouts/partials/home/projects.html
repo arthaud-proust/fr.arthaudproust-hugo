@@ -9,7 +9,7 @@
                     Réalisations
                 </h2>
                 <p>
-                    {{ partial "components/link" (dict "text" "Voir tous les projets" "link" "/projects" ) }}
+                    {{ partial "components/link" (dict "text" "Toutes les réalisations" "link" "/projects" ) }}
                 </p>
             </article>
             <div id="projects-group" class="position-relative">
@@ -21,6 +21,30 @@
                             </div>
                         {{ end}}
                     {{ end }}
+                     <div class="h-100 d-flex swiper-slide">
+                        <div 
+                            paint-y
+                            class="pe-4 hoverable w-100 user-select-none" 
+                        >
+                            {{ partial "image/resize" (dict
+                                "img" "/images/projects/all-projects.jpg"
+                                "opt" (dict
+                                    "size" "800x webp"
+                                    "itemprop" "thumbnailUrl"
+                                    "alt" .Title
+                                    "class" " effect-transition-2 effect-hover effect-hover-rotate-n5 effect-hover-scale-9 col-12 col-md-8 h-auto"
+                                )
+                            )}}
+
+                            <div>
+                                <h3 class="display-6 mt-3" itemprop="name">
+                                    <a data-hover-text="Voir" class="supercursor-none text-black text-decoration-none stretched-link" href="/projects">
+                                        <span>Toutes les réalisations</span>
+                                    </a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
