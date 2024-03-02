@@ -1,6 +1,6 @@
 ---
 visibleInCms: true
 techno: csharp
-img: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg
+img: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg
 
 ---
