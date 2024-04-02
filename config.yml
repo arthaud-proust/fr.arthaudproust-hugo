@@ -14,9 +14,10 @@ params:
     hero: /sprites/hero-min.jpg
     logo: /sprites/logo.png
     links:
+      passeport: https://passeport.arthaud.dev
+      linkedin: https://linkedin.arthaud.dev
       github: https://github.com/arthaud-proust
       githubArchive: https://github.com/arthaud-proust-archive
-      linkedin: https://www.linkedin.com/in/arthaud-proust/
       twitter: https://twitter.com/arthaud_proust
       facebook: https://www.facebook.com/arthaudproust.fr
       instagram: https://www.instagram.com/arthaudproust/      
