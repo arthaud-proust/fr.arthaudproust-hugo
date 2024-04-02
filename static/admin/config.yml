@@ -41,7 +41,7 @@ collections:
       - { label: Brouillon, name: draft, widget: "boolean", default: false}
       - { label: Titre, name: title }
       - { label: "Date", name: date, required: false, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
-      - { label: "Image", name: "image", required: false, widget: "image", allow_multiple: false, choose_url: false, media_folder: /assets/images/projects, public_folder: /images/projects}
+      - { label: "Image", name: "image", required: false, widget: "image", allow_multiple: false, choose_url: false, media_folder: /assets/images/projects, public_folder: /images/projects, hint: "1200x628"}
       - { label: Description, name: description, required: false, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] }
       - { label: Technologies, name: technos, required: false, widget: relation, collection: technos, value_field: techno, search_fields: [techno], multiple: true}
       - { label: Lien projet, name: project_url, required: false }
@@ -113,4 +113,17 @@ collections:
                   { label: Lien, name: link },
               ]}
             ]}
-          
+      - name: lab
+        label: Lab
+        file: content/lab/_index.md
+        fields:
+          - { label: Titre, name: title }
+          - { label: Description, name: description, widget: "text", required: false }
+          - { label: Catégories, name: categories, widget: list, fields: [
+              { label: Titre, name: title, required: false },
+              { label: Sous-titre, name: subtitle, required: false },
+              { label: "Liens", name: links, widget: list, fields: [
+                  { label: Texte, name: text },
+                  { label: Lien, name: link },
+              ]}
+            ]}
