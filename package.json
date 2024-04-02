@@ -10,6 +10,6 @@
   }, 
   "scripts": {
     "cms": "npx netlify-cms-proxy-server",
-    "start": "hugo serve & npm run cms"
+    "dev": "hugo serve & npm run cms"
   }
 }
