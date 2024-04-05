@@ -33,4 +33,9 @@ categories:
         text: "Figma : Harmoniser la conception et le développement"
       - link: https://www.patterns.dev/
         text: Pattern front end
+  - title: Paradigmes
+    links:
+      - link: https://www.elegantobjects.org/
+        text: Elegant Objects
+    subtitle: Comment appliquer les différents paradigmes (POO, FP, etc)
 ---
