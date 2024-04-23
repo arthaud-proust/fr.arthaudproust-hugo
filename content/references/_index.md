@@ -4,6 +4,11 @@ layout: index
 description: J'appuie mon travail sur des références qui m'ont été conseillées
   ou que j'ai découvertes. En voici la liste non-exhaustive.
 books:
+  - title: Qualité logicielle pour les développeurs
+    author:
+      - name: Jean-François Lépine
+        link: https://lepine.pro/
+    image: /images/references/qualite-logicielle-pour-les-developpeurs.jpg
   - title: Architecture Logicielle Propre
     author:
       - name: Robert C. Martin
@@ -14,11 +19,6 @@ books:
       - name: Alexander Shvets
         link: https://www.linkedin.com/in/neochief/?originalSubdomain=ua
     image: /images/references/dive-into-design-pattern.jpg
-  - title: Culture numérique
-    author:
-      - name: Dominique Cardon
-        link: https://fr.wikipedia.org/wiki/Dominique_Cardon_(sociologue)
-    image: /images/references/culture-numerique.jpg
   - image: /images/references/assurance-qualite-web.jpg
     title: Assurance Qualité Web - Opquast
     author:
@@ -29,6 +29,11 @@ books:
       - name: Robert C. Martin
         link: https://fr.wikipedia.org/wiki/Robert_C._Martin
     image: /images/references/clean-code.jpg
+  - title: Culture numérique
+    author:
+      - name: Dominique Cardon
+        link: https://fr.wikipedia.org/wiki/Dominique_Cardon_(sociologue)
+    image: /images/references/culture-numerique.jpg
   - title: La palette parfaite pour le graphisme et l'illustration
     author:
       - name: Sara Caldas
