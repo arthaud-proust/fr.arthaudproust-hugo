@@ -127,3 +127,21 @@ collections:
                   { label: Lien, name: link },
               ]}
             ]}
+
+  - name: testimonies
+    label: Témoignages
+    label_singular: Témoignage
+    folder: content/testimonies
+    create: true
+    editor: { preview: false }
+    filter: { field: "visibleInCms", value: true }
+    fields:
+      - { label: "Visible", name: "visibleInCms", widget: hidden, default: true}
+      - { label: Brouillon, name: draft, widget: "boolean", default: false}
+      - { label: "Order", name: "weight", widget: "number"}
+      - { label: "Titre", name: "title"}
+      - { label: "Sous-titre", name: "subtitle"}
+      - { label: "URL Projet", name: "project"}
+      - { label: "Content", name: "content", widget: "text" }
+      - { label: "Plus", name: "more", required: false, widget: "text" }
+      - { label: "Image", name: "img", widget: "image", allow_multiple: false, choose_url: false, media_folder: /assets/images/testimonies, public_folder: /images/testimonies}

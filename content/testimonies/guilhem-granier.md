@@ -1,6 +1,6 @@
 ---
 visibleInCms: true
-weight: 2
+weight: 4
 title: Guilhem Granier
 subtitle: Professeur d'EPS au Lycée Montesquieu
 project: /projects/escalade-montesquieu/
