@@ -140,8 +140,8 @@ collections:
       - { label: Brouillon, name: draft, widget: "boolean", default: false}
       - { label: "Order", name: "weight", widget: "number"}
       - { label: "Titre", name: "title"}
-      - { label: "Sous-titre", name: "subtitle"}
-      - { label: "URL Projet", name: "project"}
+      - { label: "Sous-titre", required: false, name: "subtitle"}
+      - { label: "URL Projet", required: false, name: "project"}
       - { label: "Content", name: "content", widget: "text" }
       - { label: "Plus", name: "more", required: false, widget: "text" }
       - { label: "Image", name: "img", widget: "image", allow_multiple: false, choose_url: false, media_folder: /assets/images/testimonies, public_folder: /images/testimonies}
