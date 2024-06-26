@@ -1,7 +1,7 @@
 ---
 visibleInCms: true
-draft: false
-weight: 5
+draft: true
+weight: 4
 title: Quentin Wegera
 subtitle: Webmestre, camarade MMI
 content: >-
