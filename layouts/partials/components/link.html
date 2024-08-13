@@ -1,7 +1,7 @@
 <a 
     href="{{ .link }}" 
     class="{{ .class }}"
-    {{ if .openTab }}
+    {{ if or .openTab .external }}
         target="_blank" rel="noopener"
     {{ end }}
 >
