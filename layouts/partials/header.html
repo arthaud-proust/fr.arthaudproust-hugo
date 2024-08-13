@@ -3,25 +3,26 @@
 {{ $brandLinkText = "Arthaud Proust" }}
 {{ end }}
 
-<header class="header page-transition sticky-top">
-    <div class=" bg-light">
-        <div class="container ">
+<div class="header page-transition sticky-top">
+    <div class="bg-light">
+        <div class="container">
             <div class="row py-2">
                 <nav class="navbar">
                     {{ with .Site.GetPage "/" }}
-                    {{ partial "components/internal-link" (dict "page" . "text" $brandLinkText "class" "text-black navbar-brand") }}
+                        {{ partial "components/internal-link" (dict "page" . "text" $brandLinkText "class" "text-black navbar-brand") }}
                     {{ end }}
+
                     <button class="supercursor-hover ms-auto navbar-toggler p-2 me-n2" type="button" data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Ouvrir le menu">
                         Menu
                     </button>
+
+                    
                 </nav>
             </div>
         </div>
     </div>
     {{ partial "components/horizontal-cord" . }}
-</header>
-
-<div>
-    {{ partial "menu.html" .}}
 </div>
+
+{{ partial "menu" .}}
