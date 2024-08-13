@@ -6,7 +6,7 @@ function setScrollEffects() {
 }
 
 function setAllSectionScrollEffects() {
-    const sections = document.querySelectorAll('main > section, main > div > section');
+    const sections = document.querySelectorAll('[data-scroll-effect-section]');
 
     function handleSectionIntersect(entries, observer) {
         entries.forEach(entry=>{

@@ -1,10 +1,10 @@
-</main>
+</div>
 {{ partial "components/horizontal-cord" . }}
-<main class="page-transition overflow-hidden">
+<div data-scroll-effect-section class="page-transition overflow-hidden">
     <div class="container">
 
         <section id="projects" class="py-6">
-            <article paint-y class="mb-4">
+            <article data-paint-y class="mb-4">
                 <h2 class="display-4">
                     Réalisations
                 </h2>
@@ -23,7 +23,7 @@
                     {{ end }}
                      <div class="h-100 d-flex swiper-slide">
                         <div 
-                            paint-y
+                            data-paint-y
                             class="pe-4 hoverable w-100 user-select-none" 
                         >
                             {{ partial "image/resize" (dict
@@ -50,6 +50,6 @@
             </div>
         </section>
     </div>
-</main>
+</div>
 {{ partial "components/horizontal-cord" . }}
-<main class="page-transition container">
+<div class="page-transition container">

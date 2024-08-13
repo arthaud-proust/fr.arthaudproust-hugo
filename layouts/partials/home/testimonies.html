@@ -1,6 +1,6 @@
-<section id="testimonies" class=" py-6 row">
-    <h2 paint-y class="display-4 col-lg-6"><span class="supercursor-hover-text" data-hover-text="🤝">On a travaillé ensemble</span></h2>
-    <div paint-y class="position-relative overflow-hidden mt-3 col-lg-6">
+<section id="testimonies" data-scroll-effect-section class=" py-6 row">
+    <h2 data-paint-y class="display-4 col-lg-6"><span class="supercursor-hover-text" data-hover-text="🤝">On a travaillé ensemble</span></h2>
+    <div data-paint-y class="position-relative overflow-hidden mt-3 col-lg-6">
         <div id="testimonies-group" >
             <div class="swiper-wrapper supercursor-activeable-x">
                 {{ range (where .Site.Pages "Section" "testimonies") }}
@@ -14,6 +14,4 @@
             <div class="swiper-pagination"></div>
         </div>
     </div>
-
-    
 </section>

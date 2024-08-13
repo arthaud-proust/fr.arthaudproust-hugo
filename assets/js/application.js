@@ -88,7 +88,7 @@ addEventListener('turbo:load', function() {
 
     setPaintYComponents();
 
-    setTimeout(()=>document.querySelectorAll('[anime-paint-y]').forEach(root=>animePaintYComponents(root)), 800);
+    setTimeout(()=>document.querySelectorAll('[data-anime-paint-y]').forEach(root=>animePaintYComponents(root)), 800);
 
     setEffects();
 

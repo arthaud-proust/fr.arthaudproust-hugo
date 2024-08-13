@@ -1,5 +1,5 @@
-<section id="hero" class="pt-0 pt-md-4 pt-xxl-6 row">
-    <div paint-y class="effect-hover hoverable offset-4 offset-md-0 col-8 col-md-5 col-lg-5 col-xl-3 mb-4">
+<div id="hero" data-scroll-effect-section class="pt-0 pt-md-4 pt-xxl-6 row">
+    <div data-paint-y class="effect-hover hoverable offset-4 offset-md-0 col-8 col-md-5 col-lg-5 col-xl-3 mb-4">
         {{ partial "image/resize" (dict
             "img" "images/faces/arthaud.jpg"
             "opt" (dict
@@ -14,14 +14,16 @@
             Par {{ partial "components/external-link" (dict "text" "Romain Bourdichon" "link" "https://www.linkedin.com/in/romain-bourdichon/?originalSubdomain=fr" ) }}
         </span>
     </div>
-    <div class="col-12 col-xxl-8">
+    <section class="col-12 col-xxl-8">
         <h1 class="display-1">
             <span class="supercursor-hover-text" data-hover-text="Prénom">Arthaud</span>
             <span class="supercursor-hover-text" data-hover-text="Nom">Proust</span>
         </h1>
-        <h2 class="">Développeur</h2>
+        <h2>
+            Développeur à Bordeaux
+        </h2>
         <p class="mt-3 md:w-75">
-            Basé à <b>Bordeaux</b>, je conçois, design et modélise des <b>solutions numériques</b>.<br>
+            Je conçois, design et modélise des <b>solutions numériques</b>.<br>
             Je compose également avec le monde physique, en sculptant le bois et en {{ partial "components/link" (dict "text" "photographiant" "link" "/galleries/" ) }}.
         </p>
 
@@ -29,5 +31,5 @@
             J'aime la <b>qualité</b>, le partage et la recherche.<br>
             Je me forme constamment, en lisant et en expérimentant.
         </p>
-    </div>
-</section>
+    </section>
+</div>

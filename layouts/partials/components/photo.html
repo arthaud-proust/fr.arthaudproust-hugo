@@ -2,7 +2,7 @@
     {{ $img := resources.Get .image }}
     {{ $fullResized := $img.Resize "2000x" }}
     <a 
-        paint-y
+        data-paint-y
         href="{{ $fullResized.Permalink }}" 
         class="d-block hoverable h-100 position-relative gallery-image supercursor-hover-see"
         data-pswp-width="{{ $fullResized.Width }}" 

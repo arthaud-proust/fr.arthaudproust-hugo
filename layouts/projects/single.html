@@ -15,7 +15,7 @@
 
 {{ define "main" }}
 <section 
-    anime-paint-y
+    data-anime-paint-y
     itemscope itemtype="https://www.schema.org/CreativeWork"
     class="row position-relative"
 >
@@ -23,7 +23,7 @@
     
 
     <section class="d-none d-md-block col-5 mt-5">
-        <div paint-y class="position-sticky top-6" id="">
+        <div data-paint-y class="position-sticky top-6" id="">
             {{ if .Params.image }}
                 {{ partial "image/resize" (dict
                     "img" .Params.image
@@ -51,7 +51,7 @@
     </section>
     
     <section class="col-md-7 col-xl-6 mt-5" id="project-sections-root">
-        <article paint-y class="mb-5">
+        <article data-paint-y class="mb-5">
             <a href="/#projects" class="mb-5">Retour aux réalisations</a>
 
             <div class="w-full d-md-none mt-5">

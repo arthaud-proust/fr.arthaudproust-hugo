@@ -2,7 +2,7 @@ import anime from 'animejs';
 
 function setPaintYComponents() {
     const PERCENTAGE = 120;
-    const paintYComponentsToSet = document.querySelectorAll('[paint-y]');
+    const paintYComponentsToSet = document.querySelectorAll('[data-paint-y]');
     paintYComponentsToSet.forEach(component => {
         component.style = `transform: translateY(${PERCENTAGE}%); overflow: hidden;`
         component.innerHTML = `<div class="paint-y-inner" style="transform: translateY(-${PERCENTAGE}%)">${component.innerHTML}</div>`
@@ -14,7 +14,7 @@ function animePaintYComponents(root) {
     const DELAY = DURATION*0.4;
     const EASING = 'easeOutCubic'
     anime({
-        targets: root.querySelectorAll('[paint-y]'),
+        targets: root.querySelectorAll('[data-paint-y]'),
         translateY: '0%',
         rotateZ: 0,
         easing: EASING,
@@ -24,7 +24,7 @@ function animePaintYComponents(root) {
         duration: DURATION
     })
     anime({
-        targets: root.querySelectorAll('[paint-y] > div.paint-y-inner'),
+        targets: root.querySelectorAll('[data-paint-y] > div.paint-y-inner'),
         translateY: '0%',
         rotateZ: 0,
         easing: EASING,
