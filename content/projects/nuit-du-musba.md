@@ -4,6 +4,9 @@ draft: false
 title: Nuit du Musba
 date: 2024-08-17
 image: /images/projects/nuit-du-musba.jpg
+description: Sculptez, repeignez, illuminez, concoctez des recettes insolites et
+  plongez dans l'histoire et l'architecture du musée à travers une série
+  d'activités immersives
 technos:
   - html5
   - css3
