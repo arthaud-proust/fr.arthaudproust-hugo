@@ -2,6 +2,7 @@
 visibleInCms: true
 draft: false
 title: Nuit du Musba
+date: 2024-08-17
 image: /images/projects/nuit-du-musba.jpg
 technos:
   - html5
