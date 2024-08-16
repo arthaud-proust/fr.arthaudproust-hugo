@@ -2,6 +2,7 @@
 visibleInCms: true
 draft: false
 title: Nuit du Musba
+image: /images/projects/nuit-du-musba.jpg
 technos:
   - html5
   - css3
