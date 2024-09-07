@@ -1,6 +1,6 @@
 ---
 visibleInCms: true
-draft: false
+draft: true
 title: Yota
 date: 2022-03-03
 image: /images/projects/yota.jpg
