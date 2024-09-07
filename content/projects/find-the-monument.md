@@ -1,6 +1,6 @@
 ---
 visibleInCms: true
-draft: false
+draft: true
 title: Find the Monument
 date: 2022-10-06
 image: /images/projects/findthemonument.jpg
