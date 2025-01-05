@@ -40,6 +40,7 @@
         <div class="mb-6">
             <h2>Autres pages</h2>
             {{ $otherPages := where .Site.Pages "Section" "!=" "technos"}}
+            {{ $otherPages := where $otherPages "Section" "!=" "skills"}}
             {{ $otherPages := where $otherPages "Section" "!=" "testimonies"}}
             {{ $otherPages := where $otherPages "Section" "!=" "galleries"}}
             {{ $otherPages := where $otherPages "Section" "!=" "projects"}}
