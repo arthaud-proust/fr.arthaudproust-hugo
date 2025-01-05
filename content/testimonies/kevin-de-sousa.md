@@ -14,5 +14,4 @@ more: >-
   enrichissante.
 
   En plus de ses compétences techniques, Arthaud a apporté une dynamique positive à notre équipe grâce a sa bonne humeur.
-img: /images/testimonies/kevin.jpeg
 ---

@@ -17,5 +17,4 @@ more: >-
   Les qualités techniques d'Arthaud m'ont toujours impressionné. Il peut aisément lancer un projet complexe, le diriger et le concevoir de bout en bout avec une équipe de 2, 5 ou 20 personnes.
 
   Arthaud est une personne remarquable par ses aptitudes techniques, sa culture (générale et numérique) grandement développée et son humanisme profond.
-img: /images/testimonies/quentin.jpeg
 ---

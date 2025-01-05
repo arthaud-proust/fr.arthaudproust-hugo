@@ -144,4 +144,3 @@ collections:
       - { label: "URL Projet", required: false, name: "project"}
       - { label: "Content", name: "content", widget: "text" }
       - { label: "Plus", name: "more", required: false, widget: "text" }
-      - { label: "Image", name: "img", widget: "image", allow_multiple: false, choose_url: false, media_folder: /assets/images/testimonies, public_folder: /images/testimonies}

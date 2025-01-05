@@ -1,20 +1,5 @@
 <div class="px-lg-5 pb-4">
-    <div class="row mb-3">
-        {{ if .Params.img }}
-            <div class="col-3 col-md-2 col-lg-4 col-xl-3 pb-lg-3 pb-xl-0">
-                {{ partial "image/resize" (dict
-                    "img" .Params.img
-                    "opt" (dict
-                        "size" "240x webp"
-                        "alt" "Photo de arthaud de profil"
-                        "class" "h-auto img-fluid rounded-3"
-                        "itemprop" "image"
-                    )
-                )}}
-            </div>
-        {{ end }}
-
-        
+    <div class="row mb-3">        
         <div class="col-9 col-lg-12 col-xl-9 my-auto">
             <h3 class="mt-0">{{ .Title }}</h3>
             {{ if .Params.subtitle }}
@@ -39,7 +24,6 @@
             <button class="supercursor-hover testimonyCollapser btn btn-text p-0 text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTestimony-{{ .Title | urlize }}" aria-expanded="false" aria-controls="collapseExample">
                 Lire plus
             </button>
-                
         {{ end }}        
     {{ end }}
 </div>

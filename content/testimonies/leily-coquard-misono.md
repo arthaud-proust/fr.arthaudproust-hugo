@@ -15,5 +15,4 @@ more: Arthaud est l'un, si ce n'est LE pilier des développeurs de la formation
   son aide, prend nombre d'initiatives pour la classe et est d'une rare
   pédagogie tout en restant humble. Ça serait un plaisir de le recroiser sur un
   projet, je le recommande les yeux fermés.
-img: /images/testimonies/leily.jpeg
 ---

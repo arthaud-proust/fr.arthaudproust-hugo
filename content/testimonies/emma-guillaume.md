@@ -13,5 +13,4 @@ more: >-
 
 
   Très pédagogue, Arthaud sait expliquer les choses simplement et les illustrer efficacement.
-img: /images/testimonies/emma.jpeg
 ---

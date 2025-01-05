@@ -14,5 +14,4 @@ more: >-
 
 
   Sa patience et son désir constant d'apprendre sont des qualités que je souhaite à chacun.
-img: /images/testimonies/francia.jpeg
 ---
