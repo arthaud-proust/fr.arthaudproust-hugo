@@ -1,9 +1,8 @@
 ---
 visibleInCms: true
-draft: true
-weight: 4
+weight: 2
 title: Quentin Wegera
-subtitle: Webmestre, camarade MMI
+subtitle: Apprenti chef de projet à Ma Sécurité, Camarade MMI
 content: >-
   J'ai eu la chance de collaborer de nombreuses fois avec Arthaud au fil de
   notre formation et ce fut à chaque fois un plaisir. 

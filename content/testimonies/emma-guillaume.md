@@ -2,7 +2,7 @@
 visibleInCms: true
 weight: 5
 title: Emma Guillaume
-subtitle: Développeuse à Theseus AI, camarade MMI
+subtitle: Développeuse à Theseus AI, Camarade MMI
 content: "Arthaud est un développeur animé par la passion. Sa soif d’apprendre
   le pousse continuellement à chercher, discuter et se questionner sur ses
   pratiques, qu’elles soient sur des projets personnels ou professionnels. "
